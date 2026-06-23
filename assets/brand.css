@@ -1,0 +1,130 @@
+/* TinyNOS public site — brand + landing styling. */
+
+:root {
+  --tn-grad-a: #4f46e5;   /* indigo  */
+  --tn-grad-b: #7c3aed;   /* violet  */
+  --tn-grad-c: #0ea5e9;   /* sky     */
+}
+
+/* ---- Hero ---------------------------------------------------------------- */
+
+.tn-hero {
+  background:
+    radial-gradient(1200px 400px at 15% -10%, rgba(124, 58, 237, 0.35), transparent 60%),
+    linear-gradient(135deg, var(--tn-grad-a) 0%, var(--tn-grad-b) 55%, var(--tn-grad-c) 130%);
+  color: #fff;
+  padding: 4.5rem 0 4rem;
+}
+
+.tn-hero__inner {
+  max-width: 61rem;
+}
+
+.tn-hero__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  opacity: 0.85;
+  margin: 0 0 0.4rem;
+}
+
+.tn-hero__title {
+  font-size: 4rem;
+  line-height: 1.02;
+  font-weight: 800;
+  margin: 0 0 1rem;
+  color: #fff;
+}
+
+.tn-hero__lead {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  max-width: 46rem;
+  opacity: 0.95;
+  margin: 0 0 1.8rem;
+}
+
+.tn-hero__lead strong { color: #fff; font-weight: 700; }
+
+.tn-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-bottom: 1.4rem;
+}
+
+.tn-hero .md-button {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.65);
+}
+
+.tn-hero .md-button--primary {
+  background: #fff;
+  color: var(--tn-grad-a);
+  border-color: #fff;
+}
+
+.tn-hero .md-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #fff;
+  color: #fff;
+}
+
+.tn-hero .md-button--primary:hover {
+  background: #f1f1ff;
+  color: var(--tn-grad-b);
+}
+
+.tn-hero__meta {
+  font-size: 0.82rem;
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* ---- Feature card grid (rendered from index.md) -------------------------- */
+
+.tn-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+  margin: 1.6rem 0 2rem;
+}
+
+.tn-card {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.7rem;
+  padding: 1.2rem 1.3rem;
+  background: var(--md-default-bg-color);
+  transition: border-color 120ms, box-shadow 120ms, transform 120ms;
+}
+
+.tn-card:hover {
+  border-color: var(--tn-grad-b);
+  box-shadow: 0 6px 22px rgba(79, 70, 229, 0.12);
+  transform: translateY(-2px);
+}
+
+.tn-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.tn-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* Tighten the landing: hide the page H1 (hero already shows the title). */
+.tn-home .md-content h1:first-of-type {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden; clip: rect(0 0 0 0);
+}
+
+@media screen and (max-width: 44rem) {
+  .tn-hero { padding: 3rem 0 2.5rem; }
+  .tn-hero__title { font-size: 2.9rem; }
+  .tn-hero__lead { font-size: 1.02rem; }
+}
