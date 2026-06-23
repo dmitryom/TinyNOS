@@ -12,13 +12,13 @@
         <meta name="author" content="TinyNOS maintainers">
       
       
-        <link rel="canonical" href="https://dmitryom.github.io/TinyNOS/config-guide/03-mlag-mh/">
+        <link rel="canonical" href="https://dmitryom.github.io/TinyNOS/guide/network-virtualization/">
       
       
-        <link rel="prev" href="../02-evpn-vxlan/">
+        <link rel="prev" href="../layer3/">
       
       
-        <link rel="next" href="../04-ai-fabric-roce/">
+        <link rel="next" href="../monitoring/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>3. MLAG и EVPN multihoming - TinyNOS</title>
+        <title>Сетевая виртуализация - TinyNOS</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#3-mlag-и-evpn-multihoming" class="md-skip">
+        <a href="#сетевая-виртуализация" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              3. MLAG и EVPN multihoming
+              Сетевая виртуализация
             
           </span>
         </div>
@@ -231,7 +231,7 @@
   
     
   
-  Главная
+  Обзор
 
       </a>
     </li>
@@ -264,23 +264,134 @@
   
   
   
-    
   
-  
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../quick-start/" class="md-tabs__link">
+        
   
   
     
   
-  Руководство по настройке
+  Быстрый старт
 
-        </a>
-      </li>
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../system/" class="md-tabs__link">
+        
+  
+  
     
+  
+  Настройка системы
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../layer1/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Layer 1 и порты
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../layer2/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Layer 2
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../layer3/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Layer 3
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Сетевая виртуализация
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../monitoring/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Мониторинг и диагностика
+
+      </a>
+    </li>
   
 
       
@@ -296,7 +407,26 @@
   
     
   
-  Справочник CLI
+  Справочник команд CLI
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../scenarios/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Сценарии дата-центра
 
       </a>
     </li>
@@ -368,7 +498,7 @@
   <span class="md-ellipsis">
     
   
-    Главная
+    Обзор
   
 
     
@@ -506,103 +636,17 @@
       
   
   
-    
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-        
-        
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Руководство по настройке
-  
-
-    
-  </span>
-  
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Руководство по настройке
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
   
   
     <li class="md-nav__item">
-      <a href="../01-underlay/" class="md-nav__link">
+      <a href="../quick-start/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Underlay — BGP / OSPF / BFD
+    Быстрый старт
   
 
     
@@ -614,23 +658,22 @@
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
   
   
   
   
     <li class="md-nav__item">
-      <a href="../02-evpn-vxlan/" class="md-nav__link">
+      <a href="../system/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. EVPN-VXLAN оверлей
+    Настройка системы
   
 
     
@@ -642,10 +685,90 @@
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../layer1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Layer 1 и порты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../layer2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Layer 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../layer3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Layer 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
   
   
     
@@ -667,7 +790,7 @@
   <span class="md-ellipsis">
     
   
-    3. MLAG и EVPN multihoming
+    Сетевая виртуализация
   
 
     
@@ -685,7 +808,7 @@
   <span class="md-ellipsis">
     
   
-    3. MLAG и EVPN multihoming
+    Сетевая виртуализация
   
 
     
@@ -711,52 +834,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mlag-multi-chassis-lag" class="md-nav__link">
+  <a href="#evpn-и-vtep" class="md-nav__link">
     <span class="md-ellipsis">
       
-        MLAG (multi-chassis LAG)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="MLAG (multi-chassis LAG)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#шаг-1--port-channel-к-серверу" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Шаг 1 — port-channel к серверу
+        EVPN и VTEP
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#шаг-2--mlag-домен" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#vxlan-устройства" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Шаг 2 — MLAG-домен
+        VXLAN-устройства
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#проверка-mlag" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#vlan--vni-l2-vni" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Проверка MLAG
+        VLAN → VNI (L2-VNI)
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#маршрутизация-vxlan-и-symmetric-irb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Маршрутизация VXLAN и symmetric IRB
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bum-репликация" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BUM-репликация
+      
+    </span>
+  </a>
   
 </li>
       
@@ -769,22 +897,27 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="EVPN multihoming (all-active)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#проверка-evpn-mh" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#статические-vxlan-туннели" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Проверка EVPN-MH
+        Статические VXLAN-туннели
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#проверка" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Проверка
+      
+    </span>
+  </a>
   
 </li>
       
@@ -795,123 +928,30 @@
     </li>
   
 
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../04-ai-fabric-roce/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
     
-  
-    4. AI-фабрика — RoCEv2 / PFC
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../05-multitenancy-security/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    5. Мультитенантность и безопасность
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../06-day2-operations/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    6. Day-2 операции
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../scenarios/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Сценарии дата-центра
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Мониторинг и диагностика
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -930,7 +970,34 @@
   <span class="md-ellipsis">
     
   
-    Справочник CLI
+    Справочник команд CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scenarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Сценарии дата-центра
   
 
     
@@ -970,52 +1037,57 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mlag-multi-chassis-lag" class="md-nav__link">
+  <a href="#evpn-и-vtep" class="md-nav__link">
     <span class="md-ellipsis">
       
-        MLAG (multi-chassis LAG)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="MLAG (multi-chassis LAG)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#шаг-1--port-channel-к-серверу" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Шаг 1 — port-channel к серверу
+        EVPN и VTEP
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#шаг-2--mlag-домен" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#vxlan-устройства" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Шаг 2 — MLAG-домен
+        VXLAN-устройства
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#проверка-mlag" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#vlan--vni-l2-vni" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Проверка MLAG
+        VLAN → VNI (L2-VNI)
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#маршрутизация-vxlan-и-symmetric-irb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Маршрутизация VXLAN и symmetric IRB
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bum-репликация" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BUM-репликация
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1028,22 +1100,27 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="EVPN multihoming (all-active)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#проверка-evpn-mh" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#статические-vxlan-туннели" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Проверка EVPN-MH
+        Статические VXLAN-туннели
       
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#проверка" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Проверка
+      
+    </span>
+  </a>
   
 </li>
       
@@ -1064,68 +1141,123 @@
 
 
 
-<h1 id="3-mlag-и-evpn-multihoming">3. MLAG и EVPN multihoming<a class="headerlink" href="#3-mlag-и-evpn-multihoming" title="Permanent link">&para;</a></h1>
-<p>Двойное подключение серверов к двум leaf даёт избыточность top-of-rack: один leaf
-может отказать без потери стойки. TinyNOS предлагает два подхода —
-<strong>MLAG</strong> (классическая пара с peer-link) и <strong>EVPN-MH</strong> (all-active multihoming на
-основе Ethernet Segment, без peer-link).</p>
-<h2 id="mlag-multi-chassis-lag">MLAG (multi-chassis LAG)<a class="headerlink" href="#mlag-multi-chassis-lag" title="Permanent link">&para;</a></h2>
-<p>MLAG объединяет два leaf в логическую пару с общим anycast-VTEP. Сервер видит один
-LACP-бандл, физически подключённый к обоим коммутаторам.</p>
-<h3 id="шаг-1--port-channel-к-серверу">Шаг 1 — port-channel к серверу<a class="headerlink" href="#шаг-1--port-channel-к-серверу" title="Permanent link">&para;</a></h3>
-<p>На обоих leaf:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>set port-channel id 1 members eth3 mode active
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>set port-channel 1 lacp-rate fast
+<h1 id="сетевая-виртуализация">Сетевая виртуализация<a class="headerlink" href="#сетевая-виртуализация" title="Permanent link">&para;</a></h1>
+<p>Overlay строится поверх настроенного L3-underlay, см. <a href="../layer3/">Layer 3</a>.</p>
+<h2 id="evpn-и-vtep">EVPN и VTEP<a class="headerlink" href="#evpn-и-vtep" title="Permanent link">&para;</a></h2>
+<p>Источник VTEP — loopback, анонсированный в underlay. Чтобы задать источник и включить EVPN-сигнализацию, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>leaf1# set evpn vtep source-ip 10.0.0.1
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>leaf1# set evpn vtep source-interface lo
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>leaf1# set routing bgp evpn neighbor 10.0.0.254 activate
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>leaf1# set evpn advertise-all-vni enable
 </code></pre></div>
-<h3 id="шаг-2--mlag-домен">Шаг 2 — MLAG-домен<a class="headerlink" href="#шаг-2--mlag-домен" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>set mlag domain 1 peer-link bond100 keepalive 169.254.1.2
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>set mlag system-mac 44:38:39:ff:00:01
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>set mlag priority 100
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>set mlag backup-ip 10.0.0.2
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>set mlag dual-attached-bonds bond1
+<p>Для IPv6-underlay задайте IPv6-источник VTEP:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>leaf1# set evpn vtep source-ipv6 2001:db8::1
 </code></pre></div>
-<ul>
-<li><code>peer-link</code> — bond между двумя leaf для синхронизации.</li>
-<li><code>system-mac</code> — общий MAC LACP-системы; <strong>должен совпадать на обоих leaf</strong>.</li>
-<li><code>dual-attached-bonds</code> — серверные бонды, чьи FDB синхронизируются между парой.</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Anycast VTEP</p>
-<p>Оба leaf анонсируют один и тот же loopback как источник VTEP — фабрика видит
-пару как единый VTEP, а ECMP underlay балансирует трафик к ней.</p>
+<p>Чтобы отключить анонс всех VNI, используйте <code>disable</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>leaf1# set evpn advertise-all-vni disable
+</code></pre></div>
+<p>Состояние EVPN и VTEP:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>leaf1&gt; show evpn
+</code></pre></div>
+<h2 id="vxlan-устройства">VXLAN-устройства<a class="headerlink" href="#vxlan-устройства" title="Permanent link">&para;</a></h2>
+<p>UDP-порт VXLAN по умолчанию 4789. Чтобы изменить порт, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>leaf1# set evpn vxlan udp-port 4789
+</code></pre></div>
+<p>Режим single-vxlan-device (SVD) использует одно VXLAN-устройство для всех VNI. Чтобы включить SVD и задать его параметры, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>leaf1# set evpn single-vxlan-device enable true
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>leaf1# set evpn single-vxlan-device name vxlan0
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>leaf1# set evpn single-vxlan-device vni 4096
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>leaf1# set evpn single-vxlan-device dataplane-policy auto
+</code></pre></div>
+<p>Политика <code>dataplane-policy</code> принимает значения <code>auto</code>, <code>native</code>, <code>compat-emulated</code>, <code>external</code>. Значение <code>auto</code> выбирает реализацию по возможностям ядра.</p>
+<p>Чтобы отключить SVD, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>leaf1# set evpn single-vxlan-device enable false
+</code></pre></div>
+<p>Атрибуты инкапсуляции VXLAN задаются отдельно. Чтобы задать MTU, режим MTU, TTL, ToS и L2-обучение, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>leaf1# set evpn vxlan mtu 9000
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>leaf1# set evpn vxlan mtu-mode explicit
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>leaf1# set evpn vxlan ttl 64
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>leaf1# set evpn vxlan ttl inherit
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>leaf1# set evpn vxlan tos inherit
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>leaf1# set evpn vxlan learning off
+</code></pre></div>
+<p>Режим <code>mtu-mode auto</code> выводит MTU из source-устройства. <code>ttl inherit</code> наследует TTL внутреннего пакета. Под управлением EVPN L2-обучение в плоскости данных отключайте через <code>learning off</code>; в нативном и legacy-режимах допустимо <code>learning on</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Ядро для SVD</p>
+<p>Режим single-vxlan-device (SVD) требует ядра Linux ≥ 5.18.</p>
 </div>
-<h3 id="проверка-mlag">Проверка MLAG<a class="headerlink" href="#проверка-mlag" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>leaf1&gt; show mlag detail               # роль, peer-link, состояние keepalive
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>leaf1&gt; show interface brief
+<h2 id="vlan--vni-l2-vni">VLAN → VNI (L2-VNI)<a class="headerlink" href="#vlan--vni-l2-vni" title="Permanent link">&para;</a></h2>
+<p>L2-VNI связывает VLAN с VNI и переносит широковещательный домен через фабрику. Чтобы привязать VLAN к VNI, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>leaf1# set evpn vlan 10 vni 10010
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>leaf1# set vlan-map vlan 10 vni 10010
 </code></pre></div>
-<h2 id="evpn-multihoming-all-active">EVPN multihoming (all-active)<a class="headerlink" href="#evpn-multihoming-all-active" title="Permanent link">&para;</a></h2>
-<p>EVPN-MH не требует peer-link: оба leaf активно форвардят через общий Ethernet
-Segment, петли предотвращаются split-horizon, а отказавший линк убирается выборами
-designated-forwarder.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a># На обоих leaf, на порту к серверному бонду:
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>set interfaces bond1 evpn mh es-id 00:11:22:33:44:55:00:00:00:01
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>set interfaces bond1 evpn mh es-sys-mac 44:38:39:ff:00:01
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>set interfaces bond1 evpn mh es-df-pref 100
+<p>Чтобы включить подавление ARP и задать gateway-MAC для L2-VNI, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>leaf1# set evpn l2-vni 10 arp-suppression enable
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>leaf1# set evpn l2-vni 10 gateway-mac 00:11:22:33:44:55
 </code></pre></div>
-<ul>
-<li><code>es-id</code> — идентификатор Ethernet Segment, <strong>общий</strong> на обоих leaf для этого сервера.</li>
-<li><code>es-sys-mac</code> — LACP system-MAC сегмента.</li>
-<li><code>es-df-pref</code> — предпочтение при выборах DF (выше = предпочтительнее).</li>
-</ul>
-<p>Аплинки в фабрику помечаются, чтобы split-horizon работал корректно:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>set interfaces eth1 evpn mh uplink
+<p>Чтобы отключить подавление ARP, используйте <code>disable</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>leaf1# set evpn l2-vni 10 arp-suppression disable
+</code></pre></div>
+<p>Хост-порт подключается к мосту в режиме access на нужный VLAN:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>leaf1# set interfaces eth3 bridge br-default
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>leaf1# set interfaces eth3 l2 mode access vlan 10
+</code></pre></div>
+<p>Детали по VNI:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>leaf1&gt; show evpn vni detail
+</code></pre></div>
+<h2 id="маршрутизация-vxlan-и-symmetric-irb">Маршрутизация VXLAN и symmetric IRB<a class="headerlink" href="#маршрутизация-vxlan-и-symmetric-irb" title="Permanent link">&para;</a></h2>
+<p>Маршрутизация между VNI выполняется через L3-VNI и VRF. Чтобы создать L3VRF и привязать L3-VNI, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>leaf1# set network-instances tenant-red type l3vrf
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>leaf1# set evpn l3-vni 5000 vrf tenant-red
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>leaf1# set evpn irb-mode symmetric
+</code></pre></div>
+<p>Режим <code>irb-mode</code> принимает <code>symmetric</code> или <code>asymmetric</code>. В symmetric-IRB трафик между подсетями проходит через L3-VNI.</p>
+<p>Anycast-шлюз использует общий MAC на всех leaf. Чтобы задать anycast-MAC, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>leaf1# set evpn anycast-gateway mac 00:00:5e:00:01:01
+</code></pre></div>
+<p>SVI несёт IP-адрес шлюза и виртуальный MAC:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>leaf1# set interfaces vlan 10 ipv4 address 10.10.10.1/24
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>leaf1# set interfaces vlan 10 mac virtual 00:00:5e:00:01:01
+</code></pre></div>
+<p>Чтобы анонсировать default-gateway и SVI-IP через EVPN, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>leaf1# set evpn route-advertise default-gateway on
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>leaf1# set evpn route-advertise svi-ip on
+</code></pre></div>
+<p>Для отключения анонса используйте <code>off</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>leaf1# set evpn route-advertise svi-ip off
+</code></pre></div>
+<h2 id="bum-репликация">BUM-репликация<a class="headerlink" href="#bum-репликация" title="Permanent link">&para;</a></h2>
+<p>BUM-трафик (broadcast, unknown-unicast, multicast) реплицируется одним из двух методов. Чтобы выбрать head-end replication или multicast-group, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>leaf1# set evpn bum-replication head-end-replication
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>leaf1# set evpn bum-replication multicast-group
+</code></pre></div>
+<p>Для multicast-group задайте группу и uplink-интерфейс:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>leaf1# set evpn vxlan multicast-group 239.1.1.1
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>leaf1# set evpn vxlan multicast-uplink-interface eth1
 </code></pre></div>
 <div class="admonition warning">
-<p class="admonition-title">Не смешивайте peer-link и ESI на одном бонде</p>
-<p>Бонд peer-link MLAG не должен одновременно нести EVPN-MH ESI — это вызывает
-коллизию system-mac и неопределённые выборы DF. <code>show blockers</code> отказывает в
-таком commit до применения.</p>
+<p class="admonition-title">Multicast-group требует группы</p>
+<p>Режим multicast-group требует заданной multicast-group, иначе BUM-трафик (ARP/ND) теряется по фабрике.</p>
 </div>
-<h3 id="проверка-evpn-mh">Проверка EVPN-MH<a class="headerlink" href="#проверка-evpn-mh" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>leaf1&gt; show evpn                      # Ethernet Segment, DF-роль
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>leaf1&gt; show bgp l2vpn evpn route      # Type-1 (AD) и Type-4 (ES) маршруты
+<h2 id="evpn-multihoming-all-active">EVPN multihoming (all-active)<a class="headerlink" href="#evpn-multihoming-all-active" title="Permanent link">&para;</a></h2>
+<p>EVPN multihoming подключает хост к двум leaf в режиме all-active через Ethernet Segment. Чтобы настроить сегмент на интерфейсе, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>leaf1# set interfaces eth4 evpn mh es-id 1
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>leaf1# set interfaces eth4 evpn mh es-sys-mac 00:11:22:00:00:01
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>leaf1# set interfaces eth4 evpn mh es-df-pref 100
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>leaf1# set interfaces eth4 evpn mh uplink
 </code></pre></div>
-<p>Дальше: <a href="../04-ai-fabric-roce/">4. AI-фабрика — RoCEv2 / PFC →</a></p>
+<p>Значение <code>es-id</code> одинаковое на обоих коммутаторах сегмента. Большее <code>es-df-pref</code> предпочтительнее при выборах designated-forwarder. Не назначайте ESI на бонд peer-link MLAG.</p>
+<h2 id="статические-vxlan-туннели">Статические VXLAN-туннели<a class="headerlink" href="#статические-vxlan-туннели" title="Permanent link">&para;</a></h2>
+<p>Без EVPN-сигнализации peer-ы задаются вручную через статическую FDB для head-end replication. Чтобы добавить запись, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>leaf1# set bridge br-default static-fdb mac 00:11:22:33:44:66 port vxlan0 dst 10.0.0.2 vlan 10 src_vni 10010
+</code></pre></div>
+<p>Параметр <code>src_vni</code> необязателен и указывает VNI исходного туннеля.</p>
+<h2 id="проверка">Проверка<a class="headerlink" href="#проверка" title="Permanent link">&para;</a></h2>
+<p>Сводка EVPN-сессий и анонсированных маршрутов в BGP:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>leaf1&gt; show bgp l2vpn evpn summary
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>leaf1&gt; show bgp l2vpn evpn route
+</code></pre></div>
+<p>Дальше: <a href="../monitoring/">Мониторинг и диагностика</a></p>
 
 
 
@@ -1161,7 +1293,7 @@ designated-forwarder.</p>
       <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
         
           
-          <a href="../02-evpn-vxlan/" class="md-footer__link md-footer__link--prev" aria-label="Назад: 2. EVPN-VXLAN оверлей">
+          <a href="../layer3/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Layer 3">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1171,20 +1303,20 @@ designated-forwarder.</p>
                 Назад
               </span>
               <div class="md-ellipsis">
-                2. EVPN-VXLAN оверлей
+                Layer 3
               </div>
             </div>
           </a>
         
         
           
-          <a href="../04-ai-fabric-roce/" class="md-footer__link md-footer__link--next" aria-label="Вперед: 4. AI-фабрика — RoCEv2 / PFC">
+          <a href="../monitoring/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Мониторинг и диагностика">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Вперед
               </span>
               <div class="md-ellipsis">
-                4. AI-фабрика — RoCEv2 / PFC
+                Мониторинг и диагностика
               </div>
             </div>
             <div class="md-footer__button md-icon">

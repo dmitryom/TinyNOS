@@ -5,35 +5,35 @@
          <lastmod>2026-06-23</lastmod>
     </url>
     <url>
-         <loc>https://dmitryom.github.io/TinyNOS/config-guide/</loc>
+         <loc>https://dmitryom.github.io/TinyNOS/guide/layer1/</loc>
          <lastmod>2026-06-23</lastmod>
     </url>
     <url>
-         <loc>https://dmitryom.github.io/TinyNOS/config-guide/01-underlay/</loc>
+         <loc>https://dmitryom.github.io/TinyNOS/guide/layer2/</loc>
          <lastmod>2026-06-23</lastmod>
     </url>
     <url>
-         <loc>https://dmitryom.github.io/TinyNOS/config-guide/02-evpn-vxlan/</loc>
+         <loc>https://dmitryom.github.io/TinyNOS/guide/layer3/</loc>
          <lastmod>2026-06-23</lastmod>
     </url>
     <url>
-         <loc>https://dmitryom.github.io/TinyNOS/config-guide/03-mlag-mh/</loc>
+         <loc>https://dmitryom.github.io/TinyNOS/guide/monitoring/</loc>
          <lastmod>2026-06-23</lastmod>
     </url>
     <url>
-         <loc>https://dmitryom.github.io/TinyNOS/config-guide/04-ai-fabric-roce/</loc>
+         <loc>https://dmitryom.github.io/TinyNOS/guide/network-virtualization/</loc>
          <lastmod>2026-06-23</lastmod>
     </url>
     <url>
-         <loc>https://dmitryom.github.io/TinyNOS/config-guide/05-multitenancy-security/</loc>
+         <loc>https://dmitryom.github.io/TinyNOS/guide/quick-start/</loc>
          <lastmod>2026-06-23</lastmod>
     </url>
     <url>
-         <loc>https://dmitryom.github.io/TinyNOS/config-guide/06-day2-operations/</loc>
+         <loc>https://dmitryom.github.io/TinyNOS/guide/scenarios/</loc>
          <lastmod>2026-06-23</lastmod>
     </url>
     <url>
-         <loc>https://dmitryom.github.io/TinyNOS/config-guide/scenarios/</loc>
+         <loc>https://dmitryom.github.io/TinyNOS/guide/system/</loc>
          <lastmod>2026-06-23</lastmod>
     </url>
     <url>

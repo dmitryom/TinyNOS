@@ -12,31 +12,31 @@
         <meta name="author" content="TinyNOS maintainers">
       
       
-        <link rel="canonical" href="https://dmitryom.github.io/TinyNOS/config-guide/">
+        <link rel="canonical" href="https://dmitryom.github.io/TinyNOS/guide/layer2/">
       
       
-        <link rel="prev" href="../product/feature-matrix/">
+        <link rel="prev" href="../layer1/">
       
       
-        <link rel="next" href="01-underlay/">
+        <link rel="next" href="../layer3/">
       
       
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Обзор - TinyNOS</title>
+        <title>Layer 2 - TinyNOS</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,9 +55,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/brand.css">
+      <link rel="stylesheet" href="../../assets/brand.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#руководство-по-настройке-tinynos" class="md-skip">
+        <a href="#layer-2" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -98,7 +98,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
-    <a href=".." title="TinyNOS" class="md-header__button md-logo" aria-label="TinyNOS" data-md-component="logo">
+    <a href="../.." title="TinyNOS" class="md-header__button md-logo" aria-label="TinyNOS" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Обзор
+              Layer 2
             
           </span>
         </div>
@@ -225,13 +225,13 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
     
   
-  Главная
+  Обзор
 
       </a>
     </li>
@@ -246,7 +246,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../product/datasheet/" class="md-tabs__link">
+        <a href="../../product/datasheet/" class="md-tabs__link">
           
   
   
@@ -264,23 +264,18 @@
   
   
   
-    
   
-  
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../quick-start/" class="md-tabs__link">
+        
   
   
     
   
-  Руководство по настройке
+  Быстрый старт
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -290,13 +285,148 @@
   
   
     <li class="md-tabs__item">
-      <a href="../reference/cli/" class="md-tabs__link">
+      <a href="../system/" class="md-tabs__link">
         
   
   
     
   
-  Справочник CLI
+  Настройка системы
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../layer1/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Layer 1 и порты
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Layer 2
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../layer3/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Layer 3
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../network-virtualization/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Сетевая виртуализация
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../monitoring/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Мониторинг и диагностика
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../reference/cli/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Справочник команд CLI
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../scenarios/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Сценарии дата-центра
 
       </a>
     </li>
@@ -331,7 +461,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навигация" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="TinyNOS" class="md-nav__button md-logo" aria-label="TinyNOS" data-md-component="logo">
+    <a href="../.." title="TinyNOS" class="md-nav__button md-logo" aria-label="TinyNOS" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -361,14 +491,14 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Главная
+    Обзор
   
 
     
@@ -446,7 +576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../product/datasheet/" class="md-nav__link">
+      <a href="../../product/datasheet/" class="md-nav__link">
         
   
   
@@ -474,7 +604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../product/feature-matrix/" class="md-nav__link">
+      <a href="../../product/feature-matrix/" class="md-nav__link">
         
   
   
@@ -506,59 +636,107 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick-start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
     
   
+    Быстрый старт
   
-  
+
     
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
     
       
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system/" class="md-nav__link">
         
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Настройка системы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../layer1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Layer 1 и порты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
           
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-        
-        
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
-              
   
   
   <span class="md-ellipsis">
     
   
-    Руководство по настройке
+    Layer 2
   
 
     
@@ -566,43 +744,141 @@
   
   
 
-            </a>
-            
-              
-              <label class="md-nav__link md-nav__link--active" for="__nav_3" id="__nav_3_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Руководство по настройке
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="01-underlay/" class="md-nav__link">
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Underlay — BGP / OSPF / BFD
+    Layer 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vlan-и-ethernet-бриджинг" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VLAN и Ethernet-бриджинг
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lldp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LLDP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spanning-tree-stp--rstp--mstp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spanning Tree (STP / RSTP / MSTP)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storm-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Storm control
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#агрегация-каналов-lacp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Агрегация каналов (LACP)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mlag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MLAG
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#igmp--mld-snooping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IGMP / MLD snooping
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../layer3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Layer 3
   
 
     
@@ -614,23 +890,22 @@
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
   
   
   
   
     <li class="md-nav__item">
-      <a href="02-evpn-vxlan/" class="md-nav__link">
+      <a href="../network-virtualization/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. EVPN-VXLAN оверлей
+    Сетевая виртуализация
   
 
     
@@ -642,23 +917,22 @@
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
   
   
   
   
     <li class="md-nav__item">
-      <a href="03-mlag-mh/" class="md-nav__link">
+      <a href="../monitoring/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. MLAG и EVPN multihoming
+    Мониторинг и диагностика
   
 
     
@@ -670,23 +944,22 @@
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
   
   
   
   
     <li class="md-nav__item">
-      <a href="04-ai-fabric-roce/" class="md-nav__link">
+      <a href="../../reference/cli/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. AI-фабрика — RoCEv2 / PFC
+    Справочник команд CLI
   
 
     
@@ -698,72 +971,15 @@
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
   
   
   
   
     <li class="md-nav__item">
-      <a href="05-multitenancy-security/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    5. Мультитенантность и безопасность
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="06-day2-operations/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    6. Day-2 операции
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="scenarios/" class="md-nav__link">
+      <a href="../scenarios/" class="md-nav__link">
         
   
   
@@ -771,41 +987,6 @@
     
   
     Сценарии дата-центра
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../reference/cli/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Справочник CLI
   
 
     
@@ -845,10 +1026,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#модель-конфигурации" class="md-nav__link">
+  <a href="#vlan-и-ethernet-бриджинг" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Модель конфигурации
+        VLAN и Ethernet-бриджинг
       
     </span>
   </a>
@@ -856,10 +1037,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#безопасный-цикл-изменений" class="md-nav__link">
+  <a href="#lldp" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Безопасный цикл изменений
+        LLDP
       
     </span>
   </a>
@@ -867,10 +1048,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#режимы-cli-и-навигация" class="md-nav__link">
+  <a href="#spanning-tree-stp--rstp--mstp" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Режимы CLI и навигация
+        Spanning Tree (STP / RSTP / MSTP)
       
     </span>
   </a>
@@ -878,10 +1059,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#управление-системой-и-доступом" class="md-nav__link">
+  <a href="#storm-control" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Управление системой и доступом
+        Storm control
       
     </span>
   </a>
@@ -889,85 +1070,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#с-чего-начать" class="md-nav__link">
+  <a href="#агрегация-каналов-lacp" class="md-nav__link">
     <span class="md-ellipsis">
       
-        С чего начать
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="С чего начать">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-underlay--bgp--ospf--bfd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Underlay — BGP / OSPF / BFD
+        Агрегация каналов (LACP)
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#2-evpn-vxlan-оверлей" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#mlag" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. EVPN-VXLAN оверлей
+        MLAG
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#3-mlag-и-evpn-multihoming" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#igmp--mld-snooping" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. MLAG и EVPN multihoming
+        IGMP / MLD snooping
       
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-ai-фабрика--rocev2--pfc" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. AI-фабрика — RoCEv2 / PFC
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-мультитенантность-и-безопасность" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Мультитенантность и безопасность
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-day-2-операции" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Day-2 операции
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -988,122 +1119,127 @@
 
 
 
-<h1 id="руководство-по-настройке-tinynos">Руководство по настройке TinyNOS<a class="headerlink" href="#руководство-по-настройке-tinynos" title="Permanent link">&para;</a></h1>
-<p>Практическое руководство оператора: как настраивать TinyNOS с безопасным,
-транзакционным циклом изменений. Точный синтаксис всех команд — в
-<a href="../reference/cli/">Справочнике CLI</a>.</p>
-<h2 id="модель-конфигурации">Модель конфигурации<a class="headerlink" href="#модель-конфигурации" title="Permanent link">&para;</a></h2>
-<p>TinyNOS использует трёхуровневую модель управления конфигурацией:</p>
-<table>
-<thead>
-<tr>
-<th>Уровень</th>
-<th>Назначение</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Candidate</strong></td>
-<td>Рабочая копия. Все правки <code>set</code> / <code>delete</code> вносятся сюда.</td>
-</tr>
-<tr>
-<td><strong>Running</strong></td>
-<td>Конфигурация, активно применённая в системе сейчас.</td>
-</tr>
-<tr>
-<td><strong>Startup</strong></td>
-<td>Конфигурация, загружаемая при следующем запуске.</td>
-</tr>
-</tbody>
-</table>
-<p>Ключевой принцип: <strong>изменение применяется полностью либо полностью откатывается —
-никогда наполовину.</strong> Каждый <code>commit</code> проходит конвейер из шести стадий
-(проверка → семантика → рендеринг → preflight → применение → постпроверка); любой
-сбой автоматически откатывает изменение начисто.</p>
-<h2 id="безопасный-цикл-изменений">Безопасный цикл изменений<a class="headerlink" href="#безопасный-цикл-изменений" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>leaf1&gt; configure                      # вход в режим редактирования
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>leaf1(config)# set ...                # правки в candidate
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>leaf1(config)# validate               # синтаксис + семантика
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>leaf1(config)# compare candidate running   # diff перед применением
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>leaf1(config)# commit                 # атомарное применение в running
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>leaf1(config)# save                   # сохранение running в startup
+<h1 id="layer-2">Layer 2<a class="headerlink" href="#layer-2" title="Permanent link">&para;</a></h1>
+<h2 id="vlan-и-ethernet-бриджинг">VLAN и Ethernet-бриджинг<a class="headerlink" href="#vlan-и-ethernet-бриджинг" title="Permanent link">&para;</a></h2>
+<p>Чтобы объявить VLAN в базе и задать ему имя, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>leaf1# set vlans vlan 10 name web
+</code></pre></div>
+<p>Чтобы объявить диапазон VLAN одной командой, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>leaf1# set vlans vlan 100-120
+</code></pre></div>
+<p>Чтобы создать мост и задать его параметры, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>leaf1# set bridges bridge br0 create
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>leaf1# set bridges bridge br0 mtu 9216
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>leaf1# set bridges bridge br0 vlan-protocol 802.1q
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>leaf1# set bridges bridge br0 mac aging-time 300
+</code></pre></div>
+<p>Для QinQ задайте <code>vlan-protocol 802.1ad</code>.</p>
+<p>Чтобы привязать порт к мосту и назначить порт доступа в VLAN, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>leaf1# set interfaces eth3 bridge br0
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>leaf1# set interfaces eth3 l2 mode access vlan 10
+</code></pre></div>
+<p>Чтобы настроить транк с перечнем разрешённых VLAN, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>leaf1# set interfaces eth4 bridge br0
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>leaf1# set interfaces eth4 l2 mode trunk allowed-vlans 10,20
+</code></pre></div>
+<p>Чтобы добавить статическую запись MAC в таблицу FDB, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>leaf1# set bridge br0 static-fdb mac 00:11:22:33:44:55 port eth3 vlan 10
+</code></pre></div>
+<p>Просмотр состояния мостов и таблицы MAC:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>leaf1&gt; show bridges
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>leaf1&gt; show bridge fdb bridge br0
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>leaf1&gt; show mac-address-table
+</code></pre></div>
+<h2 id="lldp">LLDP<a class="headerlink" href="#lldp" title="Permanent link">&para;</a></h2>
+<p>Чтобы включить LLDP на порту, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>leaf1# set interfaces eth1 lldp enable on
+</code></pre></div>
+<p>Чтобы передавать LLDP-MED политику для приложения (VLAN, приоритет 802.1p, DSCP), выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>leaf1# set lldp interface eth1 med policy voice vlan 100 priority 5 dscp 46
+</code></pre></div>
+<p>Просмотр соседей:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>leaf1&gt; show lldp neighbors
+</code></pre></div>
+<h2 id="spanning-tree-stp--rstp--mstp">Spanning Tree (STP / RSTP / MSTP)<a class="headerlink" href="#spanning-tree-stp--rstp--mstp" title="Permanent link">&para;</a></h2>
+<p>Чтобы включить spanning tree на мосту и выбрать режим, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>leaf1# set bridges bridge br0 stp enable
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>leaf1# set bridges bridge br0 stp mode rstp
+</code></pre></div>
+<p>Для отключения протокола задайте <code>stp disable</code> или <code>stp mode none</code>.</p>
+<p>Чтобы задать приоритет моста и таймеры, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>leaf1# set bridges bridge br0 stp priority 4096
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>leaf1# set bridges bridge br0 stp hello-time 2
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>leaf1# set bridges bridge br0 stp forward-delay 15
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>leaf1# set bridges bridge br0 stp max-age 20
+</code></pre></div>
+<p>Чтобы настроить защиту и параметры порта моста, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>leaf1# set interfaces eth3 bridge-port bpdu-guard enable
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>leaf1# set interfaces eth3 bridge-port bpdu-filter disable
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>leaf1# set interfaces eth3 bridge-port cost 20000
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>leaf1# set interfaces eth3 bridge-port flood off
+</code></pre></div>
+<p>Чтобы настроить MSTP-регион и инстанс, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>leaf1# set mstp region name DC1
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>leaf1# set mstp region revision 1
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>leaf1# set mstp instance 1 vlan 10,20
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>leaf1# set mstp instance 1 bridge br0 priority 8192
+</code></pre></div>
+<p>Просмотр состояния MSTP:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>leaf1&gt; show mstp
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Режимы RSTP/MSTP</p>
+<p>RSTP и MSTP применяются через mstpctl. Утилита входит в lab-образ; на стандартном Debian 12 установите её отдельно.</p>
+</div>
+<h2 id="storm-control">Storm control<a class="headerlink" href="#storm-control" title="Permanent link">&para;</a></h2>
+<p>Чтобы ограничить полосу broadcast-, multicast- и unknown-unicast-трафика на порту (в kbps), выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>leaf1# set storm-control interface eth3 broadcast 1000
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>leaf1# set storm-control interface eth3 multicast 2000
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>leaf1# set storm-control interface eth3 unknown-unicast 1000
+</code></pre></div>
+<h2 id="агрегация-каналов-lacp">Агрегация каналов (LACP)<a class="headerlink" href="#агрегация-каналов-lacp" title="Permanent link">&para;</a></h2>
+<p>Чтобы создать port-channel с перечнем членов и режимом, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>leaf1# set port-channel id 1 members eth1,eth2 mode active
+</code></pre></div>
+<p>Чтобы задать параметры агрегата, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>leaf1# set port-channel 1 lacp-rate fast
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>leaf1# set port-channel 1 xmit-hash-policy layer3+4
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>leaf1# set port-channel 1 miimon 100
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>leaf1# set port-channel 1 updelay 200
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>leaf1# set port-channel 1 downdelay 200
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>leaf1# set port-channel id 1 mac 00:11:22:aa:bb:cc
+</code></pre></div>
+<p>Чтобы добавить интерфейс в агрегат отдельной командой, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>leaf1# set interfaces eth3 channel-group id 1 mode active
+</code></pre></div>
+<p>Просмотр счётчиков LACP:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>leaf1&gt; show lacp counters
+</code></pre></div>
+<h2 id="mlag">MLAG<a class="headerlink" href="#mlag" title="Permanent link">&para;</a></h2>
+<p>Чтобы настроить MLAG-домен, peer-link и keepalive, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>leaf1# set mlag domain 1 peer-link bond0 keepalive 10.0.0.2
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>leaf1# set mlag system-mac 44:38:39:ff:00:01
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>leaf1# set mlag priority 100
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>leaf1# set mlag backup-ip 192.168.0.2
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>leaf1# set mlag dual-attached-bonds bond1,bond2
+</code></pre></div>
+<p>Просмотр состояния пары:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>leaf1&gt; show mlag detail
 </code></pre></div>
 <div class="admonition tip">
-<p class="admonition-title">Удалённая настройка через SSH</p>
-<p>Всегда используйте <code>commit confirmed</code>, чтобы не потерять доступ при ошибке:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>leaf1(config)# commit confirmed 5     # авто-откат через 5 минут
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a># проверьте связь, и если всё хорошо:
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>leaf1(config)# confirm
+<p class="admonition-title">Согласование system-mac</p>
+<p>Значение system-mac должно совпадать на обоих коммутаторах пары MLAG.</p>
+</div>
+<h2 id="igmp--mld-snooping">IGMP / MLD snooping<a class="headerlink" href="#igmp--mld-snooping" title="Permanent link">&para;</a></h2>
+<p>Чтобы включить snooping и querier на мосту, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>leaf1# set bridges bridge br0 igmp-snooping enable
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>leaf1# set bridges bridge br0 igmp-snooping querier enable
 </code></pre></div>
-Если связь потеряна — изменение откатится само, и доступ восстановится.</p>
-</div>
-<h2 id="режимы-cli-и-навигация">Режимы CLI и навигация<a class="headerlink" href="#режимы-cli-и-навигация" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Режим</th>
-<th>Промпт</th>
-<th>Назначение</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Операционный</td>
-<td><code>leaf1&gt;</code></td>
-<td><code>show</code>, диагностика (<code>ping</code>, <code>traceroute</code>), управление сессиями</td>
-</tr>
-<tr>
-<td>Конфигурационный</td>
-<td><code>leaf1(config)#</code></td>
-<td>изменение candidate-конфигурации</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><code>?</code> — контекстная справка в любом месте команды.</li>
-<li><code>Tab</code> — автодополнение команд и имён интерфейсов.</li>
-<li><code>exit</code> / <code>quit</code> — выход из режима; <code>end</code> — сразу в операционный режим.</li>
-</ul>
-<h2 id="управление-системой-и-доступом">Управление системой и доступом<a class="headerlink" href="#управление-системой-и-доступом" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>set system hostname &lt;name&gt;                 # имя хоста (формирует промпт)
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>set system domain-name &lt;domain&gt;            # доменное имя
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a># Ролевой доступ (RBAC)
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>set aaa role readonly permit show*
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>set aaa role admin permit *
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>set aaa user &lt;username&gt; role role &lt;rolename&gt;
+<p>Для отключения задайте <code>igmp-snooping disable</code>.</p>
+<p>Просмотр многоадресной базы моста:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>leaf1&gt; show bridge mdb bridge br0
 </code></pre></div>
-<h2 id="с-чего-начать">С чего начать<a class="headerlink" href="#с-чего-начать" title="Permanent link">&para;</a></h2>
-<p>Соберите конфигурацию по слоям — снизу вверх. Каждая глава самодостаточна для
-точечной настройки, но при первичном bring-up читайте по порядку:</p>
-<div class="tn-grid">
-<div class="tn-card">
-<h3 id="1-underlay--bgp--ospf--bfd"><a href="01-underlay/">1. Underlay — BGP / OSPF / BFD</a><a class="headerlink" href="#1-underlay--bgp--ospf--bfd" title="Permanent link">&para;</a></h3>
-<p>Базовая IP-связность leaf-spine: интерфейсы, loopback, BGP unnumbered или
-нумерованный, OSPF, субсекундный BFD.</p>
-</div>
-<div class="tn-card">
-<h3 id="2-evpn-vxlan-оверлей"><a href="02-evpn-vxlan/">2. EVPN-VXLAN оверлей</a><a class="headerlink" href="#2-evpn-vxlan-оверлей" title="Permanent link">&para;</a></h3>
-<p>VTEP, маппинг VLAN→VNI, symmetric IRB, anycast-шлюз, EVPN Type-2/3/5.</p>
-</div>
-<div class="tn-card">
-<h3 id="3-mlag-и-evpn-multihoming"><a href="03-mlag-mh/">3. MLAG и EVPN multihoming</a><a class="headerlink" href="#3-mlag-и-evpn-multihoming" title="Permanent link">&para;</a></h3>
-<p>Двойно-активная избыточность top-of-rack: MLAG-домен и all-active EVPN-MH.</p>
-</div>
-<div class="tn-card">
-<h3 id="4-ai-фабрика--rocev2--pfc"><a href="04-ai-fabric-roce/">4. AI-фабрика — RoCEv2 / PFC</a><a class="headerlink" href="#4-ai-фабрика--rocev2--pfc" title="Permanent link">&para;</a></h3>
-<p>Lossless-транспорт для RDMA/GPU: PFC, ECN/WRED, ETS, профиль RoCEv2.</p>
-</div>
-<div class="tn-card">
-<h3 id="5-мультитенантность-и-безопасность"><a href="05-multitenancy-security/">5. Мультитенантность и безопасность</a><a class="headerlink" href="#5-мультитенантность-и-безопасность" title="Permanent link">&para;</a></h3>
-<p>VRF и route-leaking, ACL, CoPP, first-hop security, storm control.</p>
-</div>
-<div class="tn-card">
-<h3 id="6-day-2-операции"><a href="06-day2-operations/">6. Day-2 операции</a><a class="headerlink" href="#6-day-2-операции" title="Permanent link">&para;</a></h3>
-<p>Сессии, блокировки, checkpoints, откаты, диагностика и наблюдаемость.</p>
-</div>
-</div>
-<p>Готовые пошаговые топологии — в разделе <a href="scenarios/">Сценарии дата-центра</a>.</p>
+<p>Дальше: <a href="../layer3/">Layer 3</a></p>
 
 
 
@@ -1139,7 +1275,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
         
           
-          <a href="../product/feature-matrix/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Спецификация функций">
+          <a href="../layer1/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Layer 1 и порты">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1149,20 +1285,20 @@
                 Назад
               </span>
               <div class="md-ellipsis">
-                Спецификация функций
+                Layer 1 и порты
               </div>
             </div>
           </a>
         
         
           
-          <a href="01-underlay/" class="md-footer__link md-footer__link--next" aria-label="Вперед: 1. Underlay — BGP / OSPF / BFD">
+          <a href="../layer3/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Layer 3">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Вперед
               </span>
               <div class="md-ellipsis">
-                1. Underlay — BGP / OSPF / BFD
+                Layer 3
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1216,10 +1352,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.footer", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.footer", "navigation.indexes", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

@@ -12,13 +12,13 @@
         <meta name="author" content="TinyNOS maintainers">
       
       
-        <link rel="canonical" href="https://dmitryom.github.io/TinyNOS/config-guide/05-multitenancy-security/">
+        <link rel="canonical" href="https://dmitryom.github.io/TinyNOS/guide/monitoring/">
       
       
-        <link rel="prev" href="../04-ai-fabric-roce/">
+        <link rel="prev" href="../network-virtualization/">
       
       
-        <link rel="next" href="../06-day2-operations/">
+        <link rel="next" href="../../reference/cli/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>5. Мультитенантность и безопасность - TinyNOS</title>
+        <title>Мониторинг и диагностика - TinyNOS</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#5-мультитенантность-и-безопасность" class="md-skip">
+        <a href="#мониторинг-и-диагностика" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              5. Мультитенантность и безопасность
+              Мониторинг и диагностика
             
           </span>
         </div>
@@ -231,7 +231,7 @@
   
     
   
-  Главная
+  Обзор
 
       </a>
     </li>
@@ -264,23 +264,134 @@
   
   
   
-    
   
-  
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../quick-start/" class="md-tabs__link">
+        
   
   
     
   
-  Руководство по настройке
+  Быстрый старт
 
-        </a>
-      </li>
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../system/" class="md-tabs__link">
+        
+  
+  
     
+  
+  Настройка системы
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../layer1/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Layer 1 и порты
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../layer2/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Layer 2
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../layer3/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Layer 3
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../network-virtualization/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Сетевая виртуализация
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Мониторинг и диагностика
+
+      </a>
+    </li>
   
 
       
@@ -296,7 +407,26 @@
   
     
   
-  Справочник CLI
+  Справочник команд CLI
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../scenarios/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Сценарии дата-центра
 
       </a>
     </li>
@@ -368,7 +498,7 @@
   <span class="md-ellipsis">
     
   
-    Главная
+    Обзор
   
 
     
@@ -506,103 +636,17 @@
       
   
   
-    
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-        
-        
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Руководство по настройке
-  
-
-    
-  </span>
-  
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Руководство по настройке
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
   
   
     <li class="md-nav__item">
-      <a href="../01-underlay/" class="md-nav__link">
+      <a href="../quick-start/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    1. Underlay — BGP / OSPF / BFD
+    Быстрый старт
   
 
     
@@ -614,23 +658,22 @@
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
   
   
   
   
     <li class="md-nav__item">
-      <a href="../02-evpn-vxlan/" class="md-nav__link">
+      <a href="../system/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. EVPN-VXLAN оверлей
+    Настройка системы
   
 
     
@@ -642,23 +685,22 @@
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
   
   
   
   
     <li class="md-nav__item">
-      <a href="../03-mlag-mh/" class="md-nav__link">
+      <a href="../layer1/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    3. MLAG и EVPN multihoming
+    Layer 1 и порты
   
 
     
@@ -670,23 +712,22 @@
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
   
   
   
   
     <li class="md-nav__item">
-      <a href="../04-ai-fabric-roce/" class="md-nav__link">
+      <a href="../layer2/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    4. AI-фабрика — RoCEv2 / PFC
+    Layer 2
   
 
     
@@ -698,10 +739,63 @@
     </li>
   
 
-              
-            
-              
-                
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../layer3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Layer 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../network-virtualization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Сетевая виртуализация
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
   
   
     
@@ -723,7 +817,7 @@
   <span class="md-ellipsis">
     
   
-    5. Мультитенантность и безопасность
+    Мониторинг и диагностика
   
 
     
@@ -741,7 +835,7 @@
   <span class="md-ellipsis">
     
   
-    5. Мультитенантность и безопасность
+    Мониторинг и диагностика
   
 
     
@@ -767,10 +861,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vrf-и-route-leaking" class="md-nav__link">
+  <a href="#состояние" class="md-nav__link">
     <span class="md-ellipsis">
       
-        VRF и route-leaking
+        Состояние
       
     </span>
   </a>
@@ -778,10 +872,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#acl" class="md-nav__link">
+  <a href="#диагностика" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ACL
+        Диагностика
       
     </span>
   </a>
@@ -789,10 +883,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#control-plane-policing-copp" class="md-nav__link">
+  <a href="#наблюдаемость" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Control-plane policing (CoPP)
+        Наблюдаемость
       
     </span>
   </a>
@@ -800,43 +894,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#first-hop-security" class="md-nav__link">
+  <a href="#импорт-состояния" class="md-nav__link">
     <span class="md-ellipsis">
       
-        First-hop security
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#storm-control" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Storm control
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#контроль-доступа-rbac-tacacsradius" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Контроль доступа (RBAC, TACACS+/RADIUS)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#проверка" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Проверка
+        Импорт состояния
       
     </span>
   </a>
@@ -846,70 +907,6 @@
     </ul>
   
 </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../06-day2-operations/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    6. Day-2 операции
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../scenarios/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Сценарии дата-центра
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -929,7 +926,34 @@
   <span class="md-ellipsis">
     
   
-    Справочник CLI
+    Справочник команд CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scenarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Сценарии дата-центра
   
 
     
@@ -969,10 +993,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#vrf-и-route-leaking" class="md-nav__link">
+  <a href="#состояние" class="md-nav__link">
     <span class="md-ellipsis">
       
-        VRF и route-leaking
+        Состояние
       
     </span>
   </a>
@@ -980,10 +1004,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#acl" class="md-nav__link">
+  <a href="#диагностика" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ACL
+        Диагностика
       
     </span>
   </a>
@@ -991,10 +1015,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#control-plane-policing-copp" class="md-nav__link">
+  <a href="#наблюдаемость" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Control-plane policing (CoPP)
+        Наблюдаемость
       
     </span>
   </a>
@@ -1002,43 +1026,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#first-hop-security" class="md-nav__link">
+  <a href="#импорт-состояния" class="md-nav__link">
     <span class="md-ellipsis">
       
-        First-hop security
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#storm-control" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Storm control
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#контроль-доступа-rbac-tacacsradius" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Контроль доступа (RBAC, TACACS+/RADIUS)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#проверка" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Проверка
+        Импорт состояния
       
     </span>
   </a>
@@ -1062,86 +1053,95 @@
 
 
 
-<h1 id="5-мультитенантность-и-безопасность">5. Мультитенантность и безопасность<a class="headerlink" href="#5-мультитенантность-и-безопасность" title="Permanent link">&para;</a></h1>
-<p>Эта глава охватывает изоляцию тенантов через VRF и набор защитных механизмов:
-ACL, control-plane policing, first-hop security и storm control.</p>
-<h2 id="vrf-и-route-leaking">VRF и route-leaking<a class="headerlink" href="#vrf-и-route-leaking" title="Permanent link">&para;</a></h2>
-<p>VRF даёт жёсткое разделение между тенантами, задачами или окружениями:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>set network-instances RED type l3vrf
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>set vrf RED rd 65001:100
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>set vrf RED interface vlan 10
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>set vrf RED interface vlan 20
+<h1 id="мониторинг-и-диагностика">Мониторинг и диагностика<a class="headerlink" href="#мониторинг-и-диагностика" title="Permanent link">&para;</a></h1>
+<p>Команды этого раздела выполняются в операционном режиме, приглашение оканчивается на <code>&gt;</code>.</p>
+<h2 id="состояние">Состояние<a class="headerlink" href="#состояние" title="Permanent link">&para;</a></h2>
+<p>Чтобы посмотреть состояние интерфейсов, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>leaf1&gt; show interface brief
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>leaf1&gt; show interface status
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>leaf1&gt; show interface eth1 counters
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>leaf1&gt; show interface eth1 counters errors
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>leaf1&gt; show interface eth1 counters rates
 </code></pre></div>
-<p>Контролируемый обмен маршрутами между VRF — через route-target:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>set vrf RED route-leak export 65001:100
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>set vrf RED route-leak import 65001:200       # принять маршруты из соседнего VRF
+<p>Состояние маршрутизации и наложенных сетей:</p>
+<table>
+<thead>
+<tr>
+<th>Команда</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>show bgp summary</code></td>
+<td>Сводка BGP-сессий</td>
+</tr>
+<tr>
+<td><code>show evpn</code></td>
+<td>Состояние EVPN</td>
+</tr>
+<tr>
+<td><code>show ip route</code></td>
+<td>Таблица маршрутов</td>
+</tr>
+<tr>
+<td><code>show ip route &lt;prefix&gt;</code></td>
+<td>Маршрут для заданного префикса</td>
+</tr>
+<tr>
+<td><code>show mlag</code></td>
+<td>Состояние MLAG</td>
+</tr>
+<tr>
+<td><code>show mlag detail</code></td>
+<td>Подробное состояние MLAG</td>
+</tr>
+<tr>
+<td><code>show lldp neighbors</code></td>
+<td>Соседи по LLDP</td>
+</tr>
+<tr>
+<td><code>show dcb</code></td>
+<td>Состояние DCB</td>
+</tr>
+<tr>
+<td><code>show dcb interface &lt;ifname&gt;</code></td>
+<td>DCB на заданном интерфейсе</td>
+</tr>
+<tr>
+<td><code>show bfd</code></td>
+<td>Сессии BFD</td>
+</tr>
+<tr>
+<td><code>show isis adjacency</code></td>
+<td>Смежности IS-IS</td>
+</tr>
+</tbody>
+</table>
+<h2 id="диагностика">Диагностика<a class="headerlink" href="#диагностика" title="Permanent link">&para;</a></h2>
+<p>Чтобы проверить доступность узла, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>leaf1&gt; ping 10.0.0.0 count 5
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>leaf1&gt; ping 10.0.0.0 count 5 vrf red
 </code></pre></div>
-<h2 id="acl">ACL<a class="headerlink" href="#acl" title="Permanent link">&para;</a></h2>
-<p>ACL — stateless-фильтрация с поддержкой L4-портов, временных окон и QoS-ремаркинга.
-Имена ACL регистронезависимы. Правила нумеруются (<code>&lt;seq&gt;</code>):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>set acl name guard 10 permit proto tcp dst-port 443
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>set acl name guard 20 permit proto tcp dst-port 22 src 10.0.0.0/8
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>set acl name guard 30 deny src 0.0.0.0/0          # default-deny в конце
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>set acl name guard 30 deny log
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a># Привязка к интерфейсу (направление in / out):
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>set interfaces eth3 acl in guard
+<p>Чтобы построить путь до узла, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>leaf1&gt; traceroute 10.0.0.0 max-hops 15
 </code></pre></div>
-<p>Ремаркинг и действия:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>set acl name mark 10 permit proto udp dst-port 4791 set dscp 26   # RoCEv2 → DSCP 26
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>set acl name mark 20 permit set priority 5
+<p>Чтобы запустить самопроверку узла, выполните <code>health check</code>.</p>
+<p>Чтобы проверить физическую линию на интерфейсе, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>leaf1&gt; run interface eth1 cable-test
 </code></pre></div>
-<div class="admonition tip">
-<p class="admonition-title">Временны́е ACL</p>
-<p>Правило можно ограничить окном времени:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>set acl name maint 10 permit src 10.9.0.0/24 time 22:00-06:00
-</code></pre></div></p>
-</div>
-<h2 id="control-plane-policing-copp">Control-plane policing (CoPP)<a class="headerlink" href="#control-plane-policing-copp" title="Permanent link">&para;</a></h2>
-<p>CoPP защищает CPU коммутатора от флудов. Готовый профиль включается одной командой:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>set copp profile default
+<h2 id="наблюдаемость">Наблюдаемость<a class="headerlink" href="#наблюдаемость" title="Permanent link">&para;</a></h2>
+<p>Каждый компонент TinyNOS публикует метрики Prometheus, доступные для сбора внешней системой мониторинга. События и операции пишутся в структурированный лог в формате JSON, пригодный для пересылки в централизованный сборщик. Потоковая телеметрия предоставляется через gNMI Subscribe в режимах SAMPLE (периодическая выборка) и ON_CHANGE (по изменению значения). Действия операторов и применения конфигурации фиксируются в журнале аудита в режиме append-only.</p>
+<h2 id="импорт-состояния">Импорт состояния<a class="headerlink" href="#импорт-состояния" title="Permanent link">&para;</a></h2>
+<p>При вводе TinyNOS на узле, который уже настроен, текущее состояние переносится в candidate.</p>
+<p>Чтобы импортировать текущие адреса и интерфейсы, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>leaf1# import running linux
 </code></pre></div>
-<p>Или собственные классы:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>set copp class bgp rate 2000 burst 4000        # pps
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>set copp class bgp protocol bgp
+<p>Чтобы импортировать текущие маршруты и настройки маршрутизации, выполните:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>leaf1# import running frr
 </code></pre></div>
-<h2 id="first-hop-security">First-hop security<a class="headerlink" href="#first-hop-security" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a># DHCP snooping
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>set dhcp-snooping enable
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>set dhcp-snooping vlan 10
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>set dhcp-snooping interface eth1 trusted        # uplink к DHCP-серверу
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a># Dynamic ARP Inspection (использует binding из snooping)
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>set arp-inspection vlan 10
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a># IP Source Guard (привязка IP+MAC к порту)
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>set ip-source-guard interface eth3 ip 10.10.10.50 mac 00:11:22:33:44:55
-</code></pre></div>
-<h2 id="storm-control">Storm control<a class="headerlink" href="#storm-control" title="Permanent link">&para;</a></h2>
-<p>Лимит широковещательного/мультикаст/unknown-unicast шторма (в kbps на интерфейс):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>set storm-control interface eth3 broadcast 1000
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>set storm-control interface eth3 multicast 2000
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>set storm-control interface eth3 unknown-unicast 1000
-</code></pre></div>
-<h2 id="контроль-доступа-rbac-tacacsradius">Контроль доступа (RBAC, TACACS+/RADIUS)<a class="headerlink" href="#контроль-доступа-rbac-tacacsradius" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>set aaa role netops permit show*
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>set aaa role netops permit configure
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>set aaa user alice role role netops
-</code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">Не блокируйте себя</p>
-<p>При включении удалённой аутентификации (TACACS+/RADIUS) всегда оставляйте
-локальный fallback и хотя бы одного локального пользователя — иначе при
-недоступности сервера администратор окажется заблокирован. <code>show blockers</code>
-предупреждает об этом.</p>
-</div>
-<h2 id="проверка">Проверка<a class="headerlink" href="#проверка" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>leaf1&gt; show acl name guard
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>leaf1&gt; show copp
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>leaf1&gt; show ip route               # маршруты в нужном VRF
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>leaf1&gt; show aaa
-</code></pre></div>
-<p>Дальше: <a href="../06-day2-operations/">6. Day-2 операции →</a></p>
+<p>После импорта правки вносятся обычным циклом <code>set</code> / <code>validate</code> / <code>commit</code>.</p>
+<p>Готовые топологии — в разделе <a href="../scenarios/">Сценарии дата-центра</a>.</p>
 
 
 
@@ -1177,7 +1177,7 @@ ACL, control-plane policing, first-hop security и storm control.</p>
       <nav class="md-footer__inner md-grid" aria-label="Нижний колонтитул" >
         
           
-          <a href="../04-ai-fabric-roce/" class="md-footer__link md-footer__link--prev" aria-label="Назад: 4. AI-фабрика — RoCEv2 / PFC">
+          <a href="../network-virtualization/" class="md-footer__link md-footer__link--prev" aria-label="Назад: Сетевая виртуализация">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1187,20 +1187,20 @@ ACL, control-plane policing, first-hop security и storm control.</p>
                 Назад
               </span>
               <div class="md-ellipsis">
-                4. AI-фабрика — RoCEv2 / PFC
+                Сетевая виртуализация
               </div>
             </div>
           </a>
         
         
           
-          <a href="../06-day2-operations/" class="md-footer__link md-footer__link--next" aria-label="Вперед: 6. Day-2 операции">
+          <a href="../../reference/cli/" class="md-footer__link md-footer__link--next" aria-label="Вперед: Справочник команд CLI">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Вперед
               </span>
               <div class="md-ellipsis">
-                6. Day-2 операции
+                Справочник команд CLI
               </div>
             </div>
             <div class="md-footer__button md-icon">
