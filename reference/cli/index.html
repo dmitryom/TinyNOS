@@ -2797,11 +2797,6 @@
 <a id="__codelineno-15-84" name="__codelineno-15-84" href="#__codelineno-15-84"></a>set interfaces &lt;ifname&gt; evpn mh uplink                                            # Пометить интерфейс как uplink (split-horizon)
 <a id="__codelineno-15-85" name="__codelineno-15-85" href="#__codelineno-15-85"></a>delete interfaces &lt;ifname&gt; evpn mh                                                # Удалить всю EVPN-MH конфигурацию интерфейса
 </code></pre></div>
-<ul>
-<li>FRR BGP EVPN → <code>FRR_STAGED</code></li>
-<li>Kernel VXLAN + ARP suppression → <code>REAL_APPLY</code></li>
-<li><code>single-vxlan-device</code> vnifilter → <code>PARTIAL</code></li>
-</ul>
 <hr />
 <h2 id="acl--nftables">ACL / nftables<a class="headerlink" href="#acl--nftables" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>set acl name &lt;name&gt; &lt;seq&gt; permit|deny                                             # ACL-правило: action без match (catch-all)
@@ -3288,9 +3283,6 @@
 <a id="__codelineno-56-3" name="__codelineno-56-3" href="#__codelineno-56-3"></a>issu rollback                                                                     # Прервать ISSU и вернуть предыдущий .deb-образ
 <a id="__codelineno-56-4" name="__codelineno-56-4" href="#__codelineno-56-4"></a>show issu status                                                                  # Текущее состояние ISSU state-machine + transitions
 </code></pre></div>
-<p>ISSU оркеструется через <code>lifecycle_orchestrator</code>: snapshot running → vtysh
-<code>bgp graceful-restart</code> → apt/dpkg install → wait reconverge → health-check →
-commit-or-rollback.</p>
 <hr />
 <h2 id="операционные-команды">Операционные команды<a class="headerlink" href="#операционные-команды" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>ping &lt;host&gt; [count &lt;n&gt;] [source &lt;ip&gt;] [vrf &lt;name&gt;]                                # ICMP echo: count &lt;n&gt; пакетов, опц. source IP и VRF
