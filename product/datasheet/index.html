@@ -1248,19 +1248,19 @@
 
 <h1 id="tinynos--product-datasheet">TinyNOS — Product Datasheet<a class="headerlink" href="#tinynos--product-datasheet" title="Permanent link">&para;</a></h1>
 <h3 id="network-operating-system-for-ai-fabric-and-campus-network-сетевая-операционная-система-для-ai-фабрики-и-кампусной-сети">Network Operating System for AI fabric and campus network (сетевая операционная система для AI-фабрики и кампусной сети)<a class="headerlink" href="#network-operating-system-for-ai-fabric-and-campus-network-сетевая-операционная-система-для-ai-фабрики-и-кампусной-сети" title="Permanent link">&para;</a></h3>
-<p><strong>Одна открытая, Linux-native NOS для двух важнейших сегодня сетей: AI/ML-фабрики, которая соединяет ваши GPU, и кампуса, который соединяет ваших людей — работающая на стандартных открытых whitebox-коммутаторах, без vendor lock-in.</strong></p>
+<p><strong>Linux-native сетевая ОС для leaf-spine фабрик ИИ и кампусных сетей. Работает на стандартных whitebox-коммутаторах, без vendor lock-in.</strong></p>
 <blockquote>
 <p>Версия 1.0.0 · Лицензия: Apache-2.0 · Open source: github.com/dmitryom/MultiCLI3</p>
 </blockquote>
 <hr />
 <h2 id="обзор">Обзор<a class="headerlink" href="#обзор" title="Permanent link">&para;</a></h2>
-<p>TinyNOS — это сетевая операционная система production-класса, которая запускает единый согласованный программный стек в двух очень разных мирах:</p>
+<p>TinyNOS запускает единый программный стек для двух типов сетей:</p>
 <ul>
-<li><strong>AI-фабрика</strong> — высокорадиксная, способная к lossless-передаче leaf-spine фабрика, объединяющая GPU-серверы и хранилище для обучения и инференса AI/ML.</li>
-<li><strong>Кампус и предприятие</strong> — сеть доступа и агрегации, соединяющая пользователей, IoT и приложения, с сегментацией и безопасностью, которых требует корпоративный край сети.</li>
+<li><strong>AI-фабрика</strong> — leaf-spine фабрика, объединяющая GPU-серверы и хранилище для обучения и инференса.</li>
+<li><strong>Кампус и предприятие</strong> — сеть доступа и агрегации с сегментацией и контролем доступа.</li>
 </ul>
-<p>Она говорит на индустриально-стандартном CLI, который сетевые инженеры уже знают, предоставляет современный программируемый интерфейс (YANG / OpenConfig / gNMI) и построена так, что <strong>изменение конфигурации либо применяется полностью, либо полностью откатывается — никогда наполовину.</strong> TinyNOS — это open source под Apache-2.0: без проприетарного control plane, без закрытого маршрутизирующего стека и без лицензионного счётчика на функции.</p>
-<p>По объёму и поверхности функций он сопоставим с Cisco NX-OS, Arista EOS, NVIDIA Cumulus Linux, IP Infusion OcNOS и SONiC — оставаясь при этом полностью открытым.</p>
+<p>Управление через индустриальный CLI и программный интерфейс (YANG / OpenConfig / gNMI). Конфигурация транзакционная: изменение применяется целиком или откатывается. Лицензия Apache-2.0, без проприетарного control plane и лицензий на отдельные функции.</p>
+<p>По объёму функций сопоставима с Cisco NX-OS, Arista EOS, NVIDIA Cumulus Linux, IP Infusion OcNOS и SONiC.</p>
 <hr />
 <h2 id="почему-tinynos">Почему TinyNOS<a class="headerlink" href="#почему-tinynos" title="Permanent link">&para;</a></h2>
 <ul>
