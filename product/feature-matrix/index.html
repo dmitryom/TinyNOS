@@ -248,7 +248,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../datasheet/" class="md-tabs__link">
+        <a href="../features/" class="md-tabs__link">
           
   
   
@@ -433,6 +433,25 @@
   
 
       
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../guide/lab/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  TinyNOS Lab
+
+      </a>
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -526,6 +545,8 @@
       
         
       
+        
+      
     
     
     
@@ -573,6 +594,34 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Возможности
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1015,6 +1064,33 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TinyNOS Lab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1174,15 +1250,15 @@
 </tr>
 </tbody>
 </table>
-<p>Дисциплина честности: ни одна строка не претендует на ASIC-offload на реальном
-кремнии или GA на production-оборудовании — эти пункты явно помечены и в работе для v1.1.</p>
+<p>Важно: ни одна строка не заявляет ASIC-offload на физическом оборудовании или
+статус GA на production-железе — такие пункты явно помечены и запланированы на v1.1.</p>
 </div>
 <h2 id="layer-2--коммутация">Layer 2 — коммутация<a class="headerlink" href="#layer-2--коммутация" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
 <th>Функция</th>
-<th>Что даёт</th>
+<th>Описание</th>
 <th>Статус</th>
 </tr>
 </thead>
@@ -1224,7 +1300,7 @@
 </tr>
 <tr>
 <td>Зеркалирование портов (SPAN)</td>
-<td>Локальный port mirror (зависит от модулей ядра)</td>
+<td>Локальный port mirror на физические интерфейсы</td>
 <td>Preview</td>
 </tr>
 <tr>
@@ -1249,7 +1325,7 @@
 <thead>
 <tr>
 <th>Функция</th>
-<th>Что даёт</th>
+<th>Описание</th>
 <th>Статус</th>
 </tr>
 </thead>
@@ -1331,7 +1407,7 @@
 <thead>
 <tr>
 <th>Функция</th>
-<th>Что даёт</th>
+<th>Описание</th>
 <th>Статус</th>
 </tr>
 </thead>
@@ -1413,7 +1489,7 @@
 <thead>
 <tr>
 <th>Функция</th>
-<th>Что даёт</th>
+<th>Описание</th>
 <th>Статус</th>
 </tr>
 </thead>
@@ -1440,12 +1516,12 @@
 </tr>
 <tr>
 <td>BGP Graceful Restart</td>
-<td>RFC 4724/8538; непрерывность при перезапуске control plane</td>
+<td>RFC 4724/8538; сосед сохраняет маршруты на время перезапуска control plane (preserve-fw-state)</td>
 <td>GA</td>
 </tr>
 <tr>
 <td>Non-Stop Forwarding</td>
-<td>Зависит от аппаратного offload</td>
+<td>Форвардинг продолжается во время рестарта control plane (требует аппаратного offload)</td>
 <td>Preview</td>
 </tr>
 <tr>
@@ -1475,7 +1551,7 @@
 <thead>
 <tr>
 <th>Функция</th>
-<th>Что даёт</th>
+<th>Описание</th>
 <th>Статус</th>
 </tr>
 </thead>
@@ -1527,7 +1603,7 @@
 <thead>
 <tr>
 <th>Функция</th>
-<th>Что даёт</th>
+<th>Описание</th>
 <th>Статус</th>
 </tr>
 </thead>
@@ -1539,7 +1615,7 @@
 </tr>
 <tr>
 <td>Control-plane policing (CoPP)</td>
-<td>Защита CPU коммутатора; курируемый профиль по умолчанию</td>
+<td>Защита CPU коммутатора; предопределённый профиль по умолчанию</td>
 <td>GA</td>
 </tr>
 <tr>
@@ -1579,7 +1655,7 @@
 </tr>
 <tr>
 <td>Защита секретов</td>
-<td>Учётные данные скрыты в выводе конфигурации и защищены «в покое»</td>
+<td>Учётные данные скрыты в выводе конфигурации и хранятся в хешированном виде</td>
 <td>GA</td>
 </tr>
 <tr>
@@ -1594,7 +1670,7 @@
 <thead>
 <tr>
 <th>Функция</th>
-<th>Что даёт</th>
+<th>Описание</th>
 <th>Статус</th>
 </tr>
 </thead>
@@ -1641,14 +1717,14 @@
 <thead>
 <tr>
 <th>Функция</th>
-<th>Что даёт</th>
+<th>Описание</th>
 <th>Статус</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Prometheus-метрики</td>
-<td>Метрики по каждому компоненту, готовые для вашего стека мониторинга</td>
+<td>Метрики по каждому демону на эндпоинте <code>/metrics</code> для внешнего стека мониторинга</td>
 <td>GA</td>
 </tr>
 <tr>
@@ -1682,9 +1758,9 @@
 <div class="admonition quote">
 <p class="admonition-title">Референсные NOS</p>
 <p>Сопоставимый объём и поверхность функций: Cisco Nexus NX-OS · Arista EOS ·
-NVIDIA Cumulus Linux · IP Infusion OcNOS · SONiC. TinyNOS целится в
-функциональную parity на production-критичной поверхности control- и dataplane,
-оставаясь open source под Apache-2.0 без vendor lock-in.</p>
+NVIDIA Cumulus Linux · IP Infusion OcNOS · SONiC. TinyNOS стремится к
+функциональному паритету по ключевым возможностям control- и data plane,
+оставаясь open source под Apache-2.0 без привязки к вендору (vendor lock-in).</p>
 </div>
 <p><small>Все названия продуктов и бренды — собственность соответствующих владельцев;
 упоминание не подразумевает одобрения.</small></p>

@@ -246,7 +246,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../product/datasheet/" class="md-tabs__link">
+        <a href="../../product/features/" class="md-tabs__link">
           
   
   
@@ -433,6 +433,25 @@
   
 
       
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../lab/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  TinyNOS Lab
+
+      </a>
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -524,6 +543,8 @@
       
         
       
+        
+      
     
     
     
@@ -568,6 +589,34 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../product/features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Возможности
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1010,6 +1059,33 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TinyNOS Lab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1142,7 +1218,7 @@
 
 
 <h1 id="сетевая-виртуализация">Сетевая виртуализация<a class="headerlink" href="#сетевая-виртуализация" title="Permanent link">&para;</a></h1>
-<p>Overlay строится поверх настроенного L3-underlay, см. <a href="../layer3/">Layer 3</a>.</p>
+<p>Оверлей (наложенная сеть) строится поверх настроенного L3-андерлея, см. <a href="../layer3/">Layer 3</a>.</p>
 <h2 id="evpn-и-vtep">EVPN и VTEP<a class="headerlink" href="#evpn-и-vtep" title="Permanent link">&para;</a></h2>
 <p>Источник VTEP — loopback, анонсированный в underlay. Чтобы задать источник и включить EVPN-сигнализацию, выполните:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>leaf1# set evpn vtep source-ip 10.0.0.1
@@ -1169,7 +1245,7 @@
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>leaf1# set evpn single-vxlan-device vni 4096
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>leaf1# set evpn single-vxlan-device dataplane-policy auto
 </code></pre></div>
-<p>Политика <code>dataplane-policy</code> принимает значения <code>auto</code>, <code>native</code>, <code>compat-emulated</code>, <code>external</code>. Значение <code>auto</code> выбирает реализацию по возможностям ядра.</p>
+<p>Параметр <code>vni</code> задаёт базовый VNI самого устройства SVD — его не следует путать с L2-VNI отдельных VLAN (см. ниже). Политика <code>dataplane-policy</code> принимает значения <code>auto</code>, <code>native</code>, <code>compat-emulated</code>, <code>external</code>. По умолчанию используйте <code>auto</code> — оно выбирает реализацию по возможностям ядра. Остальные значения — явные переопределения: <code>native</code> — нативный vnifilter (ядро ≥ 5.18), <code>compat-emulated</code> — отдельное VXLAN-устройство на каждый VNI для старых ядер, <code>external</code> — устройство создаётся вне TinyNOS.</p>
 <p>Чтобы отключить SVD, выполните:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>leaf1# set evpn single-vxlan-device enable false
 </code></pre></div>
@@ -1181,13 +1257,13 @@
 <a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>leaf1# set evpn vxlan tos inherit
 <a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>leaf1# set evpn vxlan learning off
 </code></pre></div>
-<p>Режим <code>mtu-mode auto</code> выводит MTU из source-устройства. <code>ttl inherit</code> наследует TTL внутреннего пакета. Под управлением EVPN L2-обучение в плоскости данных отключайте через <code>learning off</code>; в нативном и legacy-режимах допустимо <code>learning on</code>.</p>
+<p>Режим <code>mtu-mode auto</code> выводит MTU из source-устройства. <code>ttl inherit</code> наследует TTL внутреннего пакета. При управлении через EVPN обучение MAC в плоскости данных должно быть выключено (<code>learning off</code>) — за изучение адресов отвечает control plane; в нативном и legacy-режимах допускается <code>learning on</code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Ядро для SVD</p>
 <p>Режим single-vxlan-device (SVD) требует ядра Linux ≥ 5.18.</p>
 </div>
 <h2 id="vlan--vni-l2-vni">VLAN → VNI (L2-VNI)<a class="headerlink" href="#vlan--vni-l2-vni" title="Permanent link">&para;</a></h2>
-<p>L2-VNI связывает VLAN с VNI и переносит широковещательный домен через фабрику. Чтобы привязать VLAN к VNI, выполните:</p>
+<p>L2-VNI связывает VLAN с VNI и переносит широковещательный домен через фабрику. Привязать VLAN к VNI можно любой из двух эквивалентных команд:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>leaf1# set evpn vlan 10 vni 10010
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>leaf1# set vlan-map vlan 10 vni 10010
 </code></pre></div>
@@ -1211,7 +1287,7 @@
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>leaf1# set evpn l3-vni 5000 vrf tenant-red
 <a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>leaf1# set evpn irb-mode symmetric
 </code></pre></div>
-<p>Режим <code>irb-mode</code> принимает <code>symmetric</code> или <code>asymmetric</code>. В symmetric-IRB трафик между подсетями проходит через L3-VNI.</p>
+<p>Режим <code>irb-mode</code> принимает <code>symmetric</code> или <code>asymmetric</code>. В symmetric-IRB маршрутизация на ingress- и egress-leaf использует общий транзитный L3-VNI (route-and-bridge на обоих узлах). В asymmetric-IRB ingress-leaf маршрутизирует сразу в L2-VNI назначения, без транзитного L3-VNI, поэтому каждый leaf должен знать все целевые подсети.</p>
 <p>Anycast-шлюз использует общий MAC на всех leaf. Чтобы задать anycast-MAC, выполните:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>leaf1# set evpn anycast-gateway mac 00:00:5e:00:01:01
 </code></pre></div>
@@ -1246,7 +1322,7 @@
 <a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>leaf1# set interfaces eth4 evpn mh es-df-pref 100
 <a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>leaf1# set interfaces eth4 evpn mh uplink
 </code></pre></div>
-<p>Значение <code>es-id</code> одинаковое на обоих коммутаторах сегмента. Большее <code>es-df-pref</code> предпочтительнее при выборах designated-forwarder. Не назначайте ESI на бонд peer-link MLAG.</p>
+<p>Значение <code>es-id</code> одинаковое на обоих коммутаторах сегмента. При выборе designated-forwarder (DF) для Ethernet Segment предпочтение отдаётся узлу с бо́льшим значением <code>es-df-pref</code>. Не назначайте ESI на бонд peer-link MLAG.</p>
 <h2 id="статические-vxlan-туннели">Статические VXLAN-туннели<a class="headerlink" href="#статические-vxlan-туннели" title="Permanent link">&para;</a></h2>
 <p>Без EVPN-сигнализации peer-ы задаются вручную через статическую FDB для head-end replication. Чтобы добавить запись, выполните:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>leaf1# set bridge br-default static-fdb mac 00:11:22:33:44:66 port vxlan0 dst 10.0.0.2 vlan 10 src_vni 10010

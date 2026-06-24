@@ -246,7 +246,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../product/datasheet/" class="md-tabs__link">
+        <a href="../../product/features/" class="md-tabs__link">
           
   
   
@@ -433,6 +433,25 @@
   
 
       
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../lab/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  TinyNOS Lab
+
+      </a>
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -524,6 +543,8 @@
       
         
       
+        
+      
     
     
     
@@ -568,6 +589,34 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../product/features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Возможности
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -966,6 +1015,33 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TinyNOS Lab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1120,18 +1196,18 @@
 </table>
 <h2 id="диагностика">Диагностика<a class="headerlink" href="#диагностика" title="Permanent link">&para;</a></h2>
 <p>Чтобы проверить доступность узла, выполните:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>leaf1&gt; ping 10.0.0.0 count 5
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>leaf1&gt; ping 10.0.0.0 count 5 vrf red
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>leaf1&gt; ping 10.0.0.2 count 5
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>leaf1&gt; ping 10.0.0.2 count 5 vrf red
 </code></pre></div>
 <p>Чтобы построить путь до узла, выполните:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>leaf1&gt; traceroute 10.0.0.0 max-hops 15
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>leaf1&gt; traceroute 10.0.0.2 max-hops 15
 </code></pre></div>
 <p>Чтобы запустить самопроверку узла, выполните <code>health check</code>.</p>
 <p>Чтобы проверить физическую линию на интерфейсе, выполните:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>leaf1&gt; run interface eth1 cable-test
 </code></pre></div>
 <h2 id="наблюдаемость">Наблюдаемость<a class="headerlink" href="#наблюдаемость" title="Permanent link">&para;</a></h2>
-<p>Каждый компонент TinyNOS публикует метрики Prometheus, доступные для сбора внешней системой мониторинга. События и операции пишутся в структурированный лог в формате JSON, пригодный для пересылки в централизованный сборщик. Потоковая телеметрия предоставляется через gNMI Subscribe в режимах SAMPLE (периодическая выборка) и ON_CHANGE (по изменению значения). Действия операторов и применения конфигурации фиксируются в журнале аудита в режиме append-only.</p>
+<p>Каждый демон TinyNOS отдаёт метрики в формате Prometheus на отдельном HTTP-эндпоинте <code>/metrics</code>, который опрашивает внешняя система мониторинга. События и операции пишутся в структурированный лог в формате JSON, пригодный для пересылки в централизованный сборщик. Потоковая телеметрия предоставляется через gNMI Subscribe в режимах SAMPLE (периодическая выборка) и ON_CHANGE (по изменению значения). Действия операторов и применения конфигурации фиксируются в журнале аудита в режиме append-only.</p>
 <h2 id="импорт-состояния">Импорт состояния<a class="headerlink" href="#импорт-состояния" title="Permanent link">&para;</a></h2>
 <p>При вводе TinyNOS на узле, который уже настроен, текущее состояние переносится в candidate.</p>
 <p>Чтобы импортировать текущие адреса и интерфейсы, выполните:</p>

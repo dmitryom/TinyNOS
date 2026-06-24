@@ -246,7 +246,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../product/datasheet/" class="md-tabs__link">
+        <a href="../../product/features/" class="md-tabs__link">
           
   
   
@@ -433,6 +433,25 @@
   
 
       
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../lab/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  TinyNOS Lab
+
+      </a>
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -524,6 +543,8 @@
       
         
       
+        
+      
     
     
     
@@ -568,6 +589,34 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../product/features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Возможности
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1010,6 +1059,33 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TinyNOS Lab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1238,7 +1314,7 @@
 </tr>
 <tr>
 <td><code>rollback</code></td>
-<td>Отменить несохранённые правки в candidate</td>
+<td>Откатить последний commit к предыдущему состоянию running</td>
 </tr>
 <tr>
 <td><code>rollback to &lt;checkpoint&gt;</code></td>
@@ -1301,7 +1377,7 @@
 </div>
 <h2 id="control-plane-policing-copp">Control-plane policing (CoPP)<a class="headerlink" href="#control-plane-policing-copp" title="Permanent link">&para;</a></h2>
 <p>CoPP ограничивает трафик, направляемый к процессору узла, по классам. Скорость задаётся в пакетах в секунду (pps).</p>
-<p>Чтобы развернуть курируемый набор классов по умолчанию, выполните:</p>
+<p>Чтобы развернуть предопределённый набор классов по умолчанию (маршрутизация, OAM, управление, L2, критичный трафик) не затрагивая уже настроенные классы, выполните:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>leaf1# set copp profile default
 </code></pre></div>
 <p>Чтобы задать собственный класс и привязать к нему протокол, выполните:</p>
@@ -1310,15 +1386,16 @@
 </code></pre></div>
 <p>Чтобы посмотреть текущие классы CoPP, выполните <code>show copp</code>.</p>
 <h2 id="списки-доступа-acl">Списки доступа (ACL)<a class="headerlink" href="#списки-доступа-acl" title="Permanent link">&para;</a></h2>
-<p>ACL состоит из правил, нумерованных параметром <code>&lt;seq&gt;</code>. Имена ACL регистронезависимы. Привязка ACL к интерфейсу задаёт направление обработки <code>in</code> или <code>out</code>.</p>
+<p>ACL состоит из правил, нумерованных параметром <code>&lt;seq&gt;</code>; правила проверяются по возрастанию <code>&lt;seq&gt;</code>, применяется первое совпавшее. Трафик, не совпавший ни с одним правилом, пропускается — добавьте завершающее правило <code>deny</code>, если нужен явный запрет. Имена ACL регистронезависимы. Привязка ACL к интерфейсу задаёт направление обработки <code>in</code> или <code>out</code>.</p>
 <p>Чтобы создать правила фильтрации, выполните:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>leaf1# set acl name web 10 permit
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>leaf1# set acl name web 20 permit proto tcp
 <a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>leaf1# set acl name web 30 permit src 10.0.0.0/24
 <a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>leaf1# set acl name web 40 deny dst 192.168.0.0/16
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>leaf1# set acl name web 50 permit src-port 1024
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>leaf1# set acl name web 60 permit dst-port 443
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>leaf1# set acl name web 50 permit proto tcp src-port 1024
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>leaf1# set acl name web 60 permit proto tcp dst-port 443
 </code></pre></div>
+<p><code>src-port</code> и <code>dst-port</code> учитываются только вместе с <code>proto tcp</code> или <code>proto udp</code>.</p>
 <p>Правило может переписывать поля проходящих кадров и пакетов:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>leaf1# set acl name web 70 permit set dscp 46
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>leaf1# set acl name web 80 permit set priority 5

@@ -1,0 +1,423 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2960" viewBox="0 0 1600 2960">
+<defs>
+<filter id="shadow" x="-10%" y="-10%" width="120%" height="120%"><feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#0b1f33" flood-opacity="0.14"/></filter>
+</defs>
+<rect x="0" y="0" width="1600" height="2960" rx="0" fill="#eef2f5"/>
+<rect x="60" y="42" width="1480" height="2876" rx="10" fill="#ffffff" stroke="#cfd8e3" stroke-width="1"/>
+<rect x="60" y="42" width="1480" height="86" rx="0" fill="#132f4f"/>
+<rect x="60" y="122" width="1480" height="8" rx="0" fill="#c8192e"/>
+<text x="110" y="96" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="38" font-weight="900" fill="#ffffff" text-anchor="start">
+<tspan x="110" dy="0">TinyNOS</tspan>
+</text>
+<text x="302" y="96" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="18" font-weight="700" fill="#c8d7e6" text-anchor="start">
+<tspan x="302" dy="0">Открытая Fabric NOS</tspan>
+</text>
+<text x="1490" y="94" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="18" font-weight="700" fill="#d9e7f5" text-anchor="end">
+<tspan x="1490" dy="0">Технический маркетинговый лист</tspan>
+</text>
+<rect x="1040" y="170" width="420" height="546" rx="8" fill="#f7f9fb" stroke="#d9e0e7" stroke-width="1"/>
+<rect x="1040" y="170" width="420" height="54" rx="8" fill="#132f4f"/>
+<rect x="1040" y="212" width="420" height="12" rx="0" fill="#132f4f"/>
+<text x="1065" y="205" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="19" font-weight="800" fill="#ffffff" text-anchor="start">
+<tspan x="1065" dy="0">Статус платформы</tspan>
+</text>
+<text x="1435" y="205" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="14" font-weight="700" fill="#cbd8e7" text-anchor="end">
+<tspan x="1435" dy="0">честность заявлений</tspan>
+</text>
+<text x="110" y="190" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="20" font-weight="900" fill="#c8192e" text-anchor="start">
+<tspan x="110" dy="0">Фабрики дата-центров, готовые к AI-нагрузкам</tspan>
+</text>
+<text x="110" y="270" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="66" font-weight="900" fill="#132f4f" text-anchor="start">
+<tspan x="110" dy="0">Открытая NOS для запуска</tspan>
+</text>
+<text x="110" y="345" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="66" font-weight="900" fill="#132f4f" text-anchor="start">
+<tspan x="110" dy="0">AI Fabric</tspan>
+</text>
+<text x="110" y="404" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="27" font-weight="500" fill="#26384f" text-anchor="start">
+<tspan x="110" dy="0">Linux-native, YANG-first, транзакционная сетевая ОС для</tspan>
+<tspan x="110" dy="32.9">EVPN/VXLAN-фабрик, whitebox-интеграции и контролируемой</tspan>
+<tspan x="110" dy="32.9">аппаратной валидации.</tspan>
+</text>
+<text x="110" y="505" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="20" font-weight="400" fill="#4b5563" text-anchor="start">
+<tspan x="110" dy="0">TinyNOS — Apache-2.0 NOS на базе стандартного Linux, FRRouting, OpenConfig/YANG и</tspan>
+<tspan x="110" dy="25.6">строго ограниченной SAI/switchdev-границы железа. Позиционирование от</tspan>
+<tspan x="110" dy="25.6">доказательств: программная фабрика отделена от виртуальных, ограниченных и</tspan>
+<tspan x="110" dy="25.6">аппаратно-зависимых заявлений.</tspan>
+</text>
+<rect x="110" y="664" width="125" height="38" rx="19" fill="#eef4fa"/>
+<text x="126" y="689" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="15" font-weight="700" fill="#132f4f" text-anchor="start">
+<tspan x="126" dy="0">Apache-2.0</tspan>
+</text>
+<rect x="245" y="664" width="114" height="38" rx="19" fill="#eef4fa"/>
+<text x="261" y="689" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="15" font-weight="700" fill="#132f4f" text-anchor="start">
+<tspan x="261" dy="0">FRRouting</tspan>
+</text>
+<rect x="369" y="664" width="198" height="38" rx="19" fill="#eef4fa"/>
+<text x="385" y="689" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="15" font-weight="700" fill="#132f4f" text-anchor="start">
+<tspan x="385" dy="0">OpenConfig / gNMI</tspan>
+</text>
+<rect x="577" y="664" width="135" height="38" rx="19" fill="#eef4fa"/>
+<text x="593" y="689" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="15" font-weight="700" fill="#132f4f" text-anchor="start">
+<tspan x="593" dy="0">SAI-граница</tspan>
+</text>
+<rect x="722" y="664" width="146" height="38" rx="19" fill="#eef4fa"/>
+<text x="738" y="689" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="15" font-weight="700" fill="#132f4f" text-anchor="start">
+<tspan x="738" dy="0">Откат commit</tspan>
+</text>
+<rect x="1072" y="238" width="98" height="32" rx="16" fill="#14845a"/>
+<text x="1121" y="260" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="13" font-weight="800" fill="#ffffff" text-anchor="middle">
+<tspan x="1121" dy="0">Проверено</tspan>
+</text>
+<text x="1188" y="257" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="15" font-weight="500" fill="#344054" text-anchor="start">
+<tspan x="1188" dy="0">EVPN/VXLAN, Type-2/3/5,</tspan>
+<tspan x="1188" dy="18.3">symmetric IRB, multi-underlay</tspan>
+<tspan x="1188" dy="18.3">lab paths, откат и телеметрия.</tspan>
+</text>
+<rect x="1072" y="340" width="98" height="32" rx="16" fill="#d78a00"/>
+<text x="1121" y="362" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="13" font-weight="800" fill="#ffffff" text-anchor="middle">
+<tspan x="1121" dy="0">С оговорками</tspan>
+</text>
+<text x="1188" y="359" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="15" font-weight="500" fill="#344054" text-anchor="start">
+<tspan x="1188" dy="0">Плоскости управления</tspan>
+<tspan x="1188" dy="18.3">RoCEv2/PFC/DCQCN, NETCONF</tspan>
+<tspan x="1188" dy="18.3">base, виртуальный SAI path,</tspan>
+<tspan x="1188" dy="18.3">промежуточный gNMI ON_CHANGE.</tspan>
+</text>
+<rect x="1072" y="442" width="98" height="32" rx="16" fill="#c8192e"/>
+<text x="1121" y="464" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="13" font-weight="800" fill="#ffffff" text-anchor="middle">
+<tspan x="1121" dy="0">Железо</tspan>
+</text>
+<text x="1188" y="461" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="15" font-weight="500" fill="#344054" text-anchor="start">
+<tspan x="1188" dy="0">Broadcom/Edgecore production</tspan>
+<tspan x="1188" dy="18.3">требует vendor SAI, syncd,</tspan>
+<tspan x="1188" dy="18.3">PAL, offload, ONIE и HIL-</tspan>
+<tspan x="1188" dy="18.3">доказательства.</tspan>
+</text>
+<line x1="1072" y1="570" x2="1425" y2="570" stroke="#d9e0e7" stroke-width="1"/>
+<text x="1072" y="604" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="15" font-weight="800" fill="#132f4f" text-anchor="start">
+<tspan x="1072" dy="0">Northbound</tspan>
+</text>
+<text x="1180" y="604" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="14" font-weight="400" fill="#4b5563" text-anchor="start">
+<tspan x="1180" dy="0">CLI, OpenConfig/YANG, gNMI</tspan>
+<tspan x="1180" dy="16.5">gRPC, HTTP/JSON, NETCONF</tspan>
+</text>
+<text x="1072" y="638" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="15" font-weight="800" fill="#132f4f" text-anchor="start">
+<tspan x="1072" dy="0">Control</tspan>
+</text>
+<text x="1180" y="638" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="14" font-weight="400" fill="#4b5563" text-anchor="start">
+<tspan x="1180" dy="0">FRR: BGP, EVPN, OSPF, IS-IS,</tspan>
+<tspan x="1180" dy="16.5">PIM, BFD, SR-MPLS, SRv6.</tspan>
+</text>
+<text x="1072" y="672" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="15" font-weight="800" fill="#132f4f" text-anchor="start">
+<tspan x="1072" dy="0">Linux</tspan>
+</text>
+<text x="1180" y="672" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="14" font-weight="400" fill="#4b5563" text-anchor="start">
+<tspan x="1180" dy="0">VRF, VXLAN, bridge, bonding,</tspan>
+<tspan x="1180" dy="16.5">nftables, TC, ECN, PFC</tspan>
+</text>
+<text x="1072" y="706" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="15" font-weight="800" fill="#132f4f" text-anchor="start">
+<tspan x="1072" dy="0">Hardware</tspan>
+</text>
+<text x="1180" y="706" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="14" font-weight="400" fill="#4b5563" text-anchor="start">
+<tspan x="1180" dy="0">PAL, SAI, syncd и switchdev;</tspan>
+<tspan x="1180" dy="16.5">production требует</tspan>
+</text>
+<rect x="100" y="770" width="1400" height="2" rx="0" fill="#d9e0e7"/>
+<text x="110" y="834" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="36" font-weight="900" fill="#132f4f" text-anchor="start">
+<tspan x="110" dy="0">Ключевые отличия</tspan>
+</text>
+<text x="110" y="875" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="18" font-weight="500" fill="#667085" text-anchor="start">
+<tspan x="110" dy="0">Стиль технического листа сетевых вендоров, но с явными границами статуса для каждого заявления об AI Fabric.</tspan>
+</text>
+<rect x="110" y="940" width="330" height="178" rx="6" fill="#ffffff" stroke="#d9e0e7" stroke-width="1"/>
+<rect x="110" y="940" width="7" height="178" rx="3" fill="#c8192e"/>
+<text x="138" y="978" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="22" font-weight="800" fill="#132f4f" text-anchor="start">
+<tspan x="138" dy="0">Транзакционные изменения</tspan>
+</text>
+<text x="138" y="1012" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="18" font-weight="400" fill="#374151" text-anchor="start">
+<tspan x="138" dy="0">Шесть стадий: parse,</tspan>
+<tspan x="138" dy="22.3">semantic, render,</tspan>
+<tspan x="138" dy="22.3">preflight, apply и post-</tspan>
+<tspan x="138" dy="22.3">check, плюс откат и аудит.</tspan>
+</text>
+<rect x="462" y="940" width="330" height="178" rx="6" fill="#ffffff" stroke="#d9e0e7" stroke-width="1"/>
+<rect x="462" y="940" width="7" height="178" rx="3" fill="#21496d"/>
+<text x="490" y="978" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="22" font-weight="800" fill="#132f4f" text-anchor="start">
+<tspan x="490" dy="0">Открытый control plane</tspan>
+</text>
+<text x="490" y="1012" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="18" font-weight="400" fill="#374151" text-anchor="start">
+<tspan x="490" dy="0">FRR и Linux primitives</tspan>
+<tspan x="490" dy="22.3">показывают реальное</tspan>
+<tspan x="490" dy="22.3">состояние фабрики через</tspan>
+<tspan x="490" dy="22.3">стандартные инструменты.</tspan>
+</text>
+<rect x="814" y="940" width="330" height="178" rx="6" fill="#ffffff" stroke="#d9e0e7" stroke-width="1"/>
+<rect x="814" y="940" width="7" height="178" rx="3" fill="#14845a"/>
+<text x="842" y="978" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="22" font-weight="800" fill="#132f4f" text-anchor="start">
+<tspan x="842" dy="0">Программируемый northbound</tspan>
+</text>
+<text x="842" y="1012" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="18" font-weight="400" fill="#374151" text-anchor="start">
+<tspan x="842" dy="0">CLI, OpenConfig/YANG</tspan>
+<tspan x="842" dy="22.3">mapping, gNMI gRPC,</tspan>
+<tspan x="842" dy="22.3">HTTP/JSON и NETCONF base</tspan>
+<tspan x="842" dy="22.3">для автоматизации.</tspan>
+</text>
+<rect x="1166" y="940" width="330" height="178" rx="6" fill="#ffffff" stroke="#d9e0e7" stroke-width="1"/>
+<rect x="1166" y="940" width="7" height="178" rx="3" fill="#d78a00"/>
+<text x="1194" y="978" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="22" font-weight="800" fill="#132f4f" text-anchor="start">
+<tspan x="1194" dy="0">Граница hardware</tspan>
+</text>
+<text x="1194" y="1012" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="18" font-weight="400" fill="#374151" text-anchor="start">
+<tspan x="1194" dy="0">PAL, SAI, syncd и</tspan>
+<tspan x="1194" dy="22.3">switchdev удерживают</tspan>
+<tspan x="1194" dy="22.3">vendor-specific поведение</tspan>
+<tspan x="1194" dy="22.3">вне management plane.</tspan>
+</text>
+<text x="110" y="1210" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="36" font-weight="900" fill="#132f4f" text-anchor="start">
+<tspan x="110" dy="0">AI Fabric возможности по уровню доказанности</tspan>
+</text>
+<text x="110" y="1252" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="18" font-weight="500" fill="#667085" text-anchor="start">
+<tspan x="110" dy="0">Переход от lab к hardware без неподтвержденных production-заявлений.</tspan>
+</text>
+<rect x="110" y="1318" width="438" height="420" rx="6" fill="#ffffff" stroke="#d9e0e7" stroke-width="1"/>
+<rect x="110" y="1318" width="438" height="46" rx="6" fill="#14845a"/>
+<rect x="110" y="1354" width="438" height="10" rx="0" fill="#14845a"/>
+<text x="132" y="1349" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="16" font-weight="800" fill="#ffffff" text-anchor="start">
+<tspan x="132" dy="0">Доступно сегодня</tspan>
+</text>
+<text x="132" y="1404" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="23" font-weight="800" fill="#132f4f" text-anchor="start">
+<tspan x="132" dy="0">Проверенная software/lab-фабрика</tspan>
+</text>
+<circle cx="137" cy="1437" r="4.5" fill="#14845a"/>
+<text x="154" y="1442" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="17" font-weight="400" fill="#344054" text-anchor="start">
+<tspan x="154" dy="0">EVPN/VXLAN Type-2, Type-3, Type-5,</tspan>
+<tspan x="154" dy="20.7">symmetric IRB, anycast gateway и VRF.</tspan>
+</text>
+<circle cx="137" cy="1488" r="4.5" fill="#14845a"/>
+<text x="154" y="1493" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="17" font-weight="400" fill="#344054" text-anchor="start">
+<tspan x="154" dy="0">MLAG, EVPN multihoming surfaces, LACP,</tspan>
+<tspan x="154" dy="20.7">LLDP, CoPP, storm control и ACL.</tspan>
+</text>
+<circle cx="137" cy="1539" r="4.5" fill="#14845a"/>
+<text x="154" y="1544" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="17" font-weight="400" fill="#344054" text-anchor="start">
+<tspan x="154" dy="0">Linux-path ECMP, UCMP и resilient</tspan>
+<tspan x="154" dy="20.7">hashing с advisory-телеметрией.</tspan>
+</text>
+<circle cx="137" cy="1590" r="4.5" fill="#14845a"/>
+<text x="154" y="1595" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="17" font-weight="400" fill="#344054" text-anchor="start">
+<tspan x="154" dy="0">Prometheus metrics, gNMI surfaces и</tspan>
+<tspan x="154" dy="20.7">reason codes для заблокированных</tspan>
+<tspan x="154" dy="20.7">возможностей.</tspan>
+</text>
+<rect x="582" y="1318" width="438" height="420" rx="6" fill="#ffffff" stroke="#d9e0e7" stroke-width="1"/>
+<rect x="582" y="1318" width="438" height="46" rx="6" fill="#d78a00"/>
+<rect x="582" y="1354" width="438" height="10" rx="0" fill="#d78a00"/>
+<text x="604" y="1349" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="16" font-weight="800" fill="#ffffff" text-anchor="start">
+<tspan x="604" dy="0">Реализовано с ограничениями</tspan>
+</text>
+<text x="604" y="1404" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="23" font-weight="800" fill="#132f4f" text-anchor="start">
+<tspan x="604" dy="0">Реальные controls, явные ограничения</tspan>
+</text>
+<circle cx="609" cy="1437" r="4.5" fill="#d78a00"/>
+<text x="626" y="1442" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="17" font-weight="400" fill="#344054" text-anchor="start">
+<tspan x="626" dy="0">RoCEv2-oriented PFC, ETS, DCBX,</tspan>
+<tspan x="626" dy="20.7">ECN/WRED, buffer pool и DCQCN config</tspan>
+<tspan x="626" dy="20.7">surfaces.</tspan>
+</text>
+<circle cx="609" cy="1509" r="4.5" fill="#d78a00"/>
+<text x="626" y="1514" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="17" font-weight="400" fill="#344054" text-anchor="start">
+<tspan x="626" dy="0">SAI virtual mode прогоняет APPL_DB to</tspan>
+<tspan x="626" dy="20.7">multicli-syncd to ASIC_DB для CI.</tspan>
+</text>
+<circle cx="609" cy="1560" r="4.5" fill="#d78a00"/>
+<text x="626" y="1565" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="17" font-weight="400" fill="#344054" text-anchor="start">
+<tspan x="626" dy="0">Базовый NETCONF-сервис есть;</tspan>
+<tspan x="626" dy="20.7">confirmed-commit и notification stream</tspan>
+<tspan x="626" dy="20.7">пока не закрыты.</tspan>
+</text>
+<circle cx="609" cy="1632" r="4.5" fill="#d78a00"/>
+<text x="626" y="1637" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="17" font-weight="400" fill="#344054" text-anchor="start">
+<tspan x="626" dy="0">gNMI ON_CHANGE — временный polling,</tspan>
+<tspan x="626" dy="20.7">event bus остается в дорожной карте.</tspan>
+</text>
+<rect x="1054" y="1318" width="438" height="420" rx="6" fill="#ffffff" stroke="#d9e0e7" stroke-width="1"/>
+<rect x="1054" y="1318" width="438" height="46" rx="6" fill="#c8192e"/>
+<rect x="1054" y="1354" width="438" height="10" rx="0" fill="#c8192e"/>
+<text x="1076" y="1349" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="16" font-weight="800" fill="#ffffff" text-anchor="start">
+<tspan x="1076" dy="0">Аппаратно-зависимая дорожная карта</tspan>
+</text>
+<text x="1076" y="1404" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="23" font-weight="800" fill="#132f4f" text-anchor="start">
+<tspan x="1076" dy="0">Production только после проверки на ASIC</tspan>
+</text>
+<circle cx="1081" cy="1437" r="4.5" fill="#c8192e"/>
+<text x="1098" y="1442" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="17" font-weight="400" fill="#344054" text-anchor="start">
+<tspan x="1098" dy="0">Vendor libsai.so, production syncd,</tspan>
+<tspan x="1098" dy="20.7">реальные PAL probes и</tspan>
+<tspan x="1098" dy="20.7">зарегистрированный driver.</tspan>
+</text>
+<circle cx="1081" cy="1509" r="4.5" fill="#c8192e"/>
+<text x="1098" y="1514" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="17" font-weight="400" fill="#344054" text-anchor="start">
+<tspan x="1098" dy="0">Доказательство ASIC-path для routes,</tspan>
+<tspan x="1098" dy="20.7">FDB, ACL, QoS, buffers, offload и</tspan>
+<tspan x="1098" dy="20.7">отсутствия software fallback.</tspan>
+</text>
+<circle cx="1081" cy="1581" r="4.5" fill="#c8192e"/>
+<text x="1098" y="1586" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="17" font-weight="400" fill="#344054" text-anchor="start">
+<tspan x="1098" dy="0">Доказательства lossless RoCEv2: PFC</tspan>
+<tspan x="1098" dy="20.7">counters, ECN marks, DCQCN behavior и</tspan>
+<tspan x="1098" dy="20.7">traffic tests.</tspan>
+</text>
+<circle cx="1081" cy="1653" r="4.5" fill="#c8192e"/>
+<text x="1098" y="1658" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="17" font-weight="400" fill="#344054" text-anchor="start">
+<tspan x="1098" dy="0">Готовность UET смоделирована; CBFC,</tspan>
+<tspan x="1098" dy="20.7">LLR, packet trimming и UEC compliance</tspan>
+<tspan x="1098" dy="20.7">аппаратно-зависимы.</tspan>
+</text>
+<text x="110" y="1830" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="36" font-weight="900" fill="#132f4f" text-anchor="start">
+<tspan x="110" dy="0">Технологические домены</tspan>
+</text>
+<text x="110" y="1871" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="18" font-weight="500" fill="#667085" text-anchor="start">
+<tspan x="110" dy="0">Краткая карта статусов для технических покупателей и партнерских инженерных команд.</tspan>
+</text>
+<rect x="110" y="1935" width="1382" height="56" rx="6" fill="#132f4f"/>
+<text x="134" y="1971" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="17" font-weight="800" fill="#ffffff" text-anchor="start">
+<tspan x="134" dy="0">Домен</tspan>
+</text>
+<text x="588" y="1971" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="17" font-weight="800" fill="#ffffff" text-anchor="start">
+<tspan x="588" dy="0">Статус</tspan>
+</text>
+<text x="790" y="1971" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="17" font-weight="800" fill="#ffffff" text-anchor="start">
+<tspan x="790" dy="0">Позиционирование TinyNOS</tspan>
+</text>
+<rect x="110" y="1991" width="1382" height="84" rx="0" fill="#ffffff"/>
+<line x1="110" y1="1991" x2="1492" y2="1991" stroke="#d9e0e7" stroke-width="1"/>
+<text x="134" y="2041" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="18" font-weight="800" fill="#132f4f" text-anchor="start">
+<tspan x="134" dy="0">Фабрика дата-центра</tspan>
+</text>
+<rect x="560" y="2015" width="136" height="34" rx="17" fill="#14845a"/>
+<text x="628" y="2038" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">
+<tspan x="628" dy="0">Проверено</tspan>
+</text>
+<text x="790" y="2025" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="17" font-weight="400" fill="#344054" text-anchor="start">
+<tspan x="790" dy="0">EVPN/VXLAN, multi-tenant VRF, Type-5, symmetric IRB, anycast</tspan>
+<tspan x="790" dy="20.4">gateway и multi-underlay validation.</tspan>
+</text>
+<rect x="110" y="2075" width="1382" height="84" rx="0" fill="#f8fafc"/>
+<line x1="110" y1="2075" x2="1492" y2="2075" stroke="#d9e0e7" stroke-width="1"/>
+<text x="134" y="2125" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="18" font-weight="800" fill="#132f4f" text-anchor="start">
+<tspan x="134" dy="0">AI / RoCE готовность</tspan>
+</text>
+<rect x="560" y="2099" width="136" height="34" rx="17" fill="#d78a00"/>
+<text x="628" y="2122" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">
+<tspan x="628" dy="0">С оговорками</tspan>
+</text>
+<text x="790" y="2109" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="17" font-weight="400" fill="#344054" text-anchor="start">
+<tspan x="790" dy="0">PFC, ETS, DCBX, ECN/WRED, buffer pools и DCQCN смоделированы;</tspan>
+<tspan x="790" dy="20.4">доказательство настоящего lossless требует целевого ASIC.</tspan>
+</text>
+<rect x="110" y="2159" width="1382" height="84" rx="0" fill="#ffffff"/>
+<line x1="110" y1="2159" x2="1492" y2="2159" stroke="#d9e0e7" stroke-width="1"/>
+<text x="134" y="2209" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="18" font-weight="800" fill="#132f4f" text-anchor="start">
+<tspan x="134" dy="0">Автоматизация и телеметрия</tspan>
+</text>
+<rect x="560" y="2183" width="136" height="34" rx="17" fill="#14845a"/>
+<text x="628" y="2206" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">
+<tspan x="628" dy="0">Проверено</tspan>
+</text>
+<text x="790" y="2193" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="17" font-weight="400" fill="#344054" text-anchor="start">
+<tspan x="790" dy="0">OpenConfig/YANG mapping, gNMI gRPC, HTTP/JSON, аудит, Prometheus</tspan>
+<tspan x="790" dy="20.4">metrics и telemetry для заблокированных возможностей.</tspan>
+</text>
+<rect x="110" y="2243" width="1382" height="84" rx="0" fill="#f8fafc"/>
+<line x1="110" y1="2243" x2="1492" y2="2243" stroke="#d9e0e7" stroke-width="1"/>
+<text x="134" y="2293" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="18" font-weight="800" fill="#132f4f" text-anchor="start">
+<tspan x="134" dy="0">Whitebox / ASIC-интеграция</tspan>
+</text>
+<rect x="560" y="2267" width="136" height="34" rx="17" fill="#c8192e"/>
+<text x="628" y="2290" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">
+<tspan x="628" dy="0">Железо</tspan>
+</text>
+<text x="790" y="2277" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="17" font-weight="400" fill="#344054" text-anchor="start">
+<tspan x="790" dy="0">Виртуальный SAI path есть; production требует vendor SAI, syncd,</tspan>
+<tspan x="790" dy="20.4">PAL, ONIE image drills и HIL-доказательства.</tspan>
+</text>
+<rect x="110" y="2327" width="1382" height="84" rx="0" fill="#ffffff"/>
+<line x1="110" y1="2327" x2="1492" y2="2327" stroke="#d9e0e7" stroke-width="1"/>
+<text x="134" y="2377" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="18" font-weight="800" fill="#132f4f" text-anchor="start">
+<tspan x="134" dy="0">UET / Ultra Ethernet</tspan>
+</text>
+<rect x="560" y="2351" width="136" height="34" rx="17" fill="#c8192e"/>
+<text x="628" y="2374" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="14" font-weight="800" fill="#ffffff" text-anchor="middle">
+<tspan x="628" dy="0">Железо</tspan>
+</text>
+<text x="790" y="2361" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="17" font-weight="400" fill="#344054" text-anchor="start">
+<tspan x="790" dy="0">Профиль готовности на стороне коммутатора, port scoping и DSCP</tspan>
+<tspan x="790" dy="20.4">intent есть; transport/provider/compliance proof остается в</tspan>
+</text>
+<rect x="110" y="1935" width="1382" height="476" rx="6" fill="none" stroke="#d9e0e7" stroke-width="1"/>
+<rect x="110" y="2460" width="675" height="324" rx="6" fill="#f7f9fb" stroke="#d9e0e7" stroke-width="1"/>
+<text x="140" y="2502" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="24" font-weight="900" fill="#132f4f" text-anchor="start">
+<tspan x="140" dy="0">Дорожная карта к production AI fabric</tspan>
+</text>
+<circle cx="147" cy="2535" r="4.5" fill="#c8192e"/>
+<text x="164" y="2540" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="15" font-weight="400" fill="#344054" text-anchor="start">
+<tspan x="164" dy="0">Подключить реальные PAL probes для целевых whitebox-</tspan>
+<tspan x="164" dy="18.3">платформ.</tspan>
+</text>
+<circle cx="147" cy="2577" r="4.5" fill="#c8192e"/>
+<text x="164" y="2582" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="15" font-weight="400" fill="#344054" text-anchor="start">
+<tspan x="164" dy="0">Интегрировать vendor SAI и production syncd под strict</tspan>
+<tspan x="164" dy="18.3">gates.</tspan>
+</text>
+<circle cx="147" cy="2619" r="4.5" fill="#c8192e"/>
+<text x="164" y="2624" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="15" font-weight="400" fill="#344054" text-anchor="start">
+<tspan x="164" dy="0">Доказать ASIC offload для route, FDB, ACL, QoS и buffers.</tspan>
+</text>
+<circle cx="147" cy="2643" r="4.5" fill="#c8192e"/>
+<text x="164" y="2648" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="15" font-weight="400" fill="#344054" text-anchor="start">
+<tspan x="164" dy="0">Проверить RoCEv2 lossless behavior реальным traffic и</tspan>
+<tspan x="164" dy="18.3">counters.</tspan>
+</text>
+<rect x="820" y="2460" width="672" height="324" rx="6" fill="#f7f9fb" stroke="#d9e0e7" stroke-width="1"/>
+<text x="850" y="2502" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="24" font-weight="900" fill="#132f4f" text-anchor="start">
+<tspan x="850" dy="0">Позиция по заявлениям</tspan>
+</text>
+<text x="850" y="2554" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="16" font-weight="800" fill="#132f4f" text-anchor="start">
+<tspan x="850" dy="0">Проверено</tspan>
+</text>
+<text x="1030" y="2554" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="15" font-weight="400" fill="#344054" text-anchor="start">
+<tspan x="1030" dy="0">Подтвержденное software/lab поведение.</tspan>
+</text>
+<text x="850" y="2586" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="16" font-weight="800" fill="#132f4f" text-anchor="start">
+<tspan x="850" dy="0">С оговорками</tspan>
+</text>
+<text x="1030" y="2586" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="15" font-weight="400" fill="#344054" text-anchor="start">
+<tspan x="1030" dy="0">Код есть, но действуют ограничения среды или</tspan>
+<tspan x="1030" dy="17.2">железа.</tspan>
+</text>
+<text x="850" y="2618" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="16" font-weight="800" fill="#132f4f" text-anchor="start">
+<tspan x="850" dy="0">Железо</tspan>
+</text>
+<text x="1030" y="2618" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="15" font-weight="400" fill="#344054" text-anchor="start">
+<tspan x="1030" dy="0">Требует vendor SAI, целевой ASIC, ONIE и HIL-</tspan>
+<tspan x="1030" dy="17.2">доказательства.</tspan>
+</text>
+<text x="850" y="2650" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="16" font-weight="800" fill="#132f4f" text-anchor="start">
+<tspan x="850" dy="0">Без подмены</tspan>
+</text>
+<text x="1030" y="2650" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="15" font-weight="400" fill="#344054" text-anchor="start">
+<tspan x="1030" dy="0">Virtual SAI и readiness-модели не выдаются за</tspan>
+<tspan x="1030" dy="17.2">real production offload.</tspan>
+</text>
+<rect x="60" y="2828" width="1480" height="90" rx="0" fill="#fbfcfd"/>
+<line x1="60" y1="2828" x2="1540" y2="2828" stroke="#d9e0e7" stroke-width="1"/>
+<text x="110" y="2858" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="15" font-weight="500" fill="#4b5563" text-anchor="start">
+<tspan x="110" dy="0">Итог: TinyNOS — доказательная открытая NOS-основа для фабрик, готовых к</tspan>
+<tspan x="110" dy="17.4">AI-нагрузкам, а не заявление, что любая production whitebox AI-фабрика уже</tspan>
+<tspan x="110" dy="17.4">решена сегодня.</tspan>
+</text>
+<text x="1010" y="2858" font-family="Arial Unicode MS, Arial, Helvetica Neue, sans-serif" font-size="14" font-weight="500" fill="#667085" text-anchor="start">
+<tspan x="1010" dy="0">Источники: README, LICENSE, docs/reference/limitations.md,</tspan>
+<tspan x="1010" dy="16.2">release notes, PRODUCTION-CHECKLIST.</tspan>
+</text>
+</svg>

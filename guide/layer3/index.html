@@ -246,7 +246,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../product/datasheet/" class="md-tabs__link">
+        <a href="../../product/features/" class="md-tabs__link">
           
   
   
@@ -433,6 +433,25 @@
   
 
       
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../lab/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  TinyNOS Lab
+
+      </a>
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -524,6 +543,8 @@
       
         
       
+        
+      
     
     
     
@@ -568,6 +589,34 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../product/features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Возможности
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1032,6 +1081,33 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TinyNOS Lab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1186,7 +1262,7 @@
 
 
 <h1 id="layer-3">Layer 3<a class="headerlink" href="#layer-3" title="Permanent link">&para;</a></h1>
-<p>Маршрутизация TinyNOS включает статические маршруты, ECMP, BGP, OSPF, IS-IS, BFD, VRF, PIM, NAT и статические соседей. Команды задают намерение в кандидат-конфигурации; примените их через <code>commit</code>.</p>
+<p>Маршрутизация TinyNOS включает статические маршруты, ECMP, BGP, OSPF, IS-IS, BFD, VRF, PIM, NAT и статические записи ARP/ND. Команды задают намерение в candidate-конфигурации; примените их через <code>commit</code>.</p>
 <h2 id="статическая-маршрутизация">Статическая маршрутизация<a class="headerlink" href="#статическая-маршрутизация" title="Permanent link">&para;</a></h2>
 <p>Добавьте статический маршрут или blackhole:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>leaf1# set routing static route 10.20.0.0/16 next-hop 10.0.0.2
@@ -1198,7 +1274,7 @@
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>leaf1&gt; show ip neighbors
 </code></pre></div>
 <h2 id="ecmp">ECMP<a class="headerlink" href="#ecmp" title="Permanent link">&para;</a></h2>
-<p>Равностоимостные пути балансируются автоматически. Для приёма нескольких путей через BGP включите multipath и ослабьте сравнение AS-path:</p>
+<p>Равностоимостные пути балансируются автоматически. Чтобы BGP принимал несколько путей в multipath, увеличьте <code>maximum-paths</code> и разрешите <code>multipath-relax</code> — пути с равной длиной AS-path, но разными номерами AS будут считаться равноценными:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>leaf1# set routing bgp maximum-paths 8
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>leaf1# set routing bgp bestpath as-path multipath-relax
 </code></pre></div>
@@ -1274,7 +1350,7 @@
 <a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>leaf1# set routing isis fast-reroute ti-lfa level level-1
 </code></pre></div>
 <h2 id="bfd">BFD<a class="headerlink" href="#bfd" title="Permanent link">&para;</a></h2>
-<p>Привяжите BFD-сессию к протоколу и задайте интервалы. Параметры <code>min-tx</code> и <code>min-rx</code> указываются в миллисекундах; <code>multiplier</code> — число пропущенных пакетов до объявления отказа.</p>
+<p>Привяжите BFD-сессию к протоколу и задайте интервалы. Параметры <code>min-tx</code> и <code>min-rx</code> указываются в миллисекундах; <code>multiplier</code> — число подряд пропущенных пакетов, после которого сессия считается отказавшей.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>leaf1# set bfd peer 10.0.0.2 protocol bgp min-tx 300 min-rx 300 multiplier 3
 <a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>leaf1# set bfd peer 10.0.0.3 protocol ospf min-tx 300 min-rx 300 multiplier 3
 <a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>leaf1# set bfd peer 10.0.0.4 protocol static min-tx 300 min-rx 300 multiplier 3

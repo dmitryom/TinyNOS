@@ -246,7 +246,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../product/datasheet/" class="md-tabs__link">
+        <a href="../../product/features/" class="md-tabs__link">
           
   
   
@@ -433,6 +433,25 @@
   
 
       
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../lab/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  TinyNOS Lab
+
+      </a>
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -524,6 +543,8 @@
       
         
       
+        
+      
     
     
     
@@ -568,6 +589,34 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../product/features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Возможности
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -955,6 +1004,33 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TinyNOS Lab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1078,7 +1154,7 @@
 </table>
 <h2 id="сквозной-пример">Сквозной пример<a class="headerlink" href="#сквозной-пример" title="Permanent link">&para;</a></h2>
 <p>Чтобы поднять порт <code>eth1</code>, назначить адрес, настроить BGP-соседа и применить изменение с подтверждением, выполните:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>leaf1# configure
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>leaf1&gt; configure
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>leaf1# set interfaces eth1 admin-state up
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>leaf1# set interfaces eth1 ipv4 address 10.0.0.1/31
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>leaf1# set routing bgp local-as 65001
@@ -1086,9 +1162,11 @@
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>leaf1# set routing bgp neighbor 10.0.0.0 remote-as 65000
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>leaf1# validate
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>leaf1# commit confirmed 5
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>leaf1# confirm
 </code></pre></div>
-<p>Команда <code>commit confirmed 5</code> применяет конфигурацию и запускает таймер на 5 минут. Если в течение этого времени не выполнить <code>confirm</code>, узел откатится на предыдущую конфигурацию.</p>
+<p>Команда <code>commit confirmed 5</code> применяет конфигурацию и запускает таймер на 5 минут. Убедитесь, что связь с узлом сохранилась и BGP-сосед поднялся, и только затем подтвердите изменение:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>leaf1# confirm
+</code></pre></div>
+<p>Если <code>confirm</code> не выполнить в течение 5 минут, узел автоматически откатится на предыдущую конфигурацию.</p>
 <div class="admonition tip">
 <p class="admonition-title">Применение по SSH</p>
 <p>При удалённой настройке через SSH применяйте <code>commit confirmed &lt;минуты&gt;</code>. При потере связи во время правки маршрутизации или адресации изменение откатится автоматически по истечении таймера, и доступ к узлу восстановится.</p>
