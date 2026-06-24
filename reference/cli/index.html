@@ -1588,6 +1588,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#sflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sFlow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#полное-покрытие-команд" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2590,6 +2601,17 @@
     <span class="md-ellipsis">
       
         Конфигурация CLI / AutoOps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sFlow
       
     </span>
   </a>
@@ -3861,282 +3883,295 @@
 <a id="__codelineno-58-5" name="__codelineno-58-5" href="#__codelineno-58-5"></a>set terminal output native                                                        # Native-формат вывода (без трансляции под cli-profile)
 </code></pre></div>
 <hr />
+<h2 id="sflow">sFlow<a class="headerlink" href="#sflow" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a>set system sflow collector &lt;host&gt;                                                  # Добавить sFlow-коллектор (UDP-порт по умолчанию 6343)
+<a id="__codelineno-59-2" name="__codelineno-59-2" href="#__codelineno-59-2"></a>set system sflow collector &lt;host&gt; port &lt;port&gt;                                      # Добавить sFlow-коллектор с явным UDP-портом (1–65535)
+<a id="__codelineno-59-3" name="__codelineno-59-3" href="#__codelineno-59-3"></a>delete system sflow collector &lt;host&gt;                                               # Удалить sFlow-коллектор
+<a id="__codelineno-59-4" name="__codelineno-59-4" href="#__codelineno-59-4"></a>set system sflow sampling-rate &lt;rate&gt;                                              # Частота сэмплирования пакетов (1 из N, напр. 1000)
+<a id="__codelineno-59-5" name="__codelineno-59-5" href="#__codelineno-59-5"></a>delete system sflow sampling-rate                                                  # Сбросить частоту сэмплирования
+<a id="__codelineno-59-6" name="__codelineno-59-6" href="#__codelineno-59-6"></a>set system sflow polling-interval &lt;seconds&gt;                                        # Интервал опроса счётчиков, секунды (напр. 30)
+<a id="__codelineno-59-7" name="__codelineno-59-7" href="#__codelineno-59-7"></a>delete system sflow polling-interval                                               # Сбросить интервал опроса
+<a id="__codelineno-59-8" name="__codelineno-59-8" href="#__codelineno-59-8"></a>set system sflow agent-interface &lt;ifname&gt;                                          # Интерфейс-источник IP агента sFlow
+<a id="__codelineno-59-9" name="__codelineno-59-9" href="#__codelineno-59-9"></a>delete system sflow agent-interface                                                # Сбросить интерфейс-источник агента sFlow
+<a id="__codelineno-59-10" name="__codelineno-59-10" href="#__codelineno-59-10"></a>show sflow                                                                          # Показать конфигурацию агента sFlow и коллекторы
+</code></pre></div>
+<hr />
 <h2 id="полное-покрытие-команд">Полное покрытие команд<a class="headerlink" href="#полное-покрытие-команд" title="Permanent link">&para;</a></h2>
 <p>Команды, ранее отсутствовавшие в справочнике — полное покрытие схемы CLI (set / delete / show по доменам).</p>
 <h3 id="интерфейсы-доп">Интерфейсы (доп.)<a class="headerlink" href="#интерфейсы-доп" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a>set interfaces &lt;ifname&gt; bridge-port loop-guard enable|disable                        # Включить/отключить Loop Guard (детект односторонних разрывов) на порту моста
-<a id="__codelineno-59-2" name="__codelineno-59-2" href="#__codelineno-59-2"></a>set interfaces &lt;ifname&gt; bridge-port portfast enable|disable                          # Включить/отключить PortFast (пропуск STP listening/learning) на мосту
-<a id="__codelineno-59-3" name="__codelineno-59-3" href="#__codelineno-59-3"></a>set interfaces &lt;ifname&gt; bridge-port root-guard enable|disable                        # Включить/отключить Root Guard (запретить становиться root) на порту моста
-<a id="__codelineno-59-4" name="__codelineno-59-4" href="#__codelineno-59-4"></a>set interfaces &lt;ifname&gt; evpn-mh es-df-pref &lt;pref&gt;                                    # Установить предпочтение EVPN-MH ES DF
-<a id="__codelineno-59-5" name="__codelineno-59-5" href="#__codelineno-59-5"></a>set interfaces &lt;ifname&gt; evpn-mh es-id &lt;value&gt;                                        # Установить EVPN-MH ES ID
-<a id="__codelineno-59-6" name="__codelineno-59-6" href="#__codelineno-59-6"></a>set interfaces &lt;ifname&gt; evpn-mh es-sys-mac &lt;mac&gt;                                     # Установить EVPN-MH ES system MAC
-<a id="__codelineno-59-7" name="__codelineno-59-7" href="#__codelineno-59-7"></a>set interfaces &lt;ifname&gt; evpn-mh uplink                                               # Пометить интерфейс как EVPN-MH uplink
-<a id="__codelineno-59-8" name="__codelineno-59-8" href="#__codelineno-59-8"></a>set interfaces &lt;ifname&gt; ip &lt;cidr&gt;                                                    # Задать IPv4-адрес (краткая форма)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a>set interfaces &lt;ifname&gt; bridge-port loop-guard enable|disable                        # Включить/отключить Loop Guard (детект односторонних разрывов) на порту моста
+<a id="__codelineno-60-2" name="__codelineno-60-2" href="#__codelineno-60-2"></a>set interfaces &lt;ifname&gt; bridge-port portfast enable|disable                          # Включить/отключить PortFast (пропуск STP listening/learning) на мосту
+<a id="__codelineno-60-3" name="__codelineno-60-3" href="#__codelineno-60-3"></a>set interfaces &lt;ifname&gt; bridge-port root-guard enable|disable                        # Включить/отключить Root Guard (запретить становиться root) на порту моста
+<a id="__codelineno-60-4" name="__codelineno-60-4" href="#__codelineno-60-4"></a>set interfaces &lt;ifname&gt; evpn-mh es-df-pref &lt;pref&gt;                                    # Установить предпочтение EVPN-MH ES DF
+<a id="__codelineno-60-5" name="__codelineno-60-5" href="#__codelineno-60-5"></a>set interfaces &lt;ifname&gt; evpn-mh es-id &lt;value&gt;                                        # Установить EVPN-MH ES ID
+<a id="__codelineno-60-6" name="__codelineno-60-6" href="#__codelineno-60-6"></a>set interfaces &lt;ifname&gt; evpn-mh es-sys-mac &lt;mac&gt;                                     # Установить EVPN-MH ES system MAC
+<a id="__codelineno-60-7" name="__codelineno-60-7" href="#__codelineno-60-7"></a>set interfaces &lt;ifname&gt; evpn-mh uplink                                               # Пометить интерфейс как EVPN-MH uplink
+<a id="__codelineno-60-8" name="__codelineno-60-8" href="#__codelineno-60-8"></a>set interfaces &lt;ifname&gt; ip &lt;cidr&gt;                                                    # Задать IPv4-адрес (краткая форма)
 </code></pre></div>
 <h3 id="acl-доп">ACL (доп.)<a class="headerlink" href="#acl-доп" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a>set acl &lt;name&gt; rule &lt;seq&gt; permit|deny                                                # Создать правило ACL с действием и критериями match
-<a id="__codelineno-60-2" name="__codelineno-60-2" href="#__codelineno-60-2"></a>set acl &lt;name&gt; rule &lt;seq&gt; permit|deny &lt;match_kw&gt;                                     # Создать правило ACL с действием и критериями match
+<div class="highlight"><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a>set acl &lt;name&gt; rule &lt;seq&gt; permit|deny                                                # Создать правило ACL с действием и критериями match
+<a id="__codelineno-61-2" name="__codelineno-61-2" href="#__codelineno-61-2"></a>set acl &lt;name&gt; rule &lt;seq&gt; permit|deny &lt;match_kw&gt;                                     # Создать правило ACL с действием и критериями match
 </code></pre></div>
 <h3 id="security-доп">Security (доп.)<a class="headerlink" href="#security-доп" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a>resequence acl &lt;name&gt; start &lt;start&gt; step &lt;step&gt;                                      # Перенумеровать правила ACL с пользовательским началом и шагом
+<div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a>resequence acl &lt;name&gt; start &lt;start&gt; step &lt;step&gt;                                      # Перенумеровать правила ACL с пользовательским началом и шагом
 </code></pre></div>
 <h3 id="qos">QoS<a class="headerlink" href="#qos" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a>set interfaces &lt;ifname&gt; qos dscp-marking &lt;dscp&gt;                                      # Установить переписывание DSCP значения (0-63) на эгрессе через tc pedit
-<a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a>set interfaces &lt;ifname&gt; qos scheduler tc &lt;tc_id&gt; strict                              # Установить strict-priority планирование для класса трафика на интерфейсе
-<a id="__codelineno-62-3" name="__codelineno-62-3" href="#__codelineno-62-3"></a>set interfaces &lt;ifname&gt; qos scheduler tc &lt;tc_id&gt; wrr weight &lt;weight&gt;                 # Установить вес WRR (1-100) для класса трафика на интерфейсе
-<a id="__codelineno-62-4" name="__codelineno-62-4" href="#__codelineno-62-4"></a>set interfaces &lt;ifname&gt; qos shaping rate &lt;kbps&gt;                                      # Установить скорость эгрессного формирования трафика (kbps) на интерфейсе — инсталлирует tc htb root qdisc
+<div class="highlight"><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a>set interfaces &lt;ifname&gt; qos dscp-marking &lt;dscp&gt;                                      # Установить переписывание DSCP значения (0-63) на эгрессе через tc pedit
+<a id="__codelineno-63-2" name="__codelineno-63-2" href="#__codelineno-63-2"></a>set interfaces &lt;ifname&gt; qos scheduler tc &lt;tc_id&gt; strict                              # Установить strict-priority планирование для класса трафика на интерфейсе
+<a id="__codelineno-63-3" name="__codelineno-63-3" href="#__codelineno-63-3"></a>set interfaces &lt;ifname&gt; qos scheduler tc &lt;tc_id&gt; wrr weight &lt;weight&gt;                 # Установить вес WRR (1-100) для класса трафика на интерфейсе
+<a id="__codelineno-63-4" name="__codelineno-63-4" href="#__codelineno-63-4"></a>set interfaces &lt;ifname&gt; qos shaping rate &lt;kbps&gt;                                      # Установить скорость эгрессного формирования трафика (kbps) на интерфейсе — инсталлирует tc htb root qdisc
 </code></pre></div>
 <h3 id="dcb--dcqcn-доп">DCB / DCQCN (доп.)<a class="headerlink" href="#dcb--dcqcn-доп" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a>delete dcb device &lt;pci_addr&gt; dcqcn enable                                            # Отключить DCQCN (контроль перегрузки RoCEv2) на ASIC-устройстве
-<a id="__codelineno-63-2" name="__codelineno-63-2" href="#__codelineno-63-2"></a>delete dcb device &lt;pci_addr&gt; dcqcn np_min|np_max|rp_min|rp_max|rate_reduce_monitor_period_us|rate_to_set_on_first_cnp|alpha_to_rate_shift # Сбросить параметр DCQCN на ASIC-устройстве
-<a id="__codelineno-63-3" name="__codelineno-63-3" href="#__codelineno-63-3"></a>set dcb device &lt;pci_addr&gt; dcqcn enable                                               # Включить DCQCN (контроль перегрузки RoCEv2) на ASIC устройстве
-<a id="__codelineno-63-4" name="__codelineno-63-4" href="#__codelineno-63-4"></a>set dcb device &lt;pci_addr&gt; dcqcn np_min|np_max|rp_min|rp_max|rate_reduce_monitor_period_us|rate_to_set_on_first_cnp|alpha_to_rate_shift &lt;value&gt; # Установить настраиваемый параметр DCQCN на ASIC устройстве (devlink dev param)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a>delete dcb device &lt;pci_addr&gt; dcqcn enable                                            # Отключить DCQCN (контроль перегрузки RoCEv2) на ASIC-устройстве
+<a id="__codelineno-64-2" name="__codelineno-64-2" href="#__codelineno-64-2"></a>delete dcb device &lt;pci_addr&gt; dcqcn np_min|np_max|rp_min|rp_max|rate_reduce_monitor_period_us|rate_to_set_on_first_cnp|alpha_to_rate_shift # Сбросить параметр DCQCN на ASIC-устройстве
+<a id="__codelineno-64-3" name="__codelineno-64-3" href="#__codelineno-64-3"></a>set dcb device &lt;pci_addr&gt; dcqcn enable                                               # Включить DCQCN (контроль перегрузки RoCEv2) на ASIC устройстве
+<a id="__codelineno-64-4" name="__codelineno-64-4" href="#__codelineno-64-4"></a>set dcb device &lt;pci_addr&gt; dcqcn np_min|np_max|rp_min|rp_max|rate_reduce_monitor_period_us|rate_to_set_on_first_cnp|alpha_to_rate_shift &lt;value&gt; # Установить настраиваемый параметр DCQCN на ASIC устройстве (devlink dev param)
 </code></pre></div>
 <h3 id="bgp-доп">BGP (доп.)<a class="headerlink" href="#bgp-доп" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a>delete routing bgp addpath receive                                                   # Отключить BGP additional-paths receive (RFC 7911)
-<a id="__codelineno-64-2" name="__codelineno-64-2" href="#__codelineno-64-2"></a>delete routing bgp addpath select                                                    # Сбросить режим выбора BGP additional-paths
-<a id="__codelineno-64-3" name="__codelineno-64-3" href="#__codelineno-64-3"></a>delete routing bgp addpath send                                                      # Отключить BGP additional-paths send (RFC 7911)
-<a id="__codelineno-64-4" name="__codelineno-64-4" href="#__codelineno-64-4"></a>delete routing bgp address-family vpnv4 neighbor &lt;ip&gt;                                # Деактивировать соседа в address-family BGP VPNv4
-<a id="__codelineno-64-5" name="__codelineno-64-5" href="#__codelineno-64-5"></a>delete routing bgp address-family vpnv4 route-target export &lt;rt&gt;                     # Удалить VPNv4 route-target export
-<a id="__codelineno-64-6" name="__codelineno-64-6" href="#__codelineno-64-6"></a>delete routing bgp address-family vpnv4 route-target import &lt;rt&gt;                     # Удалить VPNv4 route-target import
-<a id="__codelineno-64-7" name="__codelineno-64-7" href="#__codelineno-64-7"></a>delete routing bgp address-family vpnv6 neighbor &lt;ip&gt;                                # Деактивировать соседа в address-family BGP VPNv6
-<a id="__codelineno-64-8" name="__codelineno-64-8" href="#__codelineno-64-8"></a>delete routing bgp address-family vpnv6 route-target export &lt;rt&gt;                     # Удалить VPNv6 route-target export
-<a id="__codelineno-64-9" name="__codelineno-64-9" href="#__codelineno-64-9"></a>delete routing bgp address-family vpnv6 route-target import &lt;rt&gt;                     # Удалить VPNv6 route-target import
-<a id="__codelineno-64-10" name="__codelineno-64-10" href="#__codelineno-64-10"></a>delete routing bgp evpn advertise ipv4|ipv6 unicast                                  # Включить BGP EVPN advertise IPv4/IPv6 unicast
-<a id="__codelineno-64-11" name="__codelineno-64-11" href="#__codelineno-64-11"></a>delete routing bgp peer-group &lt;name&gt;                                                 # Удалить BGP peer-group
-<a id="__codelineno-64-12" name="__codelineno-64-12" href="#__codelineno-64-12"></a>delete routing bgp peer-group &lt;name&gt; &lt;attr&gt;                                          # Удалить произвольный атрибут из BGP peer-group
-<a id="__codelineno-64-13" name="__codelineno-64-13" href="#__codelineno-64-13"></a>delete routing bgp peer-group &lt;name&gt; remote-as                                       # Удалить remote-as из BGP peer-group
-<a id="__codelineno-64-14" name="__codelineno-64-14" href="#__codelineno-64-14"></a>delete routing bgp peer-group &lt;name&gt; timers-connect                                  # Удалить timers-connect из BGP peer-group
-<a id="__codelineno-64-15" name="__codelineno-64-15" href="#__codelineno-64-15"></a>set routing bgp addpath receive                                                      # Включить BGP addpath receive (RFC 7911)
-<a id="__codelineno-64-16" name="__codelineno-64-16" href="#__codelineno-64-16"></a>set routing bgp addpath select all|group-best                                        # Установить режим выбора BGP addpath (all | group-best)
-<a id="__codelineno-64-17" name="__codelineno-64-17" href="#__codelineno-64-17"></a>set routing bgp addpath select best &lt;n&gt;                                              # Выбрать N лучших BGP addpath для анонса
-<a id="__codelineno-64-18" name="__codelineno-64-18" href="#__codelineno-64-18"></a>set routing bgp addpath send                                                         # Включить BGP addpath send (RFC 7911)
-<a id="__codelineno-64-19" name="__codelineno-64-19" href="#__codelineno-64-19"></a>set routing bgp address-family vpnv4 neighbor &lt;ip&gt; activate                          # Активировать соседа в BGP VPNv4 address family
-<a id="__codelineno-64-20" name="__codelineno-64-20" href="#__codelineno-64-20"></a>set routing bgp address-family vpnv4 route-target export &lt;rt&gt;                        # Добавить VPNv4 route-target export
-<a id="__codelineno-64-21" name="__codelineno-64-21" href="#__codelineno-64-21"></a>set routing bgp address-family vpnv4 route-target import &lt;rt&gt;                        # Добавить VPNv4 route-target import
-<a id="__codelineno-64-22" name="__codelineno-64-22" href="#__codelineno-64-22"></a>set routing bgp address-family vpnv6 neighbor &lt;ip&gt; activate                          # Активировать соседа в BGP VPNv6 address family
-<a id="__codelineno-64-23" name="__codelineno-64-23" href="#__codelineno-64-23"></a>set routing bgp address-family vpnv6 route-target export &lt;rt&gt;                        # Добавить VPNv6 route-target export
-<a id="__codelineno-64-24" name="__codelineno-64-24" href="#__codelineno-64-24"></a>set routing bgp address-family vpnv6 route-target import &lt;rt&gt;                        # Добавить VPNv6 route-target import
+<div class="highlight"><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a>delete routing bgp addpath receive                                                   # Отключить BGP additional-paths receive (RFC 7911)
+<a id="__codelineno-65-2" name="__codelineno-65-2" href="#__codelineno-65-2"></a>delete routing bgp addpath select                                                    # Сбросить режим выбора BGP additional-paths
+<a id="__codelineno-65-3" name="__codelineno-65-3" href="#__codelineno-65-3"></a>delete routing bgp addpath send                                                      # Отключить BGP additional-paths send (RFC 7911)
+<a id="__codelineno-65-4" name="__codelineno-65-4" href="#__codelineno-65-4"></a>delete routing bgp address-family vpnv4 neighbor &lt;ip&gt;                                # Деактивировать соседа в address-family BGP VPNv4
+<a id="__codelineno-65-5" name="__codelineno-65-5" href="#__codelineno-65-5"></a>delete routing bgp address-family vpnv4 route-target export &lt;rt&gt;                     # Удалить VPNv4 route-target export
+<a id="__codelineno-65-6" name="__codelineno-65-6" href="#__codelineno-65-6"></a>delete routing bgp address-family vpnv4 route-target import &lt;rt&gt;                     # Удалить VPNv4 route-target import
+<a id="__codelineno-65-7" name="__codelineno-65-7" href="#__codelineno-65-7"></a>delete routing bgp address-family vpnv6 neighbor &lt;ip&gt;                                # Деактивировать соседа в address-family BGP VPNv6
+<a id="__codelineno-65-8" name="__codelineno-65-8" href="#__codelineno-65-8"></a>delete routing bgp address-family vpnv6 route-target export &lt;rt&gt;                     # Удалить VPNv6 route-target export
+<a id="__codelineno-65-9" name="__codelineno-65-9" href="#__codelineno-65-9"></a>delete routing bgp address-family vpnv6 route-target import &lt;rt&gt;                     # Удалить VPNv6 route-target import
+<a id="__codelineno-65-10" name="__codelineno-65-10" href="#__codelineno-65-10"></a>delete routing bgp evpn advertise ipv4|ipv6 unicast                                  # Включить BGP EVPN advertise IPv4/IPv6 unicast
+<a id="__codelineno-65-11" name="__codelineno-65-11" href="#__codelineno-65-11"></a>delete routing bgp peer-group &lt;name&gt;                                                 # Удалить BGP peer-group
+<a id="__codelineno-65-12" name="__codelineno-65-12" href="#__codelineno-65-12"></a>delete routing bgp peer-group &lt;name&gt; &lt;attr&gt;                                          # Удалить произвольный атрибут из BGP peer-group
+<a id="__codelineno-65-13" name="__codelineno-65-13" href="#__codelineno-65-13"></a>delete routing bgp peer-group &lt;name&gt; remote-as                                       # Удалить remote-as из BGP peer-group
+<a id="__codelineno-65-14" name="__codelineno-65-14" href="#__codelineno-65-14"></a>delete routing bgp peer-group &lt;name&gt; timers-connect                                  # Удалить timers-connect из BGP peer-group
+<a id="__codelineno-65-15" name="__codelineno-65-15" href="#__codelineno-65-15"></a>set routing bgp addpath receive                                                      # Включить BGP addpath receive (RFC 7911)
+<a id="__codelineno-65-16" name="__codelineno-65-16" href="#__codelineno-65-16"></a>set routing bgp addpath select all|group-best                                        # Установить режим выбора BGP addpath (all | group-best)
+<a id="__codelineno-65-17" name="__codelineno-65-17" href="#__codelineno-65-17"></a>set routing bgp addpath select best &lt;n&gt;                                              # Выбрать N лучших BGP addpath для анонса
+<a id="__codelineno-65-18" name="__codelineno-65-18" href="#__codelineno-65-18"></a>set routing bgp addpath send                                                         # Включить BGP addpath send (RFC 7911)
+<a id="__codelineno-65-19" name="__codelineno-65-19" href="#__codelineno-65-19"></a>set routing bgp address-family vpnv4 neighbor &lt;ip&gt; activate                          # Активировать соседа в BGP VPNv4 address family
+<a id="__codelineno-65-20" name="__codelineno-65-20" href="#__codelineno-65-20"></a>set routing bgp address-family vpnv4 route-target export &lt;rt&gt;                        # Добавить VPNv4 route-target export
+<a id="__codelineno-65-21" name="__codelineno-65-21" href="#__codelineno-65-21"></a>set routing bgp address-family vpnv4 route-target import &lt;rt&gt;                        # Добавить VPNv4 route-target import
+<a id="__codelineno-65-22" name="__codelineno-65-22" href="#__codelineno-65-22"></a>set routing bgp address-family vpnv6 neighbor &lt;ip&gt; activate                          # Активировать соседа в BGP VPNv6 address family
+<a id="__codelineno-65-23" name="__codelineno-65-23" href="#__codelineno-65-23"></a>set routing bgp address-family vpnv6 route-target export &lt;rt&gt;                        # Добавить VPNv6 route-target export
+<a id="__codelineno-65-24" name="__codelineno-65-24" href="#__codelineno-65-24"></a>set routing bgp address-family vpnv6 route-target import &lt;rt&gt;                        # Добавить VPNv6 route-target import
 </code></pre></div>
 <h3 id="ospf-доп">OSPF (доп.)<a class="headerlink" href="#ospf-доп" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a>delete routing ospf interface &lt;ifname&gt; bfd                                           # Отключить BFD на интерфейсе OSPF
-<a id="__codelineno-65-2" name="__codelineno-65-2" href="#__codelineno-65-2"></a>delete routing ospf interface &lt;ifname&gt; cost                                          # Сбросить переопределение стоимости интерфейса OSPF
-<a id="__codelineno-65-3" name="__codelineno-65-3" href="#__codelineno-65-3"></a>delete routing ospf interface &lt;ifname&gt; dead-interval                                 # Сбросить интервал dead интерфейса OSPF к дефолту
-<a id="__codelineno-65-4" name="__codelineno-65-4" href="#__codelineno-65-4"></a>delete routing ospf interface &lt;ifname&gt; hello-interval                                # Сбросить интервал hello интерфейса OSPF к дефолту
-<a id="__codelineno-65-5" name="__codelineno-65-5" href="#__codelineno-65-5"></a>delete routing ospf interface &lt;ifname&gt; priority                                      # Сбросить приоритет DR интерфейса OSPF к дефолту
-<a id="__codelineno-65-6" name="__codelineno-65-6" href="#__codelineno-65-6"></a>delete routing ospf router-id                                                        # Удалить ID маршрутизатора OSPF
-<a id="__codelineno-65-7" name="__codelineno-65-7" href="#__codelineno-65-7"></a>set routing ospf interface &lt;ifname&gt; bfd                                              # Включить BFD на интерфейсе OSPF
-<a id="__codelineno-65-8" name="__codelineno-65-8" href="#__codelineno-65-8"></a>set routing ospf interface &lt;ifname&gt; cost &lt;cost&gt;                                      # Установить стоимость интерфейса OSPF
-<a id="__codelineno-65-9" name="__codelineno-65-9" href="#__codelineno-65-9"></a>set routing ospf interface &lt;ifname&gt; dead-interval &lt;seconds&gt;                          # Установить интервал dead интерфейса OSPF (секунды)
-<a id="__codelineno-65-10" name="__codelineno-65-10" href="#__codelineno-65-10"></a>set routing ospf interface &lt;ifname&gt; hello-interval &lt;seconds&gt;                         # Установить интервал hello интерфейса OSPF (секунды)
-<a id="__codelineno-65-11" name="__codelineno-65-11" href="#__codelineno-65-11"></a>set routing ospf interface &lt;ifname&gt; priority &lt;priority&gt;                              # Установить приоритет DR интерфейса OSPF (0–255)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a>delete routing ospf interface &lt;ifname&gt; bfd                                           # Отключить BFD на интерфейсе OSPF
+<a id="__codelineno-66-2" name="__codelineno-66-2" href="#__codelineno-66-2"></a>delete routing ospf interface &lt;ifname&gt; cost                                          # Сбросить переопределение стоимости интерфейса OSPF
+<a id="__codelineno-66-3" name="__codelineno-66-3" href="#__codelineno-66-3"></a>delete routing ospf interface &lt;ifname&gt; dead-interval                                 # Сбросить интервал dead интерфейса OSPF к дефолту
+<a id="__codelineno-66-4" name="__codelineno-66-4" href="#__codelineno-66-4"></a>delete routing ospf interface &lt;ifname&gt; hello-interval                                # Сбросить интервал hello интерфейса OSPF к дефолту
+<a id="__codelineno-66-5" name="__codelineno-66-5" href="#__codelineno-66-5"></a>delete routing ospf interface &lt;ifname&gt; priority                                      # Сбросить приоритет DR интерфейса OSPF к дефолту
+<a id="__codelineno-66-6" name="__codelineno-66-6" href="#__codelineno-66-6"></a>delete routing ospf router-id                                                        # Удалить ID маршрутизатора OSPF
+<a id="__codelineno-66-7" name="__codelineno-66-7" href="#__codelineno-66-7"></a>set routing ospf interface &lt;ifname&gt; bfd                                              # Включить BFD на интерфейсе OSPF
+<a id="__codelineno-66-8" name="__codelineno-66-8" href="#__codelineno-66-8"></a>set routing ospf interface &lt;ifname&gt; cost &lt;cost&gt;                                      # Установить стоимость интерфейса OSPF
+<a id="__codelineno-66-9" name="__codelineno-66-9" href="#__codelineno-66-9"></a>set routing ospf interface &lt;ifname&gt; dead-interval &lt;seconds&gt;                          # Установить интервал dead интерфейса OSPF (секунды)
+<a id="__codelineno-66-10" name="__codelineno-66-10" href="#__codelineno-66-10"></a>set routing ospf interface &lt;ifname&gt; hello-interval &lt;seconds&gt;                         # Установить интервал hello интерфейса OSPF (секунды)
+<a id="__codelineno-66-11" name="__codelineno-66-11" href="#__codelineno-66-11"></a>set routing ospf interface &lt;ifname&gt; priority &lt;priority&gt;                              # Установить приоритет DR интерфейса OSPF (0–255)
 </code></pre></div>
 <h3 id="ospfv3">OSPFv3<a class="headerlink" href="#ospfv3" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a>delete routing ospf6 interface &lt;ifname&gt;                                              # Удалить интерфейс из OSPFv3
-<a id="__codelineno-66-2" name="__codelineno-66-2" href="#__codelineno-66-2"></a>delete routing ospf6 passive-interface &lt;ifname&gt;                                      # Удалить пассивный интерфейс OSPFv3
-<a id="__codelineno-66-3" name="__codelineno-66-3" href="#__codelineno-66-3"></a>delete routing ospf6 redistribute connected|static|bgp                               # Отключить пересылку протокола в OSPFv3
-<a id="__codelineno-66-4" name="__codelineno-66-4" href="#__codelineno-66-4"></a>delete routing ospf6 router-id                                                       # Удалить ID маршрутизатора OSPFv3
-<a id="__codelineno-66-5" name="__codelineno-66-5" href="#__codelineno-66-5"></a>set routing ospf6 interface &lt;ifname&gt; area &lt;area&gt;                                     # Присвоить интерфейс к области OSPFv3
-<a id="__codelineno-66-6" name="__codelineno-66-6" href="#__codelineno-66-6"></a>set routing ospf6 passive-interface &lt;ifname&gt;                                         # Установить интерфейс OSPFv3 как пассивный
-<a id="__codelineno-66-7" name="__codelineno-66-7" href="#__codelineno-66-7"></a>set routing ospf6 redistribute connected|static|bgp                                  # Включить пересылку протокола в OSPFv3
-<a id="__codelineno-66-8" name="__codelineno-66-8" href="#__codelineno-66-8"></a>set routing ospf6 router-id &lt;ip&gt;                                                     # Установить ID маршрутизатора OSPFv3
+<div class="highlight"><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a>delete routing ospf6 interface &lt;ifname&gt;                                              # Удалить интерфейс из OSPFv3
+<a id="__codelineno-67-2" name="__codelineno-67-2" href="#__codelineno-67-2"></a>delete routing ospf6 passive-interface &lt;ifname&gt;                                      # Удалить пассивный интерфейс OSPFv3
+<a id="__codelineno-67-3" name="__codelineno-67-3" href="#__codelineno-67-3"></a>delete routing ospf6 redistribute connected|static|bgp                               # Отключить пересылку протокола в OSPFv3
+<a id="__codelineno-67-4" name="__codelineno-67-4" href="#__codelineno-67-4"></a>delete routing ospf6 router-id                                                       # Удалить ID маршрутизатора OSPFv3
+<a id="__codelineno-67-5" name="__codelineno-67-5" href="#__codelineno-67-5"></a>set routing ospf6 interface &lt;ifname&gt; area &lt;area&gt;                                     # Присвоить интерфейс к области OSPFv3
+<a id="__codelineno-67-6" name="__codelineno-67-6" href="#__codelineno-67-6"></a>set routing ospf6 passive-interface &lt;ifname&gt;                                         # Установить интерфейс OSPFv3 как пассивный
+<a id="__codelineno-67-7" name="__codelineno-67-7" href="#__codelineno-67-7"></a>set routing ospf6 redistribute connected|static|bgp                                  # Включить пересылку протокола в OSPFv3
+<a id="__codelineno-67-8" name="__codelineno-67-8" href="#__codelineno-67-8"></a>set routing ospf6 router-id &lt;ip&gt;                                                     # Установить ID маршрутизатора OSPFv3
 </code></pre></div>
 <h3 id="is-is-полный">IS-IS (полный)<a class="headerlink" href="#is-is-полный" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a>delete routing isis area-password                                                    # Удалить пароль аутентификации area IS-IS
-<a id="__codelineno-67-2" name="__codelineno-67-2" href="#__codelineno-67-2"></a>delete routing isis bfd                                                              # Отключить BFD для смежностей IS-IS
-<a id="__codelineno-67-3" name="__codelineno-67-3" href="#__codelineno-67-3"></a>delete routing isis domain-password                                                  # Удалить пароль аутентификации domain IS-IS
-<a id="__codelineno-67-4" name="__codelineno-67-4" href="#__codelineno-67-4"></a>delete routing isis graceful-restart                                                 # Отключить IS-IS Graceful Restart
-<a id="__codelineno-67-5" name="__codelineno-67-5" href="#__codelineno-67-5"></a>delete routing isis interface &lt;ifname&gt;                                               # Отключить IS-IS на интерфейсе
-<a id="__codelineno-67-6" name="__codelineno-67-6" href="#__codelineno-67-6"></a>delete routing isis interface &lt;ifname&gt; hello-interval                                # Сбросить интервал hello IS-IS на интерфейсе к дефолту
-<a id="__codelineno-67-7" name="__codelineno-67-7" href="#__codelineno-67-7"></a>delete routing isis interface &lt;ifname&gt; hello-multiplier                              # Сбросить множитель hello IS-IS на интерфейсе к дефолту
-<a id="__codelineno-67-8" name="__codelineno-67-8" href="#__codelineno-67-8"></a>delete routing isis interface &lt;ifname&gt; metric                                        # Сбросить метрику интерфейса IS-IS к дефолту
-<a id="__codelineno-67-9" name="__codelineno-67-9" href="#__codelineno-67-9"></a>delete routing isis is-type                                                          # Сбросить тип маршрутизатора IS-IS к дефолту (level-2-only)
-<a id="__codelineno-67-10" name="__codelineno-67-10" href="#__codelineno-67-10"></a>delete routing isis metric-style                                                     # Сбросить стиль метрики IS-IS к дефолту (wide)
-<a id="__codelineno-67-11" name="__codelineno-67-11" href="#__codelineno-67-11"></a>delete routing isis net                                                              # Удалить NET-адрес IS-IS
-<a id="__codelineno-67-12" name="__codelineno-67-12" href="#__codelineno-67-12"></a>delete routing isis passive-interface &lt;ifname&gt;                                       # Удалить пассивный интерфейс IS-IS
-<a id="__codelineno-67-13" name="__codelineno-67-13" href="#__codelineno-67-13"></a>delete routing isis prefix-sid &lt;prefix&gt;                                              # Удалить присваивание prefix-SID SR-MPLS
-<a id="__codelineno-67-14" name="__codelineno-67-14" href="#__codelineno-67-14"></a>delete routing isis redistribute connected|static|bgp|ospf                           # Удалить пересылку протокола из IS-IS
-<a id="__codelineno-67-15" name="__codelineno-67-15" href="#__codelineno-67-15"></a>delete routing isis segment-routing                                                  # Отключить Segment Routing IS-IS
-<a id="__codelineno-67-16" name="__codelineno-67-16" href="#__codelineno-67-16"></a>delete routing isis segment-routing global-block                                     # Сбросить SRGB IS-IS к дефолту FRR (16000–23999)
-<a id="__codelineno-67-17" name="__codelineno-67-17" href="#__codelineno-67-17"></a>delete routing isis tag                                                              # Удалить тег процесса IS-IS
-<a id="__codelineno-67-18" name="__codelineno-67-18" href="#__codelineno-67-18"></a>set routing isis area-password &lt;password&gt;                                            # Установить пароль аутентификации area IS-IS (открытый текст)
-<a id="__codelineno-67-19" name="__codelineno-67-19" href="#__codelineno-67-19"></a>set routing isis bfd                                                                 # Включить BFD для всех смежностей IS-IS
-<a id="__codelineno-67-20" name="__codelineno-67-20" href="#__codelineno-67-20"></a>set routing isis domain-password &lt;password&gt;                                          # Установить пароль аутентификации domain IS-IS уровня 2
-<a id="__codelineno-67-21" name="__codelineno-67-21" href="#__codelineno-67-21"></a>set routing isis graceful-restart                                                    # Включить IS-IS Graceful Restart (RFC 5306)
-<a id="__codelineno-67-22" name="__codelineno-67-22" href="#__codelineno-67-22"></a>set routing isis interface &lt;ifname&gt;                                                  # Включить IS-IS на интерфейсе
-<a id="__codelineno-67-23" name="__codelineno-67-23" href="#__codelineno-67-23"></a>set routing isis interface &lt;ifname&gt; hello-interval &lt;n&gt;                               # Установить интервал hello IS-IS на интерфейсе (секунды, 1–600)
-<a id="__codelineno-67-24" name="__codelineno-67-24" href="#__codelineno-67-24"></a>set routing isis interface &lt;ifname&gt; hello-multiplier &lt;n&gt;                             # Установить множитель hello IS-IS на интерфейсе (dead = interval × multiplier)
-<a id="__codelineno-67-25" name="__codelineno-67-25" href="#__codelineno-67-25"></a>set routing isis interface &lt;ifname&gt; metric &lt;n&gt;                                       # Установить метрику интерфейса IS-IS (wide: 1–16777214)
-<a id="__codelineno-67-26" name="__codelineno-67-26" href="#__codelineno-67-26"></a>set routing isis is-type level-1|level-2-only|level-1-2                              # Установить тип маршрутизатора IS-IS (level-1, level-2-only, level-1-2)
-<a id="__codelineno-67-27" name="__codelineno-67-27" href="#__codelineno-67-27"></a>set routing isis metric-style wide                                                   # Включить wide (расширенный) стиль метрики IS-IS
-<a id="__codelineno-67-28" name="__codelineno-67-28" href="#__codelineno-67-28"></a>set routing isis net &lt;net&gt;                                                           # Установить NET-адрес IS-IS (Network Entity Title)
-<a id="__codelineno-67-29" name="__codelineno-67-29" href="#__codelineno-67-29"></a>set routing isis passive-interface &lt;ifname&gt;                                          # Установить интерфейс IS-IS как пассивный (без формирования смежности)
-<a id="__codelineno-67-30" name="__codelineno-67-30" href="#__codelineno-67-30"></a>set routing isis prefix-sid &lt;prefix&gt; index &lt;index&gt;                                   # Присвоить индекс prefix-SID SR-MPLS префиксу
-<a id="__codelineno-67-31" name="__codelineno-67-31" href="#__codelineno-67-31"></a>set routing isis redistribute connected|static|bgp|ospf                              # Пересылать протокол в IS-IS
-<a id="__codelineno-67-32" name="__codelineno-67-32" href="#__codelineno-67-32"></a>set routing isis segment-routing enable                                              # Включить Segment Routing MPLS для IS-IS
-<a id="__codelineno-67-33" name="__codelineno-67-33" href="#__codelineno-67-33"></a>set routing isis segment-routing global-block &lt;srgb_min&gt; &lt;srgb_max&gt;                  # Установить диапазон меток SRGB IS-IS Segment Routing (min–max)
-<a id="__codelineno-67-34" name="__codelineno-67-34" href="#__codelineno-67-34"></a>set routing isis tag &lt;tag&gt;                                                           # Установить тег процесса IS-IS (имя экземпляра)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a>delete routing isis area-password                                                    # Удалить пароль аутентификации area IS-IS
+<a id="__codelineno-68-2" name="__codelineno-68-2" href="#__codelineno-68-2"></a>delete routing isis bfd                                                              # Отключить BFD для смежностей IS-IS
+<a id="__codelineno-68-3" name="__codelineno-68-3" href="#__codelineno-68-3"></a>delete routing isis domain-password                                                  # Удалить пароль аутентификации domain IS-IS
+<a id="__codelineno-68-4" name="__codelineno-68-4" href="#__codelineno-68-4"></a>delete routing isis graceful-restart                                                 # Отключить IS-IS Graceful Restart
+<a id="__codelineno-68-5" name="__codelineno-68-5" href="#__codelineno-68-5"></a>delete routing isis interface &lt;ifname&gt;                                               # Отключить IS-IS на интерфейсе
+<a id="__codelineno-68-6" name="__codelineno-68-6" href="#__codelineno-68-6"></a>delete routing isis interface &lt;ifname&gt; hello-interval                                # Сбросить интервал hello IS-IS на интерфейсе к дефолту
+<a id="__codelineno-68-7" name="__codelineno-68-7" href="#__codelineno-68-7"></a>delete routing isis interface &lt;ifname&gt; hello-multiplier                              # Сбросить множитель hello IS-IS на интерфейсе к дефолту
+<a id="__codelineno-68-8" name="__codelineno-68-8" href="#__codelineno-68-8"></a>delete routing isis interface &lt;ifname&gt; metric                                        # Сбросить метрику интерфейса IS-IS к дефолту
+<a id="__codelineno-68-9" name="__codelineno-68-9" href="#__codelineno-68-9"></a>delete routing isis is-type                                                          # Сбросить тип маршрутизатора IS-IS к дефолту (level-2-only)
+<a id="__codelineno-68-10" name="__codelineno-68-10" href="#__codelineno-68-10"></a>delete routing isis metric-style                                                     # Сбросить стиль метрики IS-IS к дефолту (wide)
+<a id="__codelineno-68-11" name="__codelineno-68-11" href="#__codelineno-68-11"></a>delete routing isis net                                                              # Удалить NET-адрес IS-IS
+<a id="__codelineno-68-12" name="__codelineno-68-12" href="#__codelineno-68-12"></a>delete routing isis passive-interface &lt;ifname&gt;                                       # Удалить пассивный интерфейс IS-IS
+<a id="__codelineno-68-13" name="__codelineno-68-13" href="#__codelineno-68-13"></a>delete routing isis prefix-sid &lt;prefix&gt;                                              # Удалить присваивание prefix-SID SR-MPLS
+<a id="__codelineno-68-14" name="__codelineno-68-14" href="#__codelineno-68-14"></a>delete routing isis redistribute connected|static|bgp|ospf                           # Удалить пересылку протокола из IS-IS
+<a id="__codelineno-68-15" name="__codelineno-68-15" href="#__codelineno-68-15"></a>delete routing isis segment-routing                                                  # Отключить Segment Routing IS-IS
+<a id="__codelineno-68-16" name="__codelineno-68-16" href="#__codelineno-68-16"></a>delete routing isis segment-routing global-block                                     # Сбросить SRGB IS-IS к дефолту FRR (16000–23999)
+<a id="__codelineno-68-17" name="__codelineno-68-17" href="#__codelineno-68-17"></a>delete routing isis tag                                                              # Удалить тег процесса IS-IS
+<a id="__codelineno-68-18" name="__codelineno-68-18" href="#__codelineno-68-18"></a>set routing isis area-password &lt;password&gt;                                            # Установить пароль аутентификации area IS-IS (открытый текст)
+<a id="__codelineno-68-19" name="__codelineno-68-19" href="#__codelineno-68-19"></a>set routing isis bfd                                                                 # Включить BFD для всех смежностей IS-IS
+<a id="__codelineno-68-20" name="__codelineno-68-20" href="#__codelineno-68-20"></a>set routing isis domain-password &lt;password&gt;                                          # Установить пароль аутентификации domain IS-IS уровня 2
+<a id="__codelineno-68-21" name="__codelineno-68-21" href="#__codelineno-68-21"></a>set routing isis graceful-restart                                                    # Включить IS-IS Graceful Restart (RFC 5306)
+<a id="__codelineno-68-22" name="__codelineno-68-22" href="#__codelineno-68-22"></a>set routing isis interface &lt;ifname&gt;                                                  # Включить IS-IS на интерфейсе
+<a id="__codelineno-68-23" name="__codelineno-68-23" href="#__codelineno-68-23"></a>set routing isis interface &lt;ifname&gt; hello-interval &lt;n&gt;                               # Установить интервал hello IS-IS на интерфейсе (секунды, 1–600)
+<a id="__codelineno-68-24" name="__codelineno-68-24" href="#__codelineno-68-24"></a>set routing isis interface &lt;ifname&gt; hello-multiplier &lt;n&gt;                             # Установить множитель hello IS-IS на интерфейсе (dead = interval × multiplier)
+<a id="__codelineno-68-25" name="__codelineno-68-25" href="#__codelineno-68-25"></a>set routing isis interface &lt;ifname&gt; metric &lt;n&gt;                                       # Установить метрику интерфейса IS-IS (wide: 1–16777214)
+<a id="__codelineno-68-26" name="__codelineno-68-26" href="#__codelineno-68-26"></a>set routing isis is-type level-1|level-2-only|level-1-2                              # Установить тип маршрутизатора IS-IS (level-1, level-2-only, level-1-2)
+<a id="__codelineno-68-27" name="__codelineno-68-27" href="#__codelineno-68-27"></a>set routing isis metric-style wide                                                   # Включить wide (расширенный) стиль метрики IS-IS
+<a id="__codelineno-68-28" name="__codelineno-68-28" href="#__codelineno-68-28"></a>set routing isis net &lt;net&gt;                                                           # Установить NET-адрес IS-IS (Network Entity Title)
+<a id="__codelineno-68-29" name="__codelineno-68-29" href="#__codelineno-68-29"></a>set routing isis passive-interface &lt;ifname&gt;                                          # Установить интерфейс IS-IS как пассивный (без формирования смежности)
+<a id="__codelineno-68-30" name="__codelineno-68-30" href="#__codelineno-68-30"></a>set routing isis prefix-sid &lt;prefix&gt; index &lt;index&gt;                                   # Присвоить индекс prefix-SID SR-MPLS префиксу
+<a id="__codelineno-68-31" name="__codelineno-68-31" href="#__codelineno-68-31"></a>set routing isis redistribute connected|static|bgp|ospf                              # Пересылать протокол в IS-IS
+<a id="__codelineno-68-32" name="__codelineno-68-32" href="#__codelineno-68-32"></a>set routing isis segment-routing enable                                              # Включить Segment Routing MPLS для IS-IS
+<a id="__codelineno-68-33" name="__codelineno-68-33" href="#__codelineno-68-33"></a>set routing isis segment-routing global-block &lt;srgb_min&gt; &lt;srgb_max&gt;                  # Установить диапазон меток SRGB IS-IS Segment Routing (min–max)
+<a id="__codelineno-68-34" name="__codelineno-68-34" href="#__codelineno-68-34"></a>set routing isis tag &lt;tag&gt;                                                           # Установить тег процесса IS-IS (имя экземпляра)
 </code></pre></div>
 <h3 id="pim-доп">PIM (доп.)<a class="headerlink" href="#pim-доп" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a>delete routing pim anycast-rp &lt;virtual_ip&gt; &lt;real_ip&gt;                                 # Удалить peer-RP из Anycast-RP набора
-<a id="__codelineno-68-2" name="__codelineno-68-2" href="#__codelineno-68-2"></a>delete routing pim ecmp                                                              # Отключить PIM ECMP multipath
-<a id="__codelineno-68-3" name="__codelineno-68-3" href="#__codelineno-68-3"></a>delete routing pim interface &lt;ifname&gt;                                                # Отключить PIM на интерфейсе
-<a id="__codelineno-68-4" name="__codelineno-68-4" href="#__codelineno-68-4"></a>delete routing pim rp &lt;rp_ip&gt;                                                        # Удалить конфигурацию PIM Rendezvous Point
-<a id="__codelineno-68-5" name="__codelineno-68-5" href="#__codelineno-68-5"></a>set routing pim anycast-rp &lt;virtual_ip&gt; &lt;real_ip&gt;                                    # Добавить peer-RP в Anycast-RP набор (PIM-SM HA)
-<a id="__codelineno-68-6" name="__codelineno-68-6" href="#__codelineno-68-6"></a>set routing pim ecmp enable                                                          # Включить PIM ECMP multipath для multicast
-<a id="__codelineno-68-7" name="__codelineno-68-7" href="#__codelineno-68-7"></a>set routing pim interface &lt;ifname&gt;                                                   # Включить PIM на интерфейсе
-<a id="__codelineno-68-8" name="__codelineno-68-8" href="#__codelineno-68-8"></a>set routing pim interface &lt;ifname&gt; igmp                                              # Включить PIM и IGMP на интерфейсе
-<a id="__codelineno-68-9" name="__codelineno-68-9" href="#__codelineno-68-9"></a>set routing pim rp &lt;rp_ip&gt; &lt;group_prefix&gt;                                            # Настроить PIM Rendezvous Point (RP) для группы multicast
+<div class="highlight"><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a>delete routing pim anycast-rp &lt;virtual_ip&gt; &lt;real_ip&gt;                                 # Удалить peer-RP из Anycast-RP набора
+<a id="__codelineno-69-2" name="__codelineno-69-2" href="#__codelineno-69-2"></a>delete routing pim ecmp                                                              # Отключить PIM ECMP multipath
+<a id="__codelineno-69-3" name="__codelineno-69-3" href="#__codelineno-69-3"></a>delete routing pim interface &lt;ifname&gt;                                                # Отключить PIM на интерфейсе
+<a id="__codelineno-69-4" name="__codelineno-69-4" href="#__codelineno-69-4"></a>delete routing pim rp &lt;rp_ip&gt;                                                        # Удалить конфигурацию PIM Rendezvous Point
+<a id="__codelineno-69-5" name="__codelineno-69-5" href="#__codelineno-69-5"></a>set routing pim anycast-rp &lt;virtual_ip&gt; &lt;real_ip&gt;                                    # Добавить peer-RP в Anycast-RP набор (PIM-SM HA)
+<a id="__codelineno-69-6" name="__codelineno-69-6" href="#__codelineno-69-6"></a>set routing pim ecmp enable                                                          # Включить PIM ECMP multipath для multicast
+<a id="__codelineno-69-7" name="__codelineno-69-7" href="#__codelineno-69-7"></a>set routing pim interface &lt;ifname&gt;                                                   # Включить PIM на интерфейсе
+<a id="__codelineno-69-8" name="__codelineno-69-8" href="#__codelineno-69-8"></a>set routing pim interface &lt;ifname&gt; igmp                                              # Включить PIM и IGMP на интерфейсе
+<a id="__codelineno-69-9" name="__codelineno-69-9" href="#__codelineno-69-9"></a>set routing pim rp &lt;rp_ip&gt; &lt;group_prefix&gt;                                            # Настроить PIM Rendezvous Point (RP) для группы multicast
 </code></pre></div>
 <h3 id="srv6-полный">SRv6 (полный)<a class="headerlink" href="#srv6-полный" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a>delete routing srv6 control-plane isis|bgp enable                                    # Отключить интеграцию SRv6 control-plane для IS-IS/BGP
-<a id="__codelineno-69-2" name="__codelineno-69-2" href="#__codelineno-69-2"></a>delete routing srv6 control-plane isis|bgp locator                                   # Удалить привязку SRv6 locator из IS-IS/BGP control-plane
-<a id="__codelineno-69-3" name="__codelineno-69-3" href="#__codelineno-69-3"></a>delete routing srv6 enable                                                           # Отключить SRv6 dataplane/config-рендер
-<a id="__codelineno-69-4" name="__codelineno-69-4" href="#__codelineno-69-4"></a>delete routing srv6 localsid &lt;sid&gt;                                                   # Удалить запись SRv6 LocalSID
-<a id="__codelineno-69-5" name="__codelineno-69-5" href="#__codelineno-69-5"></a>delete routing srv6 locator &lt;name&gt;                                                   # Удалить SRv6 locator
-<a id="__codelineno-69-6" name="__codelineno-69-6" href="#__codelineno-69-6"></a>delete routing srv6 policy &lt;name&gt;                                                    # Удалить SRv6 policy
-<a id="__codelineno-69-7" name="__codelineno-69-7" href="#__codelineno-69-7"></a>delete routing srv6 policy &lt;name&gt; binding-sid                                        # Удалить binding-SID из SRv6 policy
-<a id="__codelineno-69-8" name="__codelineno-69-8" href="#__codelineno-69-8"></a>delete routing srv6 steering prefix &lt;prefix&gt;                                         # Удалить запись SRv6 steering из глобальной таблицы
-<a id="__codelineno-69-9" name="__codelineno-69-9" href="#__codelineno-69-9"></a>delete routing srv6 steering vrf &lt;vrf&gt; prefix &lt;prefix&gt;                               # Удалить запись SRv6 steering из конкретного VRF
-<a id="__codelineno-69-10" name="__codelineno-69-10" href="#__codelineno-69-10"></a>set routing srv6 control-plane isis|bgp enable true|false                            # Включить/отключить интеграцию SRv6 control-plane для IS-IS/BGP
-<a id="__codelineno-69-11" name="__codelineno-69-11" href="#__codelineno-69-11"></a>set routing srv6 control-plane isis|bgp locator &lt;name&gt;                               # Привязать SRv6 locator к IS-IS/BGP control-plane
-<a id="__codelineno-69-12" name="__codelineno-69-12" href="#__codelineno-69-12"></a>set routing srv6 enable true|false                                                   # Включить или отключить SRv6 dataplane/config-рендер
-<a id="__codelineno-69-13" name="__codelineno-69-13" href="#__codelineno-69-13"></a>set routing srv6 localsid &lt;sid&gt; behavior end                                         # Настроить SRv6 LocalSID поведение End
-<a id="__codelineno-69-14" name="__codelineno-69-14" href="#__codelineno-69-14"></a>set routing srv6 localsid &lt;sid&gt; behavior end.dt4 vrf &lt;vrf&gt;                           # Настроить SRv6 LocalSID поведение End.DT4 (decap в IPv4 VRF)
-<a id="__codelineno-69-15" name="__codelineno-69-15" href="#__codelineno-69-15"></a>set routing srv6 localsid &lt;sid&gt; behavior end.dt6 vrf &lt;vrf&gt;                           # Настроить SRv6 LocalSID поведение End.DT6 (decap в IPv6 VRF)
-<a id="__codelineno-69-16" name="__codelineno-69-16" href="#__codelineno-69-16"></a>set routing srv6 localsid &lt;sid&gt; behavior end.dx4 interface &lt;ifname&gt; next-hop &lt;next_hop&gt; # Настроить SRv6 LocalSID поведение End.DX4 (IPv4 decap)
-<a id="__codelineno-69-17" name="__codelineno-69-17" href="#__codelineno-69-17"></a>set routing srv6 localsid &lt;sid&gt; behavior end.dx6 interface &lt;ifname&gt; next-hop &lt;next_hop&gt; # Настроить SRv6 LocalSID поведение End.DX6 (IPv6 decap)
-<a id="__codelineno-69-18" name="__codelineno-69-18" href="#__codelineno-69-18"></a>set routing srv6 localsid &lt;sid&gt; behavior end.x interface &lt;ifname&gt; next-hop &lt;next_hop&gt; # Настроить SRv6 LocalSID поведение End.X (соседний линк)
-<a id="__codelineno-69-19" name="__codelineno-69-19" href="#__codelineno-69-19"></a>set routing srv6 locator &lt;name&gt; argument-len &lt;value&gt;                                 # Установить длину argument SRv6 locator
-<a id="__codelineno-69-20" name="__codelineno-69-20" href="#__codelineno-69-20"></a>set routing srv6 locator &lt;name&gt; block-len &lt;value&gt;                                    # Установить длину block SRv6 locator
-<a id="__codelineno-69-21" name="__codelineno-69-21" href="#__codelineno-69-21"></a>set routing srv6 locator &lt;name&gt; function-len &lt;value&gt;                                 # Установить длину function SRv6 locator
-<a id="__codelineno-69-22" name="__codelineno-69-22" href="#__codelineno-69-22"></a>set routing srv6 locator &lt;name&gt; node-len &lt;value&gt;                                     # Установить длину node SRv6 locator
-<a id="__codelineno-69-23" name="__codelineno-69-23" href="#__codelineno-69-23"></a>set routing srv6 locator &lt;name&gt; prefix &lt;prefix&gt;                                      # Установить префикс SRv6 locator
-<a id="__codelineno-69-24" name="__codelineno-69-24" href="#__codelineno-69-24"></a>set routing srv6 policy &lt;name&gt; binding-sid &lt;sid&gt;                                     # Установить optional binding-SID для SRv6 policy
-<a id="__codelineno-69-25" name="__codelineno-69-25" href="#__codelineno-69-25"></a>set routing srv6 policy &lt;name&gt; mode encap|inline                                     # Установить режим SRv6 policy (encap или inline)
-<a id="__codelineno-69-26" name="__codelineno-69-26" href="#__codelineno-69-26"></a>set routing srv6 policy &lt;name&gt; segments &lt;segments&gt;                                   # Установить список сегментов SRv6 policy (через запятую)
-<a id="__codelineno-69-27" name="__codelineno-69-27" href="#__codelineno-69-27"></a>set routing srv6 steering prefix &lt;prefix&gt; policy &lt;policy&gt;                            # Установить запись SRv6 steering для глобальной таблицы
-<a id="__codelineno-69-28" name="__codelineno-69-28" href="#__codelineno-69-28"></a>set routing srv6 steering vrf &lt;vrf&gt; prefix &lt;prefix&gt; policy &lt;policy&gt;                  # Установить запись SRv6 steering для конкретного VRF
+<div class="highlight"><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a>delete routing srv6 control-plane isis|bgp enable                                    # Отключить интеграцию SRv6 control-plane для IS-IS/BGP
+<a id="__codelineno-70-2" name="__codelineno-70-2" href="#__codelineno-70-2"></a>delete routing srv6 control-plane isis|bgp locator                                   # Удалить привязку SRv6 locator из IS-IS/BGP control-plane
+<a id="__codelineno-70-3" name="__codelineno-70-3" href="#__codelineno-70-3"></a>delete routing srv6 enable                                                           # Отключить SRv6 dataplane/config-рендер
+<a id="__codelineno-70-4" name="__codelineno-70-4" href="#__codelineno-70-4"></a>delete routing srv6 localsid &lt;sid&gt;                                                   # Удалить запись SRv6 LocalSID
+<a id="__codelineno-70-5" name="__codelineno-70-5" href="#__codelineno-70-5"></a>delete routing srv6 locator &lt;name&gt;                                                   # Удалить SRv6 locator
+<a id="__codelineno-70-6" name="__codelineno-70-6" href="#__codelineno-70-6"></a>delete routing srv6 policy &lt;name&gt;                                                    # Удалить SRv6 policy
+<a id="__codelineno-70-7" name="__codelineno-70-7" href="#__codelineno-70-7"></a>delete routing srv6 policy &lt;name&gt; binding-sid                                        # Удалить binding-SID из SRv6 policy
+<a id="__codelineno-70-8" name="__codelineno-70-8" href="#__codelineno-70-8"></a>delete routing srv6 steering prefix &lt;prefix&gt;                                         # Удалить запись SRv6 steering из глобальной таблицы
+<a id="__codelineno-70-9" name="__codelineno-70-9" href="#__codelineno-70-9"></a>delete routing srv6 steering vrf &lt;vrf&gt; prefix &lt;prefix&gt;                               # Удалить запись SRv6 steering из конкретного VRF
+<a id="__codelineno-70-10" name="__codelineno-70-10" href="#__codelineno-70-10"></a>set routing srv6 control-plane isis|bgp enable true|false                            # Включить/отключить интеграцию SRv6 control-plane для IS-IS/BGP
+<a id="__codelineno-70-11" name="__codelineno-70-11" href="#__codelineno-70-11"></a>set routing srv6 control-plane isis|bgp locator &lt;name&gt;                               # Привязать SRv6 locator к IS-IS/BGP control-plane
+<a id="__codelineno-70-12" name="__codelineno-70-12" href="#__codelineno-70-12"></a>set routing srv6 enable true|false                                                   # Включить или отключить SRv6 dataplane/config-рендер
+<a id="__codelineno-70-13" name="__codelineno-70-13" href="#__codelineno-70-13"></a>set routing srv6 localsid &lt;sid&gt; behavior end                                         # Настроить SRv6 LocalSID поведение End
+<a id="__codelineno-70-14" name="__codelineno-70-14" href="#__codelineno-70-14"></a>set routing srv6 localsid &lt;sid&gt; behavior end.dt4 vrf &lt;vrf&gt;                           # Настроить SRv6 LocalSID поведение End.DT4 (decap в IPv4 VRF)
+<a id="__codelineno-70-15" name="__codelineno-70-15" href="#__codelineno-70-15"></a>set routing srv6 localsid &lt;sid&gt; behavior end.dt6 vrf &lt;vrf&gt;                           # Настроить SRv6 LocalSID поведение End.DT6 (decap в IPv6 VRF)
+<a id="__codelineno-70-16" name="__codelineno-70-16" href="#__codelineno-70-16"></a>set routing srv6 localsid &lt;sid&gt; behavior end.dx4 interface &lt;ifname&gt; next-hop &lt;next_hop&gt; # Настроить SRv6 LocalSID поведение End.DX4 (IPv4 decap)
+<a id="__codelineno-70-17" name="__codelineno-70-17" href="#__codelineno-70-17"></a>set routing srv6 localsid &lt;sid&gt; behavior end.dx6 interface &lt;ifname&gt; next-hop &lt;next_hop&gt; # Настроить SRv6 LocalSID поведение End.DX6 (IPv6 decap)
+<a id="__codelineno-70-18" name="__codelineno-70-18" href="#__codelineno-70-18"></a>set routing srv6 localsid &lt;sid&gt; behavior end.x interface &lt;ifname&gt; next-hop &lt;next_hop&gt; # Настроить SRv6 LocalSID поведение End.X (соседний линк)
+<a id="__codelineno-70-19" name="__codelineno-70-19" href="#__codelineno-70-19"></a>set routing srv6 locator &lt;name&gt; argument-len &lt;value&gt;                                 # Установить длину argument SRv6 locator
+<a id="__codelineno-70-20" name="__codelineno-70-20" href="#__codelineno-70-20"></a>set routing srv6 locator &lt;name&gt; block-len &lt;value&gt;                                    # Установить длину block SRv6 locator
+<a id="__codelineno-70-21" name="__codelineno-70-21" href="#__codelineno-70-21"></a>set routing srv6 locator &lt;name&gt; function-len &lt;value&gt;                                 # Установить длину function SRv6 locator
+<a id="__codelineno-70-22" name="__codelineno-70-22" href="#__codelineno-70-22"></a>set routing srv6 locator &lt;name&gt; node-len &lt;value&gt;                                     # Установить длину node SRv6 locator
+<a id="__codelineno-70-23" name="__codelineno-70-23" href="#__codelineno-70-23"></a>set routing srv6 locator &lt;name&gt; prefix &lt;prefix&gt;                                      # Установить префикс SRv6 locator
+<a id="__codelineno-70-24" name="__codelineno-70-24" href="#__codelineno-70-24"></a>set routing srv6 policy &lt;name&gt; binding-sid &lt;sid&gt;                                     # Установить optional binding-SID для SRv6 policy
+<a id="__codelineno-70-25" name="__codelineno-70-25" href="#__codelineno-70-25"></a>set routing srv6 policy &lt;name&gt; mode encap|inline                                     # Установить режим SRv6 policy (encap или inline)
+<a id="__codelineno-70-26" name="__codelineno-70-26" href="#__codelineno-70-26"></a>set routing srv6 policy &lt;name&gt; segments &lt;segments&gt;                                   # Установить список сегментов SRv6 policy (через запятую)
+<a id="__codelineno-70-27" name="__codelineno-70-27" href="#__codelineno-70-27"></a>set routing srv6 steering prefix &lt;prefix&gt; policy &lt;policy&gt;                            # Установить запись SRv6 steering для глобальной таблицы
+<a id="__codelineno-70-28" name="__codelineno-70-28" href="#__codelineno-70-28"></a>set routing srv6 steering vrf &lt;vrf&gt; prefix &lt;prefix&gt; policy &lt;policy&gt;                  # Установить запись SRv6 steering для конкретного VRF
 </code></pre></div>
 <h3 id="mpls--ldp-доп">MPLS / LDP (доп.)<a class="headerlink" href="#mpls--ldp-доп" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a>delete mpls ldp interface &lt;ifname&gt;                                                   # Отключить LDP-распределение меток на интерфейсе
-<a id="__codelineno-70-2" name="__codelineno-70-2" href="#__codelineno-70-2"></a>delete mpls ldp neighbor &lt;addr&gt; password                                             # Удалить MD5-пароль LDP-соседа
-<a id="__codelineno-70-3" name="__codelineno-70-3" href="#__codelineno-70-3"></a>delete mpls ldp router-id                                                            # Сбросить MPLS LDP router-id
-<a id="__codelineno-70-4" name="__codelineno-70-4" href="#__codelineno-70-4"></a>set mpls ldp interface &lt;ifname&gt;                                                      # Включить LDP label-распределение на интерфейсе
-<a id="__codelineno-70-5" name="__codelineno-70-5" href="#__codelineno-70-5"></a>set mpls ldp neighbor &lt;addr&gt; password &lt;password&gt;                                     # Установить LDP сосед MD5 аутентификацию password
-<a id="__codelineno-70-6" name="__codelineno-70-6" href="#__codelineno-70-6"></a>set mpls ldp router-id &lt;rid&gt;                                                         # Установить MPLS LDP router-id (transport-адрес)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a>delete mpls ldp interface &lt;ifname&gt;                                                   # Отключить LDP-распределение меток на интерфейсе
+<a id="__codelineno-71-2" name="__codelineno-71-2" href="#__codelineno-71-2"></a>delete mpls ldp neighbor &lt;addr&gt; password                                             # Удалить MD5-пароль LDP-соседа
+<a id="__codelineno-71-3" name="__codelineno-71-3" href="#__codelineno-71-3"></a>delete mpls ldp router-id                                                            # Сбросить MPLS LDP router-id
+<a id="__codelineno-71-4" name="__codelineno-71-4" href="#__codelineno-71-4"></a>set mpls ldp interface &lt;ifname&gt;                                                      # Включить LDP label-распределение на интерфейсе
+<a id="__codelineno-71-5" name="__codelineno-71-5" href="#__codelineno-71-5"></a>set mpls ldp neighbor &lt;addr&gt; password &lt;password&gt;                                     # Установить LDP сосед MD5 аутентификацию password
+<a id="__codelineno-71-6" name="__codelineno-71-6" href="#__codelineno-71-6"></a>set mpls ldp router-id &lt;rid&gt;                                                         # Установить MPLS LDP router-id (transport-адрес)
 </code></pre></div>
 <h3 id="vrrp">VRRP<a class="headerlink" href="#vrrp" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a>delete routing vrrp group &lt;id&gt;                                                       # Удалить VRRP группу
-<a id="__codelineno-71-2" name="__codelineno-71-2" href="#__codelineno-71-2"></a>delete routing vrrp group &lt;id&gt; preempt                                               # Отключить VRRP preemption для группы
-<a id="__codelineno-71-3" name="__codelineno-71-3" href="#__codelineno-71-3"></a>delete routing vrrp group &lt;id&gt; priority                                              # Сбросить приоритет VRRP группы на default (100)
-<a id="__codelineno-71-4" name="__codelineno-71-4" href="#__codelineno-71-4"></a>delete routing vrrp group &lt;id&gt; timer                                                 # Сбросить таймер VRRP advertisement на default
-<a id="__codelineno-71-5" name="__codelineno-71-5" href="#__codelineno-71-5"></a>set routing vrrp group &lt;id&gt; interface &lt;ifname&gt; virtual-address &lt;vip&gt;                 # Создать VRRP группу на интерфейсе с virtual IP
-<a id="__codelineno-71-6" name="__codelineno-71-6" href="#__codelineno-71-6"></a>set routing vrrp group &lt;id&gt; preempt                                                  # Включить VRRP preemption для группы
-<a id="__codelineno-71-7" name="__codelineno-71-7" href="#__codelineno-71-7"></a>set routing vrrp group &lt;id&gt; priority &lt;priority&gt;                                      # Установить приоритет VRRP группы (1–254, default 100)
-<a id="__codelineno-71-8" name="__codelineno-71-8" href="#__codelineno-71-8"></a>set routing vrrp group &lt;id&gt; timer &lt;centiseconds&gt;                                     # Установить таймер VRRP advertisement (centiseconds, default 100)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a>delete routing vrrp group &lt;id&gt;                                                       # Удалить VRRP группу
+<a id="__codelineno-72-2" name="__codelineno-72-2" href="#__codelineno-72-2"></a>delete routing vrrp group &lt;id&gt; preempt                                               # Отключить VRRP preemption для группы
+<a id="__codelineno-72-3" name="__codelineno-72-3" href="#__codelineno-72-3"></a>delete routing vrrp group &lt;id&gt; priority                                              # Сбросить приоритет VRRP группы на default (100)
+<a id="__codelineno-72-4" name="__codelineno-72-4" href="#__codelineno-72-4"></a>delete routing vrrp group &lt;id&gt; timer                                                 # Сбросить таймер VRRP advertisement на default
+<a id="__codelineno-72-5" name="__codelineno-72-5" href="#__codelineno-72-5"></a>set routing vrrp group &lt;id&gt; interface &lt;ifname&gt; virtual-address &lt;vip&gt;                 # Создать VRRP группу на интерфейсе с virtual IP
+<a id="__codelineno-72-6" name="__codelineno-72-6" href="#__codelineno-72-6"></a>set routing vrrp group &lt;id&gt; preempt                                                  # Включить VRRP preemption для группы
+<a id="__codelineno-72-7" name="__codelineno-72-7" href="#__codelineno-72-7"></a>set routing vrrp group &lt;id&gt; priority &lt;priority&gt;                                      # Установить приоритет VRRP группы (1–254, default 100)
+<a id="__codelineno-72-8" name="__codelineno-72-8" href="#__codelineno-72-8"></a>set routing vrrp group &lt;id&gt; timer &lt;centiseconds&gt;                                     # Установить таймер VRRP advertisement (centiseconds, default 100)
 </code></pre></div>
 <h3 id="evpn-доп">EVPN (доп.)<a class="headerlink" href="#evpn-доп" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a>delete evpn advertise ipv4|ipv6                                                      # Включить анонс EVPN-префиксов для IPv4 или IPv6
-<a id="__codelineno-72-2" name="__codelineno-72-2" href="#__codelineno-72-2"></a>delete evpn route-advertise default-gateway|svi-ip                                   # Включить/отключить анонс EVPN default-gateway/SVI-IP
-<a id="__codelineno-72-3" name="__codelineno-72-3" href="#__codelineno-72-3"></a>delete evpn vtep source_ip                                                           # Удалить IP-адрес источника EVPN VTEP
-<a id="__codelineno-72-4" name="__codelineno-72-4" href="#__codelineno-72-4"></a>delete routing evpn mac_mobility hold_time                                           # Удалить время удержания MAC mobility
-<a id="__codelineno-72-5" name="__codelineno-72-5" href="#__codelineno-72-5"></a>delete routing evpn mac_mobility hold_time &lt;val&gt;                                     # Удалить время удержания MAC mobility
-<a id="__codelineno-72-6" name="__codelineno-72-6" href="#__codelineno-72-6"></a>delete routing evpn vtep source-ip                                                   # Удалить IP-адрес источника EVPN VTEP
-<a id="__codelineno-72-7" name="__codelineno-72-7" href="#__codelineno-72-7"></a>delete routing evpn vtep source_ip                                                   # Удалить IP-адрес источника EVPN VTEP
-<a id="__codelineno-72-8" name="__codelineno-72-8" href="#__codelineno-72-8"></a>set evpn l3-vni &lt;vrf&gt; vni &lt;vni&gt;                                                      # Привязать L3 VNI к VRF
-<a id="__codelineno-72-9" name="__codelineno-72-9" href="#__codelineno-72-9"></a>set evpn vtep source_ip &lt;ip&gt;                                                         # Установить IP-адрес источника EVPN VTEP
-<a id="__codelineno-72-10" name="__codelineno-72-10" href="#__codelineno-72-10"></a>set routing evpn mac_mobility hold_time &lt;val&gt;                                        # Установить время удержания MAC mobility
-<a id="__codelineno-72-11" name="__codelineno-72-11" href="#__codelineno-72-11"></a>set routing evpn vtep source-ip &lt;ip&gt;                                                 # Установить IP-адрес источника EVPN VTEP
-<a id="__codelineno-72-12" name="__codelineno-72-12" href="#__codelineno-72-12"></a>set routing evpn vtep source_ip &lt;ip&gt;                                                 # Установить IP-адрес источника EVPN VTEP
+<div class="highlight"><pre><span></span><code><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a>delete evpn advertise ipv4|ipv6                                                      # Включить анонс EVPN-префиксов для IPv4 или IPv6
+<a id="__codelineno-73-2" name="__codelineno-73-2" href="#__codelineno-73-2"></a>delete evpn route-advertise default-gateway|svi-ip                                   # Включить/отключить анонс EVPN default-gateway/SVI-IP
+<a id="__codelineno-73-3" name="__codelineno-73-3" href="#__codelineno-73-3"></a>delete evpn vtep source_ip                                                           # Удалить IP-адрес источника EVPN VTEP
+<a id="__codelineno-73-4" name="__codelineno-73-4" href="#__codelineno-73-4"></a>delete routing evpn mac_mobility hold_time                                           # Удалить время удержания MAC mobility
+<a id="__codelineno-73-5" name="__codelineno-73-5" href="#__codelineno-73-5"></a>delete routing evpn mac_mobility hold_time &lt;val&gt;                                     # Удалить время удержания MAC mobility
+<a id="__codelineno-73-6" name="__codelineno-73-6" href="#__codelineno-73-6"></a>delete routing evpn vtep source-ip                                                   # Удалить IP-адрес источника EVPN VTEP
+<a id="__codelineno-73-7" name="__codelineno-73-7" href="#__codelineno-73-7"></a>delete routing evpn vtep source_ip                                                   # Удалить IP-адрес источника EVPN VTEP
+<a id="__codelineno-73-8" name="__codelineno-73-8" href="#__codelineno-73-8"></a>set evpn l3-vni &lt;vrf&gt; vni &lt;vni&gt;                                                      # Привязать L3 VNI к VRF
+<a id="__codelineno-73-9" name="__codelineno-73-9" href="#__codelineno-73-9"></a>set evpn vtep source_ip &lt;ip&gt;                                                         # Установить IP-адрес источника EVPN VTEP
+<a id="__codelineno-73-10" name="__codelineno-73-10" href="#__codelineno-73-10"></a>set routing evpn mac_mobility hold_time &lt;val&gt;                                        # Установить время удержания MAC mobility
+<a id="__codelineno-73-11" name="__codelineno-73-11" href="#__codelineno-73-11"></a>set routing evpn vtep source-ip &lt;ip&gt;                                                 # Установить IP-адрес источника EVPN VTEP
+<a id="__codelineno-73-12" name="__codelineno-73-12" href="#__codelineno-73-12"></a>set routing evpn vtep source_ip &lt;ip&gt;                                                 # Установить IP-адрес источника EVPN VTEP
 </code></pre></div>
 <h3 id="vrf-доп">VRF (доп.)<a class="headerlink" href="#vrf-доп" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a>set vrf &lt;name&gt; route-leak import-vrf &lt;source_vrf&gt;                                    # Импортировать маршруты IPv4 unicast из другого VRF (классический BGP VRF leak)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-74-1" name="__codelineno-74-1" href="#__codelineno-74-1"></a>set vrf &lt;name&gt; route-leak import-vrf &lt;source_vrf&gt;                                    # Импортировать маршруты IPv4 unicast из другого VRF (классический BGP VRF leak)
 </code></pre></div>
 <h3 id="маршрутизация-доп">Маршрутизация (доп.)<a class="headerlink" href="#маршрутизация-доп" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-74-1" name="__codelineno-74-1" href="#__codelineno-74-1"></a>delete routing ecmp hash-policy                                                      # Сбросить политику ECMP hash-policy на умолчание (layer3)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1" href="#__codelineno-75-1"></a>delete routing ecmp hash-policy                                                      # Сбросить политику ECMP hash-policy на умолчание (layer3)
 </code></pre></div>
 <h3 id="туннели-доп">Туннели (доп.)<a class="headerlink" href="#туннели-доп" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1" href="#__codelineno-75-1"></a>set tunnel &lt;name&gt; gretap &lt;kw_pairs&gt;                                                  # Создать или обновить GRETAP (L2-over-GRE) tunnel — мостируемый
-<a id="__codelineno-75-2" name="__codelineno-75-2" href="#__codelineno-75-2"></a>set tunnel &lt;name&gt; sit &lt;kw_pairs&gt;                                                     # Создать или обновить 6in4 (IPv6-in-IPv4) SIT tunnel
+<div class="highlight"><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a>set tunnel &lt;name&gt; gretap &lt;kw_pairs&gt;                                                  # Создать или обновить GRETAP (L2-over-GRE) tunnel — мостируемый
+<a id="__codelineno-76-2" name="__codelineno-76-2" href="#__codelineno-76-2"></a>set tunnel &lt;name&gt; sit &lt;kw_pairs&gt;                                                     # Создать или обновить 6in4 (IPv6-in-IPv4) SIT tunnel
 </code></pre></div>
 <h3 id="aaa-доп">AAA (доп.)<a class="headerlink" href="#aaa-доп" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a>set aaa role &lt;name&gt; &lt;shell&gt; privilege &lt;level&gt;                                        # Настроить AAA роль с shell и привилегией
-<a id="__codelineno-76-2" name="__codelineno-76-2" href="#__codelineno-76-2"></a>set aaa user &lt;name&gt; &lt;password&gt; role &lt;role&gt;                                           # Создать локального пользователя с паролем и ролью
+<div class="highlight"><pre><span></span><code><a id="__codelineno-77-1" name="__codelineno-77-1" href="#__codelineno-77-1"></a>set aaa role &lt;name&gt; &lt;shell&gt; privilege &lt;level&gt;                                        # Настроить AAA роль с shell и привилегией
+<a id="__codelineno-77-2" name="__codelineno-77-2" href="#__codelineno-77-2"></a>set aaa user &lt;name&gt; &lt;password&gt; role &lt;role&gt;                                           # Создать локального пользователя с паролем и ролью
 </code></pre></div>
 <h3 id="система--snmp-доп">Система / SNMP (доп.)<a class="headerlink" href="#система--snmp-доп" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-77-1" name="__codelineno-77-1" href="#__codelineno-77-1"></a>delete system ip-forwarding ipv4|ipv6                                                # Включить/отключить пересылку IPv4/IPv6
-<a id="__codelineno-77-2" name="__codelineno-77-2" href="#__codelineno-77-2"></a>delete system snmp community &lt;name&gt;                                                  # Удалить SNMP v2c community
-<a id="__codelineno-77-3" name="__codelineno-77-3" href="#__codelineno-77-3"></a>delete system snmp contact                                                           # Сбросить SNMP system contact
-<a id="__codelineno-77-4" name="__codelineno-77-4" href="#__codelineno-77-4"></a>delete system snmp location                                                          # Сбросить SNMP system location
-<a id="__codelineno-77-5" name="__codelineno-77-5" href="#__codelineno-77-5"></a>delete system snmp trap-target &lt;host&gt;                                                # Удалить SNMP v2c trap-target
-<a id="__codelineno-77-6" name="__codelineno-77-6" href="#__codelineno-77-6"></a>delete system snmp v3 user &lt;name&gt;                                                    # Удалить пользователя SNMPv3
-<a id="__codelineno-77-7" name="__codelineno-77-7" href="#__codelineno-77-7"></a>set system snmp community &lt;name&gt; ro|rw                                               # Установить SNMP v2c community string
-<a id="__codelineno-77-8" name="__codelineno-77-8" href="#__codelineno-77-8"></a>set system snmp contact &lt;contact&gt;                                                    # Установить контакт SNMP системы
-<a id="__codelineno-77-9" name="__codelineno-77-9" href="#__codelineno-77-9"></a>set system snmp location &lt;location&gt;                                                  # Установить местоположение SNMP системы
-<a id="__codelineno-77-10" name="__codelineno-77-10" href="#__codelineno-77-10"></a>set system snmp trap-target &lt;host&gt; community &lt;community&gt;                             # Добавить SNMP v2c trap target
-<a id="__codelineno-77-11" name="__codelineno-77-11" href="#__codelineno-77-11"></a>set system snmp v3 user &lt;name&gt; auth-protocol md5|sha auth-key &lt;auth_key&gt; priv-protocol aes|des priv-key &lt;priv_key&gt; # Установить SNMPv3 пользователя с аутентификацией и приватностью
-<a id="__codelineno-77-12" name="__codelineno-77-12" href="#__codelineno-77-12"></a>set system snmp v3 user &lt;name&gt; auth-protocol md5|sha auth-key-ref &lt;auth_key_ref&gt; priv-protocol aes|des priv-key-ref &lt;priv_key_ref&gt; # Установить SNMPv3 пользователя через ссылки на секреты (без открытых текстов)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-78-1" name="__codelineno-78-1" href="#__codelineno-78-1"></a>delete system ip-forwarding ipv4|ipv6                                                # Включить/отключить пересылку IPv4/IPv6
+<a id="__codelineno-78-2" name="__codelineno-78-2" href="#__codelineno-78-2"></a>delete system snmp community &lt;name&gt;                                                  # Удалить SNMP v2c community
+<a id="__codelineno-78-3" name="__codelineno-78-3" href="#__codelineno-78-3"></a>delete system snmp contact                                                           # Сбросить SNMP system contact
+<a id="__codelineno-78-4" name="__codelineno-78-4" href="#__codelineno-78-4"></a>delete system snmp location                                                          # Сбросить SNMP system location
+<a id="__codelineno-78-5" name="__codelineno-78-5" href="#__codelineno-78-5"></a>delete system snmp trap-target &lt;host&gt;                                                # Удалить SNMP v2c trap-target
+<a id="__codelineno-78-6" name="__codelineno-78-6" href="#__codelineno-78-6"></a>delete system snmp v3 user &lt;name&gt;                                                    # Удалить пользователя SNMPv3
+<a id="__codelineno-78-7" name="__codelineno-78-7" href="#__codelineno-78-7"></a>set system snmp community &lt;name&gt; ro|rw                                               # Установить SNMP v2c community string
+<a id="__codelineno-78-8" name="__codelineno-78-8" href="#__codelineno-78-8"></a>set system snmp contact &lt;contact&gt;                                                    # Установить контакт SNMP системы
+<a id="__codelineno-78-9" name="__codelineno-78-9" href="#__codelineno-78-9"></a>set system snmp location &lt;location&gt;                                                  # Установить местоположение SNMP системы
+<a id="__codelineno-78-10" name="__codelineno-78-10" href="#__codelineno-78-10"></a>set system snmp trap-target &lt;host&gt; community &lt;community&gt;                             # Добавить SNMP v2c trap target
+<a id="__codelineno-78-11" name="__codelineno-78-11" href="#__codelineno-78-11"></a>set system snmp v3 user &lt;name&gt; auth-protocol md5|sha auth-key &lt;auth_key&gt; priv-protocol aes|des priv-key &lt;priv_key&gt; # Установить SNMPv3 пользователя с аутентификацией и приватностью
+<a id="__codelineno-78-12" name="__codelineno-78-12" href="#__codelineno-78-12"></a>set system snmp v3 user &lt;name&gt; auth-protocol md5|sha auth-key-ref &lt;auth_key_ref&gt; priv-protocol aes|des priv-key-ref &lt;priv_key_ref&gt; # Установить SNMPv3 пользователя через ссылки на секреты (без открытых текстов)
 </code></pre></div>
 <h3 id="lifecycle--issu-доп">Lifecycle / ISSU (доп.)<a class="headerlink" href="#lifecycle--issu-доп" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-78-1" name="__codelineno-78-1" href="#__codelineno-78-1"></a>delete system software-lifecycle precheck-mode                                       # Отключить обязательные health-проверки перед активацией
-<a id="__codelineno-78-2" name="__codelineno-78-2" href="#__codelineno-78-2"></a>load default                                                                         # Сбросить кандидат-конфигурацию на заводские установки
-<a id="__codelineno-78-3" name="__codelineno-78-3" href="#__codelineno-78-3"></a>request system software activate                                                     # Активировать подготовленный образ программного обеспечения
-<a id="__codelineno-78-4" name="__codelineno-78-4" href="#__codelineno-78-4"></a>request system software install &lt;image&gt;                                              # Зарегистрировать образ программного обеспечения в конвейере жизненного цикла
-<a id="__codelineno-78-5" name="__codelineno-78-5" href="#__codelineno-78-5"></a>request system software stage                                                        # Подготовить ранее установленный образ программного обеспечения
-<a id="__codelineno-78-6" name="__codelineno-78-6" href="#__codelineno-78-6"></a>request system software verify                                                       # Проверить активированный образ и подтвердить состояние жизненного цикла
-<a id="__codelineno-78-7" name="__codelineno-78-7" href="#__codelineno-78-7"></a>set system software-lifecycle precheck-mode enforce                                  # Принудительно проводить критические проверки здоровья перед активацией (блокировать на отказ)
-<a id="__codelineno-78-8" name="__codelineno-78-8" href="#__codelineno-78-8"></a>set system software-lifecycle precheck-mode warn                                     # Проверки перед активацией (по умолчанию; не блокировать активацию)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-79-1" name="__codelineno-79-1" href="#__codelineno-79-1"></a>delete system software-lifecycle precheck-mode                                       # Отключить обязательные health-проверки перед активацией
+<a id="__codelineno-79-2" name="__codelineno-79-2" href="#__codelineno-79-2"></a>load default                                                                         # Сбросить кандидат-конфигурацию на заводские установки
+<a id="__codelineno-79-3" name="__codelineno-79-3" href="#__codelineno-79-3"></a>request system software activate                                                     # Активировать подготовленный образ программного обеспечения
+<a id="__codelineno-79-4" name="__codelineno-79-4" href="#__codelineno-79-4"></a>request system software install &lt;image&gt;                                              # Зарегистрировать образ программного обеспечения в конвейере жизненного цикла
+<a id="__codelineno-79-5" name="__codelineno-79-5" href="#__codelineno-79-5"></a>request system software stage                                                        # Подготовить ранее установленный образ программного обеспечения
+<a id="__codelineno-79-6" name="__codelineno-79-6" href="#__codelineno-79-6"></a>request system software verify                                                       # Проверить активированный образ и подтвердить состояние жизненного цикла
+<a id="__codelineno-79-7" name="__codelineno-79-7" href="#__codelineno-79-7"></a>set system software-lifecycle precheck-mode enforce                                  # Принудительно проводить критические проверки здоровья перед активацией (блокировать на отказ)
+<a id="__codelineno-79-8" name="__codelineno-79-8" href="#__codelineno-79-8"></a>set system software-lifecycle precheck-mode warn                                     # Проверки перед активацией (по умолчанию; не блокировать активацию)
 </code></pre></div>
 <h3 id="show--операционные-доп">Show / операционные (доп.)<a class="headerlink" href="#show--операционные-доп" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-79-1" name="__codelineno-79-1" href="#__codelineno-79-1"></a>clear ip bgp * soft                                                                  # Мягкое очищение всех BGP сессий
-<a id="__codelineno-79-2" name="__codelineno-79-2" href="#__codelineno-79-2"></a>clear ip bgp &lt;neighbor&gt; soft in|out                                                  # Мягкое очищение BGP сессии для соседа в одном направлении (in/out)
-<a id="__codelineno-79-3" name="__codelineno-79-3" href="#__codelineno-79-3"></a>cli style nxos|nx-os|cisco-nxos|arista|eos|arista-eos|huawei|vrp|huawei-vrp          # Установить стиль вывода CLI (nxos / arista / huawei и aliases)
-<a id="__codelineno-79-4" name="__codelineno-79-4" href="#__codelineno-79-4"></a>delete autoops policy operator-enable|maintenance-gate                               # Сбросить gate-флаги autoops-политики (operator-enable / maintenance-gate)
-<a id="__codelineno-79-5" name="__codelineno-79-5" href="#__codelineno-79-5"></a>delete autoops policy profile                                                        # Сбросить профиль autoops-политики на default
-<a id="__codelineno-79-6" name="__codelineno-79-6" href="#__codelineno-79-6"></a>delete cli profile                                                                   # Сбросить стиль вывода CLI на default
-<a id="__codelineno-79-7" name="__codelineno-79-7" href="#__codelineno-79-7"></a>delete terminal op-allowlist                                                         # Сбросить режим allowlist операционных команд
-<a id="__codelineno-79-8" name="__codelineno-79-8" href="#__codelineno-79-8"></a>set autoops policy operator-enable|maintenance-gate true|false                       # Включить/отключить гейты autoops policy (operator-enable / maintenance-gate)
-<a id="__codelineno-79-9" name="__codelineno-79-9" href="#__codelineno-79-9"></a>set autoops policy profile strict|balanced|aggressive                                # Установить профиль autoops (strict / balanced / aggressive)
-<a id="__codelineno-79-10" name="__codelineno-79-10" href="#__codelineno-79-10"></a>set cli profile nxos|nx-os|cisco-nxos|arista|eos|arista-eos|huawei|vrp|huawei-vrp    # Установить стиль вывода CLI (nxos / arista / huawei и aliases)
-<a id="__codelineno-79-11" name="__codelineno-79-11" href="#__codelineno-79-11"></a>show arp-inspection                                                                  # VLAN&#39;ы с включённой Dynamic ARP Inspection
-<a id="__codelineno-79-12" name="__codelineno-79-12" href="#__codelineno-79-12"></a>show cli profile|style                                                               # Текущее значение стиля CLI
-<a id="__codelineno-79-13" name="__codelineno-79-13" href="#__codelineno-79-13"></a>show dhcp-snooping                                                                   # VLAN&#39;ы с включённой защитой DHCP и доверенные порты
-<a id="__codelineno-79-14" name="__codelineno-79-14" href="#__codelineno-79-14"></a>show ip-source-guard                                                                 # Привязки интерфейсов IP source guard
-<a id="__codelineno-79-15" name="__codelineno-79-15" href="#__codelineno-79-15"></a>show ipv6 ospf6                                                                      # Состояние OSPFv3 (router-id, интерфейсы, соседи)
-<a id="__codelineno-79-16" name="__codelineno-79-16" href="#__codelineno-79-16"></a>show ipv6 ospf6 neighbor                                                             # Таблица смежности OSPFv3
-<a id="__codelineno-79-17" name="__codelineno-79-17" href="#__codelineno-79-17"></a>show ipv6 ospf6 route                                                                # Таблица маршрутов OSPFv3
-<a id="__codelineno-79-18" name="__codelineno-79-18" href="#__codelineno-79-18"></a>show isis database                                                                   # Database IS-IS link-state
-<a id="__codelineno-79-19" name="__codelineno-79-19" href="#__codelineno-79-19"></a>show isis neighbors                                                                  # Таблица смежности IS-IS
-<a id="__codelineno-79-20" name="__codelineno-79-20" href="#__codelineno-79-20"></a>show isis route                                                                      # Таблица маршрутов IS-IS
-<a id="__codelineno-79-21" name="__codelineno-79-21" href="#__codelineno-79-21"></a>show mac address-table                                                               # Таблица MAC-адресов
-<a id="__codelineno-79-22" name="__codelineno-79-22" href="#__codelineno-79-22"></a>show network-instances bgp                                                           # Canonical BGP view для default network-instance (OpenConfig)
-<a id="__codelineno-79-23" name="__codelineno-79-23" href="#__codelineno-79-23"></a>show pim                                                                             # Состояние PIM (интерфейсы, RP, соседи)
-<a id="__codelineno-79-24" name="__codelineno-79-24" href="#__codelineno-79-24"></a>show pim interface                                                                   # Состояние PIM по интерфейсам
-<a id="__codelineno-79-25" name="__codelineno-79-25" href="#__codelineno-79-25"></a>show pim mroute                                                                      # Таблица мультикаст-маршрутов PIM (S,G и *,G записи)
-<a id="__codelineno-79-26" name="__codelineno-79-26" href="#__codelineno-79-26"></a>show pim neighbors                                                                   # Смежность соседей PIM
-<a id="__codelineno-79-27" name="__codelineno-79-27" href="#__codelineno-79-27"></a>show pim rp-info                                                                     # Информация Rendezvous Point (PIM)
-<a id="__codelineno-79-28" name="__codelineno-79-28" href="#__codelineno-79-28"></a>show platform health                                                                 # Состояние здоровья платформы: проверка дaemоnов и готовность блокировщиков
-<a id="__codelineno-79-29" name="__codelineno-79-29" href="#__codelineno-79-29"></a>show platform history                                                                # История действий lifecycle ПО (install/stage/activate/verify/rollback)
-<a id="__codelineno-79-30" name="__codelineno-79-30" href="#__codelineno-79-30"></a>show platform inventory                                                              # Снимок инвентаря платформы: режим backend, профили, сертифицированное ПО и указатели образов
-<a id="__codelineno-79-31" name="__codelineno-79-31" href="#__codelineno-79-31"></a>show platform profile                                                                # Активный профиль платформы и матрица сертифицированного ПО
-<a id="__codelineno-79-32" name="__codelineno-79-32" href="#__codelineno-79-32"></a>show qos                                                                             # Конфигурация QoS и планировщика (tc htb)
-<a id="__codelineno-79-33" name="__codelineno-79-33" href="#__codelineno-79-33"></a>show qos &lt;ifname&gt;                                                                    # Конфигурация QoS для конкретного интерфейса
-<a id="__codelineno-79-34" name="__codelineno-79-34" href="#__codelineno-79-34"></a>show release metadata                                                                # Метаданные governance релиза: модель экосистемы и чеклист production-readiness
-<a id="__codelineno-79-35" name="__codelineno-79-35" href="#__codelineno-79-35"></a>show snmp                                                                            # Конфигурация SNMP сообществ, пользователей и целей trap
-<a id="__codelineno-79-36" name="__codelineno-79-36" href="#__codelineno-79-36"></a>show srv6                                                                            # Состояние SRv6 (общее)
-<a id="__codelineno-79-37" name="__codelineno-79-37" href="#__codelineno-79-37"></a>show srv6 control-plane                                                              # Привязки SRv6 контроль-плоскости для IS-IS/BGP
-<a id="__codelineno-79-38" name="__codelineno-79-38" href="#__codelineno-79-38"></a>show srv6 dataplane                                                                  # Маршруты SRv6 плоскости данных и действия (ip -6 route)
-<a id="__codelineno-79-39" name="__codelineno-79-39" href="#__codelineno-79-39"></a>show srv6 localsids                                                                  # Поведения SRv6 LocalSID
-<a id="__codelineno-79-40" name="__codelineno-79-40" href="#__codelineno-79-40"></a>show srv6 locators                                                                   # Инвентарь SRv6 локаторов
-<a id="__codelineno-79-41" name="__codelineno-79-41" href="#__codelineno-79-41"></a>show srv6 policies                                                                   # Определения политик SRv6
-<a id="__codelineno-79-42" name="__codelineno-79-42" href="#__codelineno-79-42"></a>show srv6 steering                                                                   # Записи маршрутизации SRv6 (steering)
-<a id="__codelineno-79-43" name="__codelineno-79-43" href="#__codelineno-79-43"></a>show vlan                                                                            # Информация о VLAN (реальная)
-<a id="__codelineno-79-44" name="__codelineno-79-44" href="#__codelineno-79-44"></a>show vrrp                                                                            # Состояние VRRP группы (статус, приоритет, виртуальные IP)
-<a id="__codelineno-79-45" name="__codelineno-79-45" href="#__codelineno-79-45"></a>show vrrp detail                                                                     # Детальная информация о группах VRRP
-<a id="__codelineno-79-46" name="__codelineno-79-46" href="#__codelineno-79-46"></a>show vxlan                                                                           # Состояние VXLAN туннеля
-<a id="__codelineno-79-47" name="__codelineno-79-47" href="#__codelineno-79-47"></a>terminal cli-profile nxos|nx-os|cisco-nxos|arista|eos|arista-eos|huawei|vrp|huawei-vrp # Установить стиль вывода CLI (nxos / arista / huawei и aliases)
-<a id="__codelineno-79-48" name="__codelineno-79-48" href="#__codelineno-79-48"></a>terminal op-allowlist strict|relaxed|off                                             # Установить режим allowlist операционных команд (strict/relaxed/off)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-80-1" name="__codelineno-80-1" href="#__codelineno-80-1"></a>clear ip bgp * soft                                                                  # Мягкое очищение всех BGP сессий
+<a id="__codelineno-80-2" name="__codelineno-80-2" href="#__codelineno-80-2"></a>clear ip bgp &lt;neighbor&gt; soft in|out                                                  # Мягкое очищение BGP сессии для соседа в одном направлении (in/out)
+<a id="__codelineno-80-3" name="__codelineno-80-3" href="#__codelineno-80-3"></a>cli style nxos|nx-os|cisco-nxos|arista|eos|arista-eos|huawei|vrp|huawei-vrp          # Установить стиль вывода CLI (nxos / arista / huawei и aliases)
+<a id="__codelineno-80-4" name="__codelineno-80-4" href="#__codelineno-80-4"></a>delete autoops policy operator-enable|maintenance-gate                               # Сбросить gate-флаги autoops-политики (operator-enable / maintenance-gate)
+<a id="__codelineno-80-5" name="__codelineno-80-5" href="#__codelineno-80-5"></a>delete autoops policy profile                                                        # Сбросить профиль autoops-политики на default
+<a id="__codelineno-80-6" name="__codelineno-80-6" href="#__codelineno-80-6"></a>delete cli profile                                                                   # Сбросить стиль вывода CLI на default
+<a id="__codelineno-80-7" name="__codelineno-80-7" href="#__codelineno-80-7"></a>delete terminal op-allowlist                                                         # Сбросить режим allowlist операционных команд
+<a id="__codelineno-80-8" name="__codelineno-80-8" href="#__codelineno-80-8"></a>set autoops policy operator-enable|maintenance-gate true|false                       # Включить/отключить гейты autoops policy (operator-enable / maintenance-gate)
+<a id="__codelineno-80-9" name="__codelineno-80-9" href="#__codelineno-80-9"></a>set autoops policy profile strict|balanced|aggressive                                # Установить профиль autoops (strict / balanced / aggressive)
+<a id="__codelineno-80-10" name="__codelineno-80-10" href="#__codelineno-80-10"></a>set cli profile nxos|nx-os|cisco-nxos|arista|eos|arista-eos|huawei|vrp|huawei-vrp    # Установить стиль вывода CLI (nxos / arista / huawei и aliases)
+<a id="__codelineno-80-11" name="__codelineno-80-11" href="#__codelineno-80-11"></a>show arp-inspection                                                                  # VLAN&#39;ы с включённой Dynamic ARP Inspection
+<a id="__codelineno-80-12" name="__codelineno-80-12" href="#__codelineno-80-12"></a>show cli profile|style                                                               # Текущее значение стиля CLI
+<a id="__codelineno-80-13" name="__codelineno-80-13" href="#__codelineno-80-13"></a>show dhcp-snooping                                                                   # VLAN&#39;ы с включённой защитой DHCP и доверенные порты
+<a id="__codelineno-80-14" name="__codelineno-80-14" href="#__codelineno-80-14"></a>show ip-source-guard                                                                 # Привязки интерфейсов IP source guard
+<a id="__codelineno-80-15" name="__codelineno-80-15" href="#__codelineno-80-15"></a>show ipv6 ospf6                                                                      # Состояние OSPFv3 (router-id, интерфейсы, соседи)
+<a id="__codelineno-80-16" name="__codelineno-80-16" href="#__codelineno-80-16"></a>show ipv6 ospf6 neighbor                                                             # Таблица смежности OSPFv3
+<a id="__codelineno-80-17" name="__codelineno-80-17" href="#__codelineno-80-17"></a>show ipv6 ospf6 route                                                                # Таблица маршрутов OSPFv3
+<a id="__codelineno-80-18" name="__codelineno-80-18" href="#__codelineno-80-18"></a>show isis database                                                                   # Database IS-IS link-state
+<a id="__codelineno-80-19" name="__codelineno-80-19" href="#__codelineno-80-19"></a>show isis neighbors                                                                  # Таблица смежности IS-IS
+<a id="__codelineno-80-20" name="__codelineno-80-20" href="#__codelineno-80-20"></a>show isis route                                                                      # Таблица маршрутов IS-IS
+<a id="__codelineno-80-21" name="__codelineno-80-21" href="#__codelineno-80-21"></a>show mac address-table                                                               # Таблица MAC-адресов
+<a id="__codelineno-80-22" name="__codelineno-80-22" href="#__codelineno-80-22"></a>show network-instances bgp                                                           # Canonical BGP view для default network-instance (OpenConfig)
+<a id="__codelineno-80-23" name="__codelineno-80-23" href="#__codelineno-80-23"></a>show pim                                                                             # Состояние PIM (интерфейсы, RP, соседи)
+<a id="__codelineno-80-24" name="__codelineno-80-24" href="#__codelineno-80-24"></a>show pim interface                                                                   # Состояние PIM по интерфейсам
+<a id="__codelineno-80-25" name="__codelineno-80-25" href="#__codelineno-80-25"></a>show pim mroute                                                                      # Таблица мультикаст-маршрутов PIM (S,G и *,G записи)
+<a id="__codelineno-80-26" name="__codelineno-80-26" href="#__codelineno-80-26"></a>show pim neighbors                                                                   # Смежность соседей PIM
+<a id="__codelineno-80-27" name="__codelineno-80-27" href="#__codelineno-80-27"></a>show pim rp-info                                                                     # Информация Rendezvous Point (PIM)
+<a id="__codelineno-80-28" name="__codelineno-80-28" href="#__codelineno-80-28"></a>show platform health                                                                 # Состояние здоровья платформы: проверка дaemоnов и готовность блокировщиков
+<a id="__codelineno-80-29" name="__codelineno-80-29" href="#__codelineno-80-29"></a>show platform history                                                                # История действий lifecycle ПО (install/stage/activate/verify/rollback)
+<a id="__codelineno-80-30" name="__codelineno-80-30" href="#__codelineno-80-30"></a>show platform inventory                                                              # Снимок инвентаря платформы: режим backend, профили, сертифицированное ПО и указатели образов
+<a id="__codelineno-80-31" name="__codelineno-80-31" href="#__codelineno-80-31"></a>show platform profile                                                                # Активный профиль платформы и матрица сертифицированного ПО
+<a id="__codelineno-80-32" name="__codelineno-80-32" href="#__codelineno-80-32"></a>show qos                                                                             # Конфигурация QoS и планировщика (tc htb)
+<a id="__codelineno-80-33" name="__codelineno-80-33" href="#__codelineno-80-33"></a>show qos &lt;ifname&gt;                                                                    # Конфигурация QoS для конкретного интерфейса
+<a id="__codelineno-80-34" name="__codelineno-80-34" href="#__codelineno-80-34"></a>show release metadata                                                                # Метаданные governance релиза: модель экосистемы и чеклист production-readiness
+<a id="__codelineno-80-35" name="__codelineno-80-35" href="#__codelineno-80-35"></a>show snmp                                                                            # Конфигурация SNMP сообществ, пользователей и целей trap
+<a id="__codelineno-80-36" name="__codelineno-80-36" href="#__codelineno-80-36"></a>show srv6                                                                            # Состояние SRv6 (общее)
+<a id="__codelineno-80-37" name="__codelineno-80-37" href="#__codelineno-80-37"></a>show srv6 control-plane                                                              # Привязки SRv6 контроль-плоскости для IS-IS/BGP
+<a id="__codelineno-80-38" name="__codelineno-80-38" href="#__codelineno-80-38"></a>show srv6 dataplane                                                                  # Маршруты SRv6 плоскости данных и действия (ip -6 route)
+<a id="__codelineno-80-39" name="__codelineno-80-39" href="#__codelineno-80-39"></a>show srv6 localsids                                                                  # Поведения SRv6 LocalSID
+<a id="__codelineno-80-40" name="__codelineno-80-40" href="#__codelineno-80-40"></a>show srv6 locators                                                                   # Инвентарь SRv6 локаторов
+<a id="__codelineno-80-41" name="__codelineno-80-41" href="#__codelineno-80-41"></a>show srv6 policies                                                                   # Определения политик SRv6
+<a id="__codelineno-80-42" name="__codelineno-80-42" href="#__codelineno-80-42"></a>show srv6 steering                                                                   # Записи маршрутизации SRv6 (steering)
+<a id="__codelineno-80-43" name="__codelineno-80-43" href="#__codelineno-80-43"></a>show vlan                                                                            # Информация о VLAN (реальная)
+<a id="__codelineno-80-44" name="__codelineno-80-44" href="#__codelineno-80-44"></a>show vrrp                                                                            # Состояние VRRP группы (статус, приоритет, виртуальные IP)
+<a id="__codelineno-80-45" name="__codelineno-80-45" href="#__codelineno-80-45"></a>show vrrp detail                                                                     # Детальная информация о группах VRRP
+<a id="__codelineno-80-46" name="__codelineno-80-46" href="#__codelineno-80-46"></a>show vxlan                                                                           # Состояние VXLAN туннеля
+<a id="__codelineno-80-47" name="__codelineno-80-47" href="#__codelineno-80-47"></a>terminal cli-profile nxos|nx-os|cisco-nxos|arista|eos|arista-eos|huawei|vrp|huawei-vrp # Установить стиль вывода CLI (nxos / arista / huawei и aliases)
+<a id="__codelineno-80-48" name="__codelineno-80-48" href="#__codelineno-80-48"></a>terminal op-allowlist strict|relaxed|off                                             # Установить режим allowlist операционных команд (strict/relaxed/off)
 </code></pre></div>
 <hr />
 
