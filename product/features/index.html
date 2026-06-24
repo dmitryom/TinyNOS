@@ -723,17 +723,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#по-уровням-сети" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        По уровням сети
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#ai-фабрика-и-lossless-транспорт" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1185,17 +1174,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#по-уровням-сети" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        По уровням сети
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#ai-фабрика-и-lossless-транспорт" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1239,6 +1217,7 @@
 маршрутизации, оверлея и безопасности на стандартных whitebox-коммутаторах. По объёму функций сопоставима с Cisco NX-OS, Arista EOS,
 NVIDIA Cumulus Linux, IP Infusion OcNOS и SONiC — оставаясь полностью открытой
 (Apache-2.0).</p>
+<p><img alt="Обзор TinyNOS для AI-фабрики" class="tn-diagram" src="../../assets/img/overview.svg" /></p>
 <h2 id="ключевые-отличия">Ключевые отличия<a class="headerlink" href="#ключевые-отличия" title="Permanent link">&para;</a></h2>
 <div class="tn-grid">
 <div class="tn-card">
@@ -1264,45 +1243,6 @@ NVIDIA Cumulus Linux, IP Infusion OcNOS и SONiC — оставаясь полн
 проприетарного стека маршрутизации и лицензий на отдельные функции.</p>
 </div>
 </div>
-<h2 id="по-уровням-сети">По уровням сети<a class="headerlink" href="#по-уровням-сети" title="Permanent link">&para;</a></h2>
-<p>Документация и справочник команд организованы по уровням — от физического порта
-до управления. Кратко, что покрывает каждый уровень:</p>
-<table>
-<thead>
-<tr>
-<th>Уровень</th>
-<th>Возможности</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>L1 — Физический</strong></td>
-<td>Интерфейсы, скорость/дуплекс, MTU, оптика и DOM, breakout</td>
-</tr>
-<tr>
-<td><strong>L2 — Канальный</strong></td>
-<td>VLAN 802.1Q, бриджинг, STP/RSTP/MSTP, LACP, MLAG, LLDP, storm control</td>
-</tr>
-<tr>
-<td><strong>L3 — Сетевой</strong></td>
-<td>Статика и ECMP, BGP, OSPF, IS-IS, RIP, BFD, multi-tenant VRF и route-leak, PIM, PBR, MPLS, SRv6</td>
-</tr>
-<tr>
-<td><strong>Оверлей</strong></td>
-<td>EVPN-VXLAN (Type-2/3/5), symmetric/asymmetric IRB, anycast-шлюз, EVPN multihoming</td>
-</tr>
-<tr>
-<td><strong>L4 — Сервисы и QoS</strong></td>
-<td>ACL, NAT, CoPP, DHCP snooping/DAI/IP source guard, DCB/PFC/ECN/ETS, RoCEv2, Ultra Ethernet, MACsec</td>
-</tr>
-<tr>
-<td><strong>Управление</strong></td>
-<td>AAA/RBAC, системные настройки, PTP, sFlow, NetFlow/IPFIX, gNMI, Prometheus-метрики и логирование</td>
-</tr>
-</tbody>
-</table>
-<p>Полная матрица со статусами (<strong>GA / Preview / Planned</strong>) —
-<a href="../feature-matrix/">Спецификация функций</a>.</p>
 <h2 id="ai-фабрика-и-lossless-транспорт">AI-фабрика и lossless-транспорт<a class="headerlink" href="#ai-фабрика-и-lossless-транспорт" title="Permanent link">&para;</a></h2>
 <p>Для leaf-spine AI-фабрик TinyNOS реализует стек lossless-Ethernet: Priority Flow
 Control (PFC), ECN/WRED, ETS и DCQCN для RoCEv2, а также готовность фабрики к
